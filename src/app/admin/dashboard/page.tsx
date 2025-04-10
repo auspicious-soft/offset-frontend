@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Footers from "@/app/components/footers/page";
+import Headers from "@/app/components/headers/page";
 
 
 
@@ -29,6 +30,7 @@ const cards = [
 const Page = () => {
  return (
   <>
+<Headers/>
 
 
 <div className="flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-[40px] gap-6">

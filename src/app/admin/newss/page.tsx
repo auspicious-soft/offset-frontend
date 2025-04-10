@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Footers from "@/app/components/footers/page";
+import Headers from "@/app/components/headers/page";
 
 
 
@@ -50,7 +51,7 @@ const cardData = [
 const Page = () => {
  return (
   <>
-
+<Headers/>
 <div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[40px] mt-[50px]">
 
 
@@ -149,13 +150,13 @@ const Page = () => {
 <div className="mt-[46px] flex flex-wrap lg:flex-nowrap items-center justify-center md:justify-start md:items-start text-center gap-x-2 gap-y-2">
   <span className="text-[#727272] text-base sm:text-lg lg:text-2xl font-medium">GENERAL NEWS SOURCE:</span>
   <span className="text-[#1C1B35] text-base sm:text-lg lg:text-2xl font-medium"> </span>
-  <span className="text-[#1C1B35] text-base sm:text-lg lg:text-2xl font-medium underline break-words">https://www.gmail.com</span>
+  <span className="text-[#1C1B35] text-base sm:text-lg lg:text-2xl font-medium underline break-words cursor-pointer">https://www.gmail.com</span>
   <Image 
     src="/link.svg" 
     alt="Sarah Image"
     height={17} 
     width={18}
-    className="ml-[20px]" 
+    className="ml-[20px] cursor-pointer" 
   />
 </div>
 
@@ -180,11 +181,11 @@ const Page = () => {
   <div className="">
 
 <div className=" flex flex-col sm:flex-row gap-4 lg:mt-[59px]">
-  <div className="w-full sm:w-1/2 h-11 p-2 bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
+  <div className="w-full sm:w-1/2 h-11 p-2 bg-[#E5223A] rounded-lg flex justify-center items-center gap-2 cursor-pointer">
     <div className="text-white text-xl font-medium">Tools Posts</div>
   </div>
 
-  <div className="mb-[19px] w-full sm:w-1/2 h-11 bg-stone-50 p-2 rounded-lg flex justify-center items-center gap-2">
+  <div className="mb-[19px] w-full sm:w-1/2 h-11 bg-stone-50 p-2 rounded-lg flex justify-center items-center gap-2 cursor-pointer">
     <div className="text-neutral-500 text-xl font-medium">Education Posts</div>
   </div>
 </div>
