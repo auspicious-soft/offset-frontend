@@ -9,7 +9,7 @@ const newsItems = [
     {
       author: "Sarah Mitchell",
       time: "4 hours ago",
-      tag: "World",
+      tag: "Ransomware",
       tagColor: "#FFDCE0",
       tagTextColor: "#E5223A",
       title:
@@ -19,7 +19,7 @@ const newsItems = [
     {
       author: "Sarah Mitchell",
       time: "4 hours ago",
-      tag: "World",
+      tag: "Ransomware",
       tagColor: "#FFDCE0",
       tagTextColor: "#E5223A",
       title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
@@ -28,7 +28,7 @@ const newsItems = [
     {
       author: "Sarah Mitchell",
       time: "4 hours ago",
-      tag: "World",
+      tag: "Ransomware",
       tagColor: "#FFDCE0",
       tagTextColor: "#E5223A",
       title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
@@ -37,7 +37,7 @@ const newsItems = [
     {
       author: "Sarah Mitchell",
       time: "4 hours ago",
-      tag: "World",
+      tag: "Ransomware",
       tagColor: "#FFDCE0",
       tagTextColor: "#E5223A",
       title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
@@ -46,7 +46,7 @@ const newsItems = [
     {
       author: "Sarah Mitchell",
       time: "4 hours ago",
-      tag: "World",
+      tag: "Ransomware",
       tagColor: "#FFDCE0",
       tagTextColor: "#E5223A",
       title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
@@ -109,13 +109,14 @@ const Page = () => {
     </div>
 
     <div className=" flex gap-6   flex-col lg:flex-row   mt-[50px]">
-     {/* Left Section */}
-{/* <div> */}
+
+{/* Left Section */}
+
 <div className="w-full lg:w-[65%] flex flex-col gap-y-[22px]">
 
 {newsItems.map((item, index) => (
 
-  <Link href="/newss/general-news"
+  <Link href="/darkweb/detail"
     key={index}
     className="  gap-4  flex flex-col md:flex-row w-full h-auto bg-stone-50 rounded-[20.65px] p-2 sm:p-3 md:p-4  " >
 
@@ -123,7 +124,7 @@ const Page = () => {
 
 <div className="">
   <Image
-    src="/images/lights.png"
+    src="/images/hospital.png"
     alt="board"
     height={225}
     width={332}
@@ -133,7 +134,7 @@ const Page = () => {
 
 
     <div className=" w-full  flex flex-col  pr-2">
-      <div className="flex flex-wrap justify-between gap-2 sm:gap-3 mb-3">
+      <div className=" flex flex-wrap justify-between gap-2 sm:gap-3 mb-3">
         <div className="flex items-center">
           <Image
             src="/sarah.svg"
@@ -151,7 +152,7 @@ const Page = () => {
         </div>
 
         <div
-          className="px-3 py-[3px] rounded-3xl flex items-center"
+          className="px-3 py-[3px]  rounded-3xl flex items-center"
           style={{ backgroundColor: item.tagColor }}
         >
           <div
@@ -164,13 +165,9 @@ const Page = () => {
       </div>
 
       <div>
-        {/* <div  className="mt-2 text-sm sm:text-base lg:text-lg text-[#1C1B35]">
-          {item.title}
-        </div> */}
-          <div  className="   sm:text-base text-xl font-medium md:text-2xl lg:text-3xl text-[#1C1B35]">
+        <div  className="   sm:text-base text-xl font-medium md:text-2xl lg:text-3xl text-[#1C1B35]">
           {item.title}
         </div>
-
 
         <div className="mt-3 flex justify-between items-center">
           <div className="text-xs sm:text-sm lg:text-base text-[#FF475E] font-bold">
@@ -207,19 +204,19 @@ const Page = () => {
       {cardData.map((card, index) => (
         <div
           key={index}
-          className="w-full lg:justify-between flex h-auto self-stretch mt-[19px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]"
-        >
-          <div>
+          className="   w-full lg:justify-between flex h-auto self-stretch mt-[19px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]" >
+          <div className="">
             <Image
               src={card.image}
               alt="board"
               height={140}
               width={140}
-              className="w-full max-w-[134px] h-[140px] rounded-xl object-cover"
+              className=" lg:w-full w-full max-w-[134px] h-[140px] rounded-xl object-cover"
             />
           </div>
 
-          <div className="w-full pr-0">
+
+          <div className=" w-full pr-0">
             <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
               <Image
                 src={card.authorImage}
@@ -260,6 +257,12 @@ const Page = () => {
     </div>
 
   </div>
+
+
+
+
+
+
 
     </div>
    </div>

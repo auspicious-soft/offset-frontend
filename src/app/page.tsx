@@ -63,7 +63,7 @@ const Page = () => {
 
   {/* Left Section */}
 
-<div className="w-full max-w-[955px] mx-auto mt-[59px] px-2">
+<div className=" w-full lg:w-[65%] mx-auto mt-[59px] px-2">
   <div className="relative w-full">
     <Image
       src="/images/mainnews.png"
@@ -125,7 +125,7 @@ const Page = () => {
 
   {/* Right Section */}
 
-  <div className="">
+  <div className=" w-full lg:w-[35%]">
     {/* right top  */}
 
 
@@ -460,7 +460,23 @@ const Page = () => {
 
 <div className="relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
   <div className="w-full md:w-1/2 pt-[60px] md:pt-[110px] z-10">
-    <div className="text-white text-3xl md:text-5xl font-bold">Get Offset7 Today</div>
+
+
+
+<div className="flex gap-[16px]">
+  <div className="flex items-stretch rounded-full overflow-hidden">
+    <Image
+      src="/verticalWhiteLine.svg"
+      alt="Vertical line"
+      width={3}
+      height={44}
+      className="h-full object-cover"
+    />
+  </div>
+  <div className="text-white text-3xl md:text-5xl font-bold">Get Offset7 Today</div>
+</div>
+
+
     <div className="mt-4 text-white text-base md:text-xl font-normal">
       Stay ahead of cyber threats with Offset7! Download the app for free and gain
       access to powerful tools, real-time monitoring, and actionable insights to protect
