@@ -188,10 +188,10 @@ export default function Headers() {
     <nav className="h-full flex items-center flex-wrap justify-center text-[#1C1B35] gap-2 sm:gap-4 md:gap-6 lg:gap-[38px] text-xs sm:text-sm md:text-base text-center">
   
         <Link
-  href="/admin/dashboard"
+  href="/"
   scroll={true}
   className={`cursor-pointer flex items-center ${
-    pathname === '/admin/dashboard' ? 'text-[#E5223A] font-semibold' : ''
+    pathname === '/' ? 'text-[#E5223A] font-semibold' : ''
   }`}
 >
   Home
@@ -199,22 +199,25 @@ export default function Headers() {
    
         
 <Link
-  href="/admin/newss"
+  href="/newss"
   className={`cursor-pointer flex items-center ${
-    pathname === '/admin/newss' ? 'text-[#E5223A] font-semibold' : ''
+    pathname === '/newss' ? 'text-[#E5223A] font-semibold' : ''
   }`}
 >
   News
 </Link>
 
-<Link
+{/* <Link
   href="/admin/darkweb"
   className={`cursor-pointer flex items-center ${
     pathname === '/admin/darkweb' ? 'text-[#E5223A] font-semibold' : ''
   }`}
 >
   Darkweb Incidents
-</Link>
+</Link> */}
+<Link href="" className="cursor-pointer flex items-center">
+Darkweb Incidents
+        </Link>
 
         <Link href="" className="cursor-pointer flex items-center">
             Cve Engine
