@@ -99,7 +99,7 @@ const Page = () => {
  return (
   <>
    <Headers />
-   <div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[40px] mt-[50px]">
+   <div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[100px] mt-[50px]">
     <div className="flex flex-row items-center gap-2 flex-wrap">
      <div className="text-neutral-500 text-sm sm:text-xl font-medium">Home</div>
      <div className="w-px h-4 sm:h-6 bg-[#E5223A]"></div>

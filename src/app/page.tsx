@@ -80,44 +80,70 @@ const Page = () => {
 <Headers/>
 
 
-<div className=" bg-[url('/images/dotsBackgroundImage.png')] bg-cover bg-center min-h-[200px] sm:min-h-[250px] md:min-h-[300px] p-4">
+<div className=" bg-[url('/images/dotsBackgroundImage.png')] bg-cover bg-center min-h-[200px] sm:min-h-[250px] md:min-h-[300px] ">
 
 
-<div className="flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-[40px] gap-6">
+<div className="  flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-[100px] gap-[44px]">
 
   {/* Left Section */}
 
 <div className=" w-full lg:w-[65%] mx-auto mt-[59px] px-2">
   <div className="relative w-full">
-    <Image
+    {/* <Image
       src="/images/mainnews.png"
       alt="earth"
       width={955}
       height={425}
       className="w-full h-[425px]  sm:h-full lg:h-full lg:min-h-[425px] object-cover rounded-[30px]"
       priority
+    /> */}
+    <Image
+      src="/images/mainnews.png"
+      alt="earth"
+      width={955}
+      height={425}
+      className="w-full h-[425px]  sm:h-full   object-cover rounded-[30px]"
+      priority
     />
 
     <div className="p-2 absolute top-0 left-0 w-full">
       <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
         <div className="text-white font-bold break-words max-w-[70%]
-          text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl">
+          text-sm sm:text-base md:text-lg lg:text-2xl xl:text-2xl">
           MAIN NEWS
         </div>
         <div className="flex items-start gap-2 sm:gap-3">
-          <Image src="/leftarrow.svg" 
-          alt="left arrow" 
-          height={43} width={43}
-          className="w-3 h-3 sm:w-4 sm:h-4" />
-          
-          <Image src="/rightarrow.svg" 
-          alt="right arrow" 
-          height={43} width={43}
 
-          className="w-3 h-3 sm:w-4 sm:h-4" />
+        <div className="backdrop-blur-sm bg-white/30 rounded-full p-2 w-fit">
+  <Image
+    src="/leftarrow.svg"
+    alt="left arrow"
+    height={43}
+    width={43}
+    className="w-3 h-3 sm:w-4 sm:h-4"
+  />
+
+</div>
+          
+      <div className="backdrop-blur-sm bg-white rounded-full p-2 w-fit">
+      <Image
+    src="/rightarrow.svg"
+    alt="left arrow"
+    height={43}
+    width={43}
+    className="w-3 h-3 sm:w-4 sm:h-4 bg-white"
+  />
+  </div>
+ 
+
+
         </div>
       </div>
-      <div className="h-px ml-2 sm:ml-3 md:ml-4" style={{ backgroundColor: "#E5223A" }} />
+
+      <div
+  className="h-px ml-2 sm:ml-3 md:ml-4 w-full"
+  style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
+
     </div>
 
     <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 md:p-4 lg:p-5">
@@ -152,13 +178,13 @@ const Page = () => {
 <div className=" w-full lg:w-[35%]">
 
 {/* buttons  */}
-<div className=" flex flex-col sm:flex-row gap-4  mb-[15px] lg:mt-[59px]">
-  <div className=" w-full sm:w-1/2 h-11 py-[17px]  bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
-    <div className="text-white text-xl font-medium">Tools Posts</div>
+<div className=" flex flex-col sm:flex-row gap-4   lg:mt-[59px]">
+  <div className=" w-full sm:w-1/2 h-[11px] py-[17px]  bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
+    <div className="text-white text-l font-medium">Tools Posts</div>
   </div>
 
-  <div className=" py-[17px]   mb-[19px] w-full sm:w-1/2 h-11 bg-stone-50  rounded-lg flex justify-center items-center gap-2">
-    <div className="text-[#727272] text-xl font-medium">Education Posts</div>
+  <div className=" py-[17px] h-[11px]  mb-[19px] w-full sm:w-1/2  bg-stone-50  rounded-lg flex justify-center items-center gap-2">
+    <div className="text-[#727272] text-l font-medium">Education Posts</div>
   </div>
 </div>
 
@@ -169,15 +195,16 @@ const Page = () => {
       {cardss.map((cards, index) => (
         <div
           key={index}
-          className="w-full lg:justify-between flex h-auto self-stretch lg:mt-[27px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]  "
+          className="w-full lg:justify-between flex h-auto self-stretch sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]  "
         >
           <div className="">
             <Image
               src={cards.boardImg}
               alt="board"
               height={140}
-              width={140}
-              className="w-full max-w-[134px] h-[140px] rounded-xl object-cover"
+              width={134}
+              // className="w-full max-w-[134px] h-[140px] rounded-xl object-cover"
+              className="rounded-xl object-cover"
             />
           </div>
 
@@ -200,7 +227,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="text-[#1C1B35]  text-sm sm:text-sm md:text-sm lg:text-lg">
+            <div className="text-[#1C1B35]  text-m sm:text-m md:text-m lg:text-m">
               {cards.title}
             </div>
 
@@ -221,9 +248,7 @@ const Page = () => {
       ))}
     </div>
 
-
 </div>
-
 </div>
 
 
@@ -231,9 +256,9 @@ const Page = () => {
 
 {/* red  */}
 
- <div className="mt-[75px] ">
+ <div className="mt-[75px] lg:px-[100px]">
 
-<div className="px-4 sm:px-6 md:px-10 lg:px-[40px]">
+<div className="   ">
   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2">
       {[
@@ -339,7 +364,7 @@ const Page = () => {
 
 {/* last second  */}
 
-<div className=" mt-[96px]  px-4 sm:px-6 md:px-10 lg:px-[40px]">
+<div className=" mt-[96px]  px-4 sm:px-6 md:px-10 lg:px-[100px]">
 
 
 <div className=" flex flex-col gap-[22px] lg:flex-row lg:flex-nowrap w-full">
@@ -361,9 +386,8 @@ const Page = () => {
       </div>
     </div>
     <div
-      className="h-px ml-4 sm:ml-5 mr-4 sm:mr-5"
-      style={{ backgroundColor: "#E5223A" }}
-    />
+  className="h-px ml-2 sm:ml-3 md:ml-4 w-full"
+  style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
   </div>
 </div>
 

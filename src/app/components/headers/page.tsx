@@ -12,10 +12,10 @@ export default function Headers() {
 
  return (
   <>
-   <header className="sticky top-0 z-50 bg-white px-4  ">
+   <header className="sticky top-0 z-50 bg-white   ">
     {/* Top Row */}
 
-    <div className=" flex justify-between">
+    <div className=" mx-[100px]  flex justify-between">
      <div className=" inline-flex items-center gap-2">
       <Link href="/">
        <Image src="/images/logo.png" alt="logo" height={72} width={57} />
@@ -51,8 +51,8 @@ export default function Headers() {
    </header>
 
    {/* Navbar Links - Show only on lg+ */}
-   <header className=" sticky top-0 z-50 bg-white px-4  rounded-[20px] shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
-    <div className="h-auto lg:h-[87px] flex justify-between ">
+   {/* <header className="border border-amber-500 lg:px-[100px] sticky top-0 z-50 bg-white px-4  rounded-[20px] shadow-[0_1px_3px_rgba(0,0,0,0.1)]"> */}
+    <header className="mx-[100px] px-4  sticky z-50 bg-white h-auto lg:h-[87px] flex justify-between rounded-[20px] shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
      <nav className=" hidden lg:flex items-center gap-6 text-[#1C1B35] text-lg">
       <Link href="/" className={pathname === "/" ? "text-[#E5223A] font-semibold" : ""}>
        Home
@@ -79,7 +79,7 @@ export default function Headers() {
       </div>
       <Image src="/downredarrow.svg" alt="dropdown" height={7} width={14} />
      </div>
-    </div>
+    </header>
 
     {/* Mobile Nav Menu */}
     {menuOpen && (
@@ -113,7 +113,7 @@ export default function Headers() {
       </div>
 
     )}
-   </header>
+   {/* </header> */}
   </>
  );
 }

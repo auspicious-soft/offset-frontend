@@ -52,7 +52,7 @@ const Page = () => {
  return (
   <>
 <Headers/>
-<div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[40px] mt-[50px]">
+<div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[100px] mt-[50px]">
 
 
 
