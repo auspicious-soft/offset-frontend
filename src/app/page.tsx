@@ -51,12 +51,36 @@ const cards = [
   },
 ];
 
+const cardss = [
+  {
+    boardImg: "/images/one.png",
+    avatarImg: "/sarah.svg",
+    author: "Sarah Mitchell",
+    time: "4 hours ago",
+    title: "Major Bank Faces Data Breach Affecting Millions",
+    tag: "GENERAL WEB",
+  },
+  {
+    boardImg: "/images/mobile.png",
+    avatarImg: "/sarah.svg",
+    author: "Sarah Mitchell",
+    time: "4 hours ago",
+    title: "Major Bank Faces Data Breach Affecting Millions",
+    tag: "GENERAL WEB",
+  },
+];
+
+
+
 
 
 const Page = () => {
  return (
   <>
 <Headers/>
+
+
+<div className=" bg-[url('/images/dotsBackgroundImage.png')] bg-cover bg-center min-h-[200px] sm:min-h-[250px] md:min-h-[300px] p-4">
 
 
 <div className="flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-[40px] gap-6">
@@ -70,11 +94,11 @@ const Page = () => {
       alt="earth"
       width={955}
       height={425}
-      className="w-full h-[440px] sm:h-full lg:h-full lg:min-h-[440px] object-cover rounded-xl"
+      className="w-full h-[425px]  sm:h-full lg:h-full lg:min-h-[425px] object-cover rounded-[30px]"
       priority
     />
 
-    <div className="absolute top-0 left-0 w-full">
+    <div className="p-2 absolute top-0 left-0 w-full">
       <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
         <div className="text-white font-bold break-words max-w-[70%]
           text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl">
@@ -125,116 +149,83 @@ const Page = () => {
 
   {/* Right Section */}
 
-  <div className=" w-full lg:w-[35%]">
-    {/* right top  */}
+<div className=" w-full lg:w-[35%]">
 
-
-<div className=" flex flex-col sm:flex-row gap-4 lg:mt-[59px]">
-  <div className="w-full sm:w-1/2 h-11 p-2 bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
+{/* buttons  */}
+<div className=" flex flex-col sm:flex-row gap-4  mb-[15px] lg:mt-[59px]">
+  <div className=" w-full sm:w-1/2 h-11 py-[17px]  bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
     <div className="text-white text-xl font-medium">Tools Posts</div>
   </div>
 
-  <div className="mb-[19px] w-full sm:w-1/2 h-11 bg-stone-50 p-2 rounded-lg flex justify-center items-center gap-2">
-    <div className="text-neutral-500 text-xl font-medium">Education Posts</div>
+  <div className=" py-[17px]   mb-[19px] w-full sm:w-1/2 h-11 bg-stone-50  rounded-lg flex justify-center items-center gap-2">
+    <div className="text-[#727272] text-xl font-medium">Education Posts</div>
   </div>
 </div>
 
 
+{/* right top  */}
 
-  <div className="  w-full  lg:justify-between flex h-auto self-stretch   sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]">
+<div className="space-y-6 ">
+      {cardss.map((cards, index) => (
+        <div
+          key={index}
+          className="w-full lg:justify-between flex h-auto self-stretch lg:mt-[27px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]  "
+        >
+          <div className="">
+            <Image
+              src={cards.boardImg}
+              alt="board"
+              height={140}
+              width={140}
+              className="w-full max-w-[134px] h-[140px] rounded-xl object-cover"
+            />
+          </div>
 
-    <div className="  ">
-      <Image
-        src="/images/one.png"
-        alt="board"
-        height={140} width={140}
-        className="w-full max-w-[134px] h-[140px]  rounded-xl object-cover"
-      />
+          <div className=" w-full pr-0">
+            <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
+              <Image
+                src={cards.avatarImg}
+                alt="Author"
+                height={34}
+                width={34}
+                className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px]  w-8 h-8 "
+              />
+              <div className=" flex justify-center align-middle">
+                <div className="mt-2    text-[#1C1B35] text-xs ">
+                  By {cards.author}
+                  <span className="ml-[4px] text-[#959595] text-xs ">
+                    | {cards.time}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-[#1C1B35]  text-sm sm:text-sm md:text-sm lg:text-lg">
+              {cards.title}
+            </div>
+
+            <div className="flex justify-between items-center">
+              <div className="text-sm  text-[#FF475E]   font-bold">
+                {cards.tag}
+              </div>
+              <Image
+                src="/redarrow.svg"
+                alt="Red Arrow"
+                height={35}
+                width={35}
+                className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
+              />
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
 
-
-      <div className=" w-full pr-0 ">
-        <div className=" flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3  sm:mb-3">
-
-          <Image src="/sarah.svg" 
-          alt="Sarah Image"
-          height={34} width={34}
-          className="sm:h-[20px] sm:w-[20px]     md:h-[34px] md:w-[34px]  w-8 h-8  lg:w-12 lg:h-12" />
-          <div className="flex justify-center align-middle">
-          <div className="mt-2 lg:mt-[7] text-[#1C1B35]  text-xs sm:text-sm md:text-sm lg:text-base">By Sarah Mitchell
-          <span className="ml-[4px] text-[#959595] text-xs sm:text-sm md:text-sm lg:text-base">| 4 hours ago</span>
-          </div>
-          </div>
-        </div>
-
-        <div className=" text-[#1C1B35] text-sm sm:text-sm md:text-sm  lg:text-lg ">
-          Major Bank Faces Data Breach Affecting Millions
-        </div>
-
-        <div className="flex justify-between items-center">
-          <div className="sm:text-sm md:text-sm text-[#FF475E] text-xs  lg:text-base font-bold">
-            GENERAL WEB
-          </div>
-          <Image
-            src="/redarrow.svg"
-            alt="Red Arrow" height={35} width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]"
-          />
-        </div>
-      </div>
-
-
-  </div>
-
-{/* right bottom  */}
-  <div className="  w-full  lg:justify-between flex h-auto self-stretch mt-[19px]  sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]">
-    <div className="  ">
-      <Image
-        src="/images/mobile.png"
-        alt="board"
-        height={140} width={140}
-        className="w-full max-w-[134px] h-[140px]  rounded-xl object-cover"
-      />
-    </div>
-
-
-
-      <div className=" w-full pr-0 ">
-        <div className=" flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3  sm:mb-3">
-
-          <Image src="/sarah.svg" 
-          alt="Sarah Image"
-          height={34} width={34}
-          className="sm:h-[20px] sm:w-[20px]     md:h-[34px] md:w-[34px]  w-8 h-8  lg:w-12 lg:h-12" />
-          <div className="flex">
-          <div className="mt-2 lg:mt-[7] text-[#1C1B35]  text-xs sm:text-sm md:text-sm lg:text-base">By Sarah Mitchell
-          <span className="ml-[4px] text-[#959595] text-xs sm:text-sm md:text-sm lg:text-base">| 4 hours ago</span>
-          </div>
-          </div>
-        </div>
-
-        <div className=" text-[#1C1B35] text-sm sm:text-sm md:text-sm  lg:text-lg ">
-        Major Bank Faces Data Breach Affecting Millions
-        </div>
-
-        <div className="flex justify-between items-center">
-          <div className="sm:text-sm md:text-sm text-[#FF475E] text-xs  lg:text-base font-bold">
-            GENERAL WEB
-          </div>
-          <Image
-            src="/redarrow.svg"
-            alt="Red Arrow" height={35} width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]"
-          />
-        </div>
-      </div>
-
-
-  </div>
-
-  </div>
 
 </div>
+
+</div>
+
 
 
 
@@ -290,7 +281,10 @@ const Page = () => {
       ))}
     </div>
 
-    <div className="bg-red-50 rounded-[20px] p-6 flex flex-col justify-between gap-4">
+
+    <div
+  className="  p-6 flex flex-col justify-between rounded-[30px] gap-4 bg-[url('/images/pinkFrame.png')] bg-cover bg-center"
+>
       <div className=" mt-[35px]">
       <div className="flex gap-[17px]">
 
@@ -341,18 +335,19 @@ const Page = () => {
 </div>
 
 
-
+</div>
 
 {/* last second  */}
 
 <div className=" mt-[96px]  px-4 sm:px-6 md:px-10 lg:px-[40px]">
 
 
-<div className=" flex flex-wrap gap-[22px] lg:flex-nowrap  w-full">
+<div className=" flex flex-col gap-[22px] lg:flex-row lg:flex-nowrap w-full">
+
   {[1, 2, 3].map((_, idx) => (
     <div key={idx} className=" flex-1 min-w-[300px]  bg-stone-50 rounded-t-[30px]">
 
-    <div className="relative inline-block w-full h-[200px] sm:h-[300px] md:h-[356px]">
+    <div className="relative inline-block w-full h-[200px] sm:h-[300px] md:h-[350px]">
   <Image
     src="/images/board.png"
     alt="earth"
@@ -374,12 +369,12 @@ const Page = () => {
 
 
       {/* text */}
-      <div className="ml-[28px] mt-[37px] w-auto">
-        <div className="justify-start text-gray-800 text-3xl font-medium">
+      <div className="ml-[22px] mt-[37px] w-auto">
+        <div className="justify-start text-gray-800 text-2xl font-medium">
           Zero-Day Exploit Discovered in Popular Enterprise Software
         </div>
 
-        <div className="mt-[11px] text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm">
+        <div className=" text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm">
           GENERAL WEB{" "}
           <span className="text-[#959595] text-sm font-normal">| 4 hours ago</span>
         </div>
@@ -395,7 +390,7 @@ const Page = () => {
           key={index}
           className="w-full lg:justify-between flex h-auto self-stretch lg:mt-[59px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]"
         >
-          <div>
+          <div className="">
             <Image
               src={card.boardImg}
               alt="board"
@@ -405,31 +400,31 @@ const Page = () => {
             />
           </div>
 
-          <div className="w-full pr-0">
+          <div className=" w-full pr-0">
             <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
               <Image
                 src={card.avatarImg}
                 alt="Author"
                 height={34}
                 width={34}
-                className="sm:h-[20px] sm:w-[20px] md:h-[34px] md:w-[34px] w-8 h-8 lg:w-12 lg:h-12"
+                className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px]  w-8 h-8 "
               />
-              <div className="flex justify-center align-middle">
-                <div className="mt-2 lg:mt-[7] text-[#1C1B35] text-xs sm:text-sm md:text-sm lg:text-base">
+              <div className="  flex justify-center items-center">
+                <div className="text-[#1C1B35] text-xs">
                   By {card.author}
-                  <span className="ml-[4px] text-[#959595] text-xs sm:text-sm md:text-sm lg:text-base">
+                  <span className="ml-[4px] text-[#959595] text-xs ">
                     | {card.time}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="text-[#1C1B35] text-sm sm:text-sm md:text-sm lg:text-lg">
+            <div className="text-[#1C1B35]   text-lg   ">
               {card.title}
             </div>
 
             <div className="flex justify-between items-center">
-              <div className="sm:text-sm md:text-sm text-[#FF475E] text-xs lg:text-base font-bold">
+              <div className="text-sm  text-[#FF475E]  font-bold">
                 {card.tag}
               </div>
               <Image
@@ -458,7 +453,7 @@ const Page = () => {
 {/* red frame playstore */}
 
 
-<div className="relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
+<div className="bg-[url('/images/playstoreBGImage.png')] bg-cover bg-center relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
   <div className="w-full md:w-1/2 pt-[60px] md:pt-[110px] z-10">
 
 

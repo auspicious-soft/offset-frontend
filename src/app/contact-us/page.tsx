@@ -10,7 +10,7 @@ const Page = () => {
  return (
   <>
   <Headers/>
-<div className="border border-amber-500 px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[40px] mt-[50px]">  
+<div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[40px] mt-[50px]">  
 
 
 {/* top  */}
@@ -57,6 +57,7 @@ const Page = () => {
 
 {/* middle  */}
 <div className=" flex my-[126px]">
+  
   <div className=" w-[50%] ">
   <div className="mt-[43px] self-stretch justify-start"><span className="text-[#1C1B35] text-7xl font-medium ">We are</span><span className="text-[#E5223A] text-7xl font-medium "> always ready</span><span className="text-gray-800 text-7xl font-medium "> to help you and answer your questions</span></div>
   <div className="mt-[21px] justify-start text-gray-800 text-2xl font-normal ">If you have any inquiries or need assistance, feel free to reach out to us. Our team is available 24/7 to support you.</div>
@@ -65,7 +66,17 @@ const Page = () => {
   <div className="w-[50%]">
   <div className=" p-[42px]  relative bg-stone-50 rounded-[30px] overflow-hidden">
 
-  <div className="justify-start text-[#1C1B35] text-5xl font-bold font-['Arial'] leading-[65px]">Get in Touch</div>
+  <div className=" flex gap-[16px]">
+  
+  <div className="w-[10px] h-10 bg-rose-600 rounded-full" />
+
+  <div>
+  <div className="justify-start text-[#1C1B35] text-5xl font-bold ">Get in Touch</div>
+  <div className="mt-[9px] justify-start text-[#727272] text-xl font-normal ">It is a long established fact that a reader will be distracted by thereadable content of a page when looking at its layout.</div>
+  </div>
+
+
+  </div>
   </div>
   </div>
   
@@ -77,10 +88,6 @@ const Page = () => {
 
 
   </div>
-
-
-
-
 
 
 <Footers/>

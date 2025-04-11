@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footers() {
  return (
   <>
-   <footer className="sticky top-0 bg-[#1C1B35] w-full px-4 sm:px-8">
+   <footer className="bg-[url('/images/footerBGImage.png')] bg-cover bg-center sticky top-0 bg-[#1C1B35] w-full px-4 sm:px-8">
     <div className="flex justify-center items-center">
      <Image src={"/images/logo.png"} alt="playstore" height={129} width={149} className="mt-[40px] sm:mt-[59px]" />
     </div>
