@@ -4,95 +4,93 @@ import Image from "next/image";
 import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
 import Link from "next/link";
+import Script from "next/script";
 
 const newsItems = [
-    {
-      author: "Sarah Mitchell",
-      time: "4 hours ago",
-      tag: "Ransomware",
-      tagColor: "#FFDCE0",
-      tagTextColor: "#E5223A",
-      title:
-        "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
-      category: "GENERAL WEB",
-    },
-    {
-      author: "Sarah Mitchell",
-      time: "4 hours ago",
-      tag: "Ransomware",
-      tagColor: "#FFDCE0",
-      tagTextColor: "#E5223A",
-      title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
-      category: "GENERAL WEB",
-    },
-    {
-      author: "Sarah Mitchell",
-      time: "4 hours ago",
-      tag: "Ransomware",
-      tagColor: "#FFDCE0",
-      tagTextColor: "#E5223A",
-      title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
-      category: "GENERAL WEB",
-    },
-    {
-      author: "Sarah Mitchell",
-      time: "4 hours ago",
-      tag: "Ransomware",
-      tagColor: "#FFDCE0",
-      tagTextColor: "#E5223A",
-      title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
-      category: "GENERAL WEB",
-    },
-    {
-      author: "Sarah Mitchell",
-      time: "4 hours ago",
-      tag: "Ransomware",
-      tagColor: "#FFDCE0",
-      tagTextColor: "#E5223A",
-      title: "Breaking Cybersecurity News: Latest Threats, Breaches, and Innovations in the Digital World",
-      category: "GENERAL WEB",
-    },
-  ];
-  
-  
+  {
+    author: "Sarah Mitchell",
+    time: "4 hours ago",
+    tag: "Dark Web",
+    tagColor: "#FFDCE0",
+    tagTextColor: "#E5223A",
+    title: "Major Darknet Marketplace Taken Down in International Operation",
+    category: "DARK WEB",
+  },
+  {
+    author: "John Carter",
+    time: "6 hours ago",
+    tag: "Dark Web",
+    tagColor: "#FFDCE0",
+    tagTextColor: "#E5223A",
+    title: "New Ransomware Group Emerges on Dark Web Forums",
+    category: "DARK WEB",
+  },
+  {
+    author: "Emma Stone",
+    time: "8 hours ago",
+    tag: "Dark Web",
+    tagColor: "#FFDCE0",
+    tagTextColor: "#E5223A",
+    title: "Leaked Healthcare Data Surfaces on Dark Web Markets",
+    category: "DARK WEB",
+  },
+  {
+    author: "Michael Brown",
+    time: "12 hours ago",
+    tag: "Dark Web",
+    tagColor: "#FFDCE0",
+    tagTextColor: "#E5223A",
+    title: "Dark Web Monitoring Reveals New Cyber Attack Patterns",
+    category: "DARK WEB",
+  },
+  {
+    author: "Lisa Anderson",
+    time: "1 day ago",
+    tag: "Dark Web",
+    tagColor: "#FFDCE0",
+    tagTextColor: "#E5223A",
+    title: "Cryptocurrency Theft Ring Uncovered Through Dark Web Analysis",
+    category: "DARK WEB",
+  },
+];
 
 const cardData = [
- {
-  image: "/images/board.png",
-  authorImage: "/sarah.svg",
-  authorName: "Sarah Mitchell",
-  time: "4 hours ago",
-  title: "Major Bank Faces Data Breach Affecting Millions",
-  category: "GENERAL WEB",
-  arrow: "/redarrow.svg",
- },
- {
-  image: "/images/mobile.png",
-  authorImage: "/sarah.svg",
-  authorName: "Sarah Mitchell",
-  time: "4 hours ago",
-  title: "Major Bank Faces Data Breach Affecting Millions",
-  category: "GENERAL WEB",
-  arrow: "/redarrow.svg",
- },
- {
-  image: "/images/mobile.png",
-  authorImage: "/sarah.svg",
-  authorName: "John Carter",
-  time: "4 hours ago",
-  title: "Major Bank Faces Data Breach Affecting Millions",
-  category: "GENERAL WEB",
-  arrow: "/redarrow.svg",
- },
- {
-  image: "/images/mobile.png",
-  authorImage: "/sarah.svg",
-  authorName: "Emma Stone",
-  time: "4 hours ago",
-  title: "Major Bank Faces Data Breach Affecting Millions",
-  category: "GENERAL WEB",
-  arrow: "/redarrow.svg",
- },
+  {
+    image: "/images/board.png",
+    authorImage: "/sarah.svg",
+    authorName: "Sarah Mitchell",
+    time: "4 hours ago",
+    title: "Dark Web Marketplace Analysis: New Trends in Cybercrime",
+    category: "DARK WEB",
+    arrow: "/redarrow.svg",
+  },
+  {
+    image: "/images/mobile.png",
+    authorImage: "/sarah.svg",
+    authorName: "John Carter",
+    time: "6 hours ago",
+    title: "Ransomware Groups Shift Tactics on Dark Web Forums",
+    category: "DARK WEB",
+    arrow: "/redarrow.svg",
+  },
+  {
+    image: "/images/mobile.png",
+    authorImage: "/sarah.svg",
+    authorName: "Emma Stone",
+    time: "8 hours ago",
+    title: "Stolen Credentials Database Discovered on Dark Web",
+    category: "DARK WEB",
+    arrow: "/redarrow.svg",
+  },
+  {
+    image: "/images/mobile.png",
+    authorImage: "/sarah.svg",
+    authorName: "Michael Brown",
+    time: "12 hours ago",
+    title: "Dark Web Intelligence: Latest Cybercriminal Activities",
+    category: "DARK WEB",
+    arrow: "/redarrow.svg",
+  },
 ];
 
 const Page = () => {
@@ -268,6 +266,30 @@ const Page = () => {
    </div>
 
    <Footers />
+
+   {/* Structured data for darkweb incidents page */}
+   <Script
+    id="darkweb-listing-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+     __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Darkweb Incidents & Threat Intelligence | Offset7",
+      "description": "Monitor darkweb incidents, data breaches, and emerging threats. Get insights into ransomware attacks, leaked credentials, and cybercriminal activities.",
+      "url": "https://offset7.com/darkweb",
+      "isPartOf": {
+       "@type": "WebSite",
+       "name": "Offset7",
+       "url": "https://offset7.com"
+      },
+      "about": {
+       "@type": "Thing",
+       "name": "Darkweb Threat Intelligence"
+      }
+     })
+    }}
+   />
   </>
  );
 };

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
 import Link from "next/link";
+import Script from "next/script";
 
 const newsItems = [
     {
@@ -53,8 +54,8 @@ const newsItems = [
       category: "GENERAL WEB",
     },
   ];
-  
-  
+
+
 
 const cardData = [
  {
@@ -265,6 +266,30 @@ const Page = () => {
    </div>
 
    <Footers />
+
+   {/* Structured data for news listing page */}
+   <Script
+    id="news-listing-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+     __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Cybersecurity News & Updates | Offset7",
+      "description": "Stay informed with the latest cybersecurity news, threat intelligence, data breaches, and security innovations from around the world.",
+      "url": "https://offset7.com/newss",
+      "isPartOf": {
+       "@type": "WebSite",
+       "name": "Offset7",
+       "url": "https://offset7.com"
+      },
+      "about": {
+       "@type": "Thing",
+       "name": "Cybersecurity"
+      }
+     })
+    }}
+   />
   </>
  );
 };

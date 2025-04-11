@@ -4,9 +4,6 @@ import Image from "next/image";
 import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
 
-
-
-
 const cardData = [
   {
     image: "/images/board.png",
@@ -45,8 +42,6 @@ const cardData = [
     arrow: "/redarrow.svg",
   },
 ];
-
-
 
 const Page = () => {
  return (
