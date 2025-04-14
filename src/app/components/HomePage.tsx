@@ -114,7 +114,12 @@ const HomePage = () => {
 
         </div>
 
-        <div className="h-px ml-2 sm:ml-3 md:ml-4 w-full" style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
+        <div
+  className="h-0.5 ml-2 sm:ml-3 md:ml-4 w-full"
+  style={{
+    background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)",
+  }}
+/>
        </div>
 
        <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 md:p-4 lg:p-5">
@@ -232,7 +237,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   xl:w-6 xl:h-6  bg-[#E5223A]   rounded-full"
+            className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
           />
            
           </div>
@@ -287,7 +292,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 bg-[#E5223A]   rounded-full "
+            className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
           />
         </div>
       </div>
@@ -336,7 +341,7 @@ const HomePage = () => {
         ].map((item, idx) => (
          <div key={idx} className="flex items-center gap-4 bg-red-50 rounded-[20px] p-[19px]">
           <div className="flex-shrink-0 w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] bg-red-100 flex items-center justify-center rounded-full">
-           <Image src={item.icon} alt="icon" width={40} height={40} className="opacity-100" />
+           <Image src={item.icon} alt="icon" width={104} height={104} className="opacity-100" />
           </div>
           <div>
            <div className="text-gray-800 text-4xl sm:text-2xl font-bold">{item.number}</div>
@@ -357,11 +362,11 @@ const HomePage = () => {
          <p className="text-sm text-gray-600 ml-[17px]">Enter your email address below to check if it has been compromised in malware leaks or cyber incidents.</p>
         </div>
 
-        <div className="  relative w-full max-w-md px-4 py-[9px] sm:px-0">
+        <div className=" rounded-xl  relative w-full max-w-md px-4 py-[9px] sm:px-0">
          <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
-         <input type="email" placeholder="Enter your Email" className="  text-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
+         <input type="email" placeholder="Enter your Email" className=" rounded-xl text-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none  " />
 
-         <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white rounded-md text-xs sm:text-sm cursor-pointer">
+         <button type="submit" className="rounded-xl absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white  text-xs sm:text-sm cursor-pointer">
           Check Now
          </button>
         </div>
@@ -387,9 +392,14 @@ const HomePage = () => {
  object-cover" />
         <div className="absolute top-0 left-0 w-full">
          <div className="flex w-full justify-between items-start p-3 sm:p-4 ">
-          <div className="text-xl font-bold text-white sm:text-lg md:text-lg lg:text-lg xl:text-lg break-words max-w-[70%]">POST DOUBLE COLUMNS 1</div>
+          <div className="0 mt-[30px] text-xl font-bold text-white sm:text-lg md:text-lg lg:text-lg xl:text-lg break-words max-w-[70%]">POST DOUBLE COLUMNS 1</div>
          </div>
-         <div className="h-px ml-2 sm:ml-3 md:ml-4 w-full" style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
+         <div
+  className="h-0.5 ml-2 sm:ml-3 md:ml-4 w-full"
+  style={{
+    background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)",
+  }}
+/>
         </div>
        </div>
 
@@ -406,7 +416,7 @@ const HomePage = () => {
 
         <div className="h-0 mt-[23px] mb-[23px] border-t border-black/5"></div>
 
-        <div className="space-y-6">
+        <div className="space-y-[12px]">
          {cards.map((card, index) => (
           <div key={index} className="w-full lg:justify-between flex h-auto self-stretch   bg-stone-50 rounded-[20.65px] gap-[19px]">
            <div className="">
@@ -430,8 +440,8 @@ const HomePage = () => {
              <div className="text-sm  text-[#FF475E]  font-bold">{card.tag}</div>
              <Image src="/Arrow.svg" 
              alt="Red Arrow" 
-             height={29} width={29} 
-             className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full " />
+             height={35} width={35} 
+             className="xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full " />
             </div>
            </div>
           </div>
@@ -465,8 +475,15 @@ const HomePage = () => {
       </div>
 
       <div className="flex flex-wrap gap-4 md:gap-[23px] mt-8 md:mt-[67px] mb-[40px] md:mb-[50px]">
-       <Image src="/images/googleplay.png" alt="Google Play" width={160} height={50} className="object-cover w-[140px] md:w-[160px] h-auto" />
-       <Image src="/images/applestore.png" alt="App Store" width={160} height={50} className="object-cover w-[140px] md:w-[160px] h-auto" />
+       <Image src="/images/googleplay.png" 
+       alt="Google Play" 
+       width={293} height={87} 
+       className="h-auto  w-[180px]  2xl:w-[293px]  object-cover   " />
+
+       <Image src="/images/applestore.png" 
+       alt="App Store" 
+       width={293} height={87} 
+      className="h-auto  w-[180px]  2xl:w-[293px]  object-cover   " />
       </div>
      </div>
 

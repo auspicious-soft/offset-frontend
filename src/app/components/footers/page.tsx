@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footers() {
  return (
   <>
-   <footer className="bg-[url('/images/footerBGImage.png')] bg-cover bg-center sticky top-0 bg-[#1C1B35] w-full px-4 sm:px-8">
+   <footer className="bg-[url('/images/footerBGImage.png')] bg-cover bg-center sticky top-0 bg-[#1C1B35] w-full  ">
      <div className="container ">
 
 
@@ -59,9 +59,12 @@ export default function Footers() {
      </a>
     </div>
 
+    </div>
     <div className="mt-8 sm:mt-[49px] mb-8 sm:mb-[49px] w-full h-px bg-white/20"></div>
+    
+    <div className="container ">
 
-    <div className="pb-10 sm:pb-[65px] text-[#FFFFFF] text-sm sm:text-base flex justify-center items-center text-center">
+    <div className=" pb-10 sm:pb-[65px] text-[#FFFFFF] text-sm sm:text-base flex justify-center items-center text-center">
      <span itemScope itemType="http://schema.org/Organization">
       © {new Date().getFullYear()} <span itemProp="name">Offset7</span>. All Rights Reserved.
      </span>
