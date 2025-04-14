@@ -359,7 +359,7 @@ const HomePage = () => {
 
         <div className="  relative w-full max-w-md px-4 py-[9px] sm:px-0">
          <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
-         <input type="email" placeholder="Enter your Email" className="  font-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
+         <input type="email" placeholder="Enter your Email" className="  text-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
 
          <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white rounded-md text-xs sm:text-sm cursor-pointer">
           Check Now
