@@ -131,7 +131,7 @@ const HomePage = () => {
          Dark Web Market Shutdown: Authorities Seize Illegal Data Trading Hub
         </div>
 
-        <div className="text-white text-[10px] sm:text-xs md:text-sm">
+        <div className="text-[#FF475E] text-[10px]  font-bold sm:text-xs md:text-sm">
          DARK WEB <span className="text-[#959595]">| 10 minutes read</span>
         </div>
        </div>
@@ -228,11 +228,11 @@ const HomePage = () => {
           <div className="flex justify-between items-center">
             <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
             <Image
-            src="/redroundarrow.svg"
+            src="/Arrow.svg"
             alt="Red Arrow"
             height={35}
             width={35}
-            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   xl:w-6 xl:h-6  bg-[#E5223A]   rounded-full p-[4px]"
+            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   xl:w-6 xl:h-6  bg-[#E5223A]   rounded-full"
           />
            
           </div>
@@ -283,11 +283,11 @@ const HomePage = () => {
         <div className="flex justify-between items-center">
           <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
           <Image
-            src="/redroundarrow.svg"
+            src="/Arrow.svg"
             alt="Red Arrow"
             height={35}
             width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 bg-[#E5223A]   rounded-full p-[4px]"
+            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 bg-[#E5223A]   rounded-full "
           />
         </div>
       </div>
@@ -397,9 +397,12 @@ const HomePage = () => {
        <div className=" px-[22px] pt-[37px] pb-[29px] w-auto">
         <div className="justify-start text-gray-800 text-2xl font-medium">Zero-Day Exploit Discovered in Popular Enterprise Software</div>
 
-        <div className=" text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm">
-         GENERAL WEB <span className="text-[#959595] text-sm font-normal">| 4 hours ago</span>
-        </div>
+
+        <div className="mt-[11px] flex text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm gap-[5px]">
+  <div>GENERAL WEB</div>
+  <span className="text-[#959595] text-sm font-normal">| 4 hours ago</span>
+</div>
+
 
         <div className="h-0 mt-[23px] mb-[23px] border-t border-black/5"></div>
 
@@ -428,7 +431,7 @@ const HomePage = () => {
              <Image src="/Arrow.svg" 
              alt="Red Arrow" 
              height={29} width={29} 
-             className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]" />
+             className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full " />
             </div>
            </div>
           </div>
@@ -455,7 +458,7 @@ const HomePage = () => {
       <div className="flex flex-wrap gap-x-6 mt-6 md:mt-[32px]">
        {["Live Threat Monitoring", "Cybersecurity Insights", "Advanced Data Protection"].map((item, idx) => (
         <div key={idx} className="flex items-center gap-3 mb-2 w-full sm:w-auto">
-         <Image src="/check.svg" alt="check" width={21} height={21} className="w-5 h-5 bg-[#E5223A] rounded-full p-[2px]" />
+         <Image src="/check.svg" alt="check" width={21} height={21} className="w-5 h-5 rounded-full p-[2px]" />
          <div className="text-white text-base md:text-lg font-medium leading-loose">{item}</div>
         </div>
        ))}
