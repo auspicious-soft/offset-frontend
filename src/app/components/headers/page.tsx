@@ -102,7 +102,7 @@ export default function Headers() {
      {/* Socials & Icons (hidden on mobile) */}
      <div className="hidden lg:flex items-center gap-3">
       <Image src="/images/country.png" alt="Language Selection" height={32} width={32} className="h-auto w-auto" />
-      <span>EN</span>
+      <span className="text-[#1C1B35]">EN</span>
       <Image src="/notification.svg" alt="Notifications" height={24} width={24} className="h-auto w-auto" />
 
   

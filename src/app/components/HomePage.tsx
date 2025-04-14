@@ -67,8 +67,11 @@ const educationCards = [
 
 
 
+
+
 const HomePage = () => {
   const [active, setActive] = useState("tools");
+
 
 
 
@@ -104,6 +107,11 @@ const HomePage = () => {
            <Image src="/rightarrow.svg" alt="left arrow" height={43} width={43} className="w-3 h-3 sm:w-4 sm:h-4 bg-white" />
           </div>
          </div>
+
+         
+
+
+
         </div>
 
         <div className="h-px ml-2 sm:ml-3 md:ml-4 w-full" style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
@@ -127,6 +135,12 @@ const HomePage = () => {
          DARK WEB <span className="text-[#959595]">| 10 minutes read</span>
         </div>
        </div>
+
+
+
+
+
+
       </div>
      </div>
 
