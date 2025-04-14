@@ -136,10 +136,10 @@ const HomePage = () => {
 
       {/* buttons  */}
 
-<div className="h-14 bg-stone-50  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[50px] lg:mt-[59px]">
+<div className=" h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[50px] lg:mt-[59px]">
       <div
         onClick={() => setActive("tools")}
-        className={`w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+        className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
           active === "tools" ? "bg-[#E5223A]" : "bg-stone-50"
         }`}
       >
@@ -154,7 +154,7 @@ const HomePage = () => {
 
       <div
         onClick={() => setActive("education")}
-        className={`w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+        className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
           active === "education" ? "bg-[#E5223A]" : "bg-stone-50"
         }`}
       >
@@ -218,7 +218,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
+            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   bg-[#E5223A]   rounded-full p-[4px]"
           />
            
           </div>
@@ -345,7 +345,7 @@ const HomePage = () => {
 
         <div className="  relative w-full max-w-md px-4 py-[9px] sm:px-0">
          <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
-         <input type="email" placeholder="Enter your Email" className="w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
+         <input type="email" placeholder="Enter your Email" className="  font-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
 
          <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white rounded-md text-xs sm:text-sm cursor-pointer">
           Check Now
