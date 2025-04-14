@@ -82,10 +82,10 @@ const HomePage = () => {
 <main>
     <section className="news-section">    
     <div className="container">
-      <div className="  flex flex-col lg:flex-row  gap-[44px]">
+      <div className=" lg:mt-[59px] flex flex-col lg:flex-row  gap-[44px]">
      {/* Left Section */}
 
-     <div className=" w-full lg:w-[65%] mx-auto mt-[59px] ">
+     <div className=" w-full lg:w-[65%] mx-auto  ">
       <div className="relative w-full">
 
        <Image src="/images/mainnews.png" alt="earth" width={955} height={425} className="w-full h-[425px]  sm:h-full   object-cover rounded-[30px]" priority />
@@ -150,7 +150,7 @@ const HomePage = () => {
 
       {/* buttons  */}
 
-<div className=" h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[50px] lg:mt-[59px]">
+<div className=" h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  ">
       <div
         onClick={() => setActive("tools")}
         className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
