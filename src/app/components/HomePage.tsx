@@ -74,7 +74,7 @@ const HomePage = () => {
 
   return (
   <>
-  <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat ">
+  <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
    <Headers />
 <main>
     <section className="news-section">    
@@ -82,7 +82,7 @@ const HomePage = () => {
       <div className="  flex flex-col lg:flex-row  gap-[44px]">
      {/* Left Section */}
 
-     <div className=" w-full lg:w-[65%] mx-auto mt-[59px] px-2">
+     <div className=" w-full lg:w-[65%] mx-auto mt-[59px] ">
       <div className="relative w-full">
 
        <Image src="/images/mainnews.png" alt="earth" width={955} height={425} className="w-full h-[425px]  sm:h-full   object-cover rounded-[30px]" priority />
@@ -136,7 +136,7 @@ const HomePage = () => {
 
       {/* buttons  */}
 
-<div className="h-14 bg-stone-50  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[20px] lg:mt-[59px]">
+<div className="h-14 bg-stone-50  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[50px] lg:mt-[59px]">
       <div
         onClick={() => setActive("tools")}
         className={`w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
@@ -214,12 +214,13 @@ const HomePage = () => {
           <div className="flex justify-between items-center">
             <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
             <Image
-            src="/redArrow.svg"
+            src="/redroundarrow.svg"
             alt="Red Arrow"
             height={35}
             width={35}
             className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
           />
+           
           </div>
         </div>
       </div>
@@ -268,7 +269,7 @@ const HomePage = () => {
         <div className="flex justify-between items-center">
           <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
           <Image
-            src="/redArrow.svg"
+            src="/redroundarrow.svg"
             alt="Red Arrow"
             height={35}
             width={35}
@@ -283,14 +284,6 @@ const HomePage = () => {
 
 
 
-
-
-
-
-
-
-
-      
      </div>
 
 
@@ -327,13 +320,13 @@ const HomePage = () => {
           label: "Ransomware Victims (Total)",
          },
         ].map((item, idx) => (
-         <div key={idx} className="flex items-center gap-4 bg-red-50 rounded-[20px] p-5">
+         <div key={idx} className="flex items-center gap-4 bg-red-50 rounded-[20px] p-[19px]">
           <div className="flex-shrink-0 w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] bg-red-100 flex items-center justify-center rounded-full">
            <Image src={item.icon} alt="icon" width={40} height={40} className="opacity-100" />
           </div>
           <div>
-           <div className="text-gray-800 text-xl sm:text-2xl font-bold">{item.number}</div>
-           <div className="text-gray-800 text-sm sm:text-base font-normal leading-snug">{item.label}</div>
+           <div className="text-gray-800 text-4xl sm:text-2xl font-bold">{item.number}</div>
+           <div className="text-gray-800  text-l sm: lg:text-xl  font-normal ">{item.label}</div>
           </div>
          </div>
         ))}
@@ -342,7 +335,7 @@ const HomePage = () => {
        <div className="  p-6 flex flex-col justify-between rounded-[30px] gap-4 bg-[url('/images/pinkFrame.png')] bg-cover bg-center">
         <div className=" mt-[35px]">
          <div className="flex gap-[17px]">
-          {/* <div className="border border-red-600 w-0 h-[34px] origin-top-left rotate- outline-[5.38px]  outline-rose-600 rounded-t-lg rounded-b-lg" /> */}
+        
           <div className="w-[4px] h-[34px] bg-red-600 rounded-t-lg rounded-b-lg" />
 
           <div className=" text-lg sm:text-xl font-semibold text-gray-900 mb-1">Check Your Email for Leaks</div>
@@ -352,7 +345,7 @@ const HomePage = () => {
 
         <div className="  relative w-full max-w-md px-4 py-[9px] sm:px-0">
          <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
-         <input type="email" placeholder="Enter your Email" className="w-full pl-10 pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md text-sm" />
+         <input type="email" placeholder="Enter your Email" className="w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none rounded-md " />
 
          <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white rounded-md text-xs sm:text-sm cursor-pointer">
           Check Now
@@ -371,11 +364,15 @@ const HomePage = () => {
    <div className=" mt-[96px]   ">
     <div className=" flex flex-col gap-[22px] lg:flex-row lg:flex-nowrap w-full">
      {[1, 2, 3].map((_, idx) => (
-      <div key={idx} className=" flex-1 min-w-[300px]  bg-stone-50 rounded-t-[30px]">
-       <div className="relative inline-block w-full h-[200px] sm:h-[300px] md:h-[350px]">
-        <Image src="/images/board.png" alt="earth" fill className=" rounded-t-2xl object-cover" />
+      <div key={idx} className=" flex-1 min-w-[300px]  bg-stone-50 rounded-[20px]">
+       <div className="relative inline-block w-full ">
+        <Image src="/images/board.png" 
+        alt="board"  
+        height={356} width={634}
+        className="   rounded-t-2xl 
+ object-cover" />
         <div className="absolute top-0 left-0 w-full">
-         <div className="flex w-full justify-between items-start p-3 sm:p-4 lg:p-5">
+         <div className="flex w-full justify-between items-start p-3 sm:p-4 ">
           <div className="text-xl font-bold text-white sm:text-lg md:text-lg lg:text-lg xl:text-lg break-words max-w-[70%]">POST DOUBLE COLUMNS 1</div>
          </div>
          <div className="h-px ml-2 sm:ml-3 md:ml-4 w-full" style={{ background: "linear-gradient(to right, #E5223A 33%, rgba(255, 255, 255, 0.1) 33%)" }} />
@@ -394,7 +391,7 @@ const HomePage = () => {
 
         <div className="space-y-6">
          {cards.map((card, index) => (
-          <div key={index} className="w-full lg:justify-between flex h-auto self-stretch lg:mt-[59px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]">
+          <div key={index} className="w-full lg:justify-between flex h-auto self-stretch   bg-stone-50 rounded-[20.65px] gap-[19px]">
            <div className="">
             <Image src={card.boardImg} alt="board" height={140} width={134} className="rounded-xl object-cover" />
            </div>

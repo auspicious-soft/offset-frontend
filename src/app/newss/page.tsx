@@ -54,6 +54,13 @@ const newsItems = [
       category: "GENERAL WEB",
     },
   ];
+  // import React from "react";
+  // import { useState } from "react";
+  // import Image from "next/image";
+  // import Footers from "@/app/components/footers/page";
+  // import Headers from "@/app/components/headers/page";
+  // import Script from "next/script";
+  // import Link from "next/link";
 
 
 
@@ -96,11 +103,75 @@ const cardData = [
  },
 ];
 
+
+const cards = [
+  {
+   boardImg: "/images/one.png",
+   avatarImg: "/sarah.svg",
+   author: "Sarah Mitchell",
+   time: "4 hours ago",
+   title: "New Phishing Scam Targets Cryptocurrency Wallets",
+   tag: "GENERAL WEB",
+  },
+  {
+   boardImg: "/images/laptop.png",
+   avatarImg: "/sarah.svg",
+   author: "Sarah Mitchell",
+   time: "4 hours ago",
+   title: "Zero-Day Exploit Discovered in Popular Enterprise Software",
+   tag: "GENERAL WEB",
+  },
+ ];
+ 
+ const cardss = [
+  {
+   boardImg: "/images/one.png",
+   avatarImg: "/sarah.svg",
+   author: "Sarah Mitchell",
+   time: "4 hours ago",
+   title: "Major Bank Faces Data Breach Affecting Millions",
+   tag: "GENERAL WEB",
+  },
+  {
+   boardImg: "/images/mobile.png",
+   avatarImg: "/sarah.svg",
+   author: "Sarah Mitchell",
+   time: "4 hours ago",
+   title: "Major Bank Faces Data Breach Affecting Millions",
+   tag: "GENERAL WEB",
+  },
+ ];
+
+
+const educationCards = [
+  {
+    boardImg: "/images/mobile.png",
+    avatarImg: "/sarah.svg",
+    author: "Dr. Learnwell",
+    time: "1d ago",
+    title: "Mastering Cybersecurity: Beginner to Advanced",
+    tag: "CYBERSECURITY",
+  },
+  {
+    boardImg: "/images/one.png",
+    avatarImg: "/sarah.svg",
+    author: "Prof. Byte",
+    time: "3d ago",
+    title: "AI & Machine Learning Basics for Students",
+    tag: "AI EDUCATION",
+  },
+];
+
 const Page = () => {
+    // const [active, setActive] = useState("tools");
+  
+
  return (
   <>
    <Headers />
-   <div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[100px] mt-[50px]">
+
+   <div className="container">
+
     <div className="flex flex-row items-center gap-2 flex-wrap">
      <div className="text-neutral-500 text-sm sm:text-xl font-medium">Home</div>
      <div className="w-px h-4 sm:h-6 bg-[#E5223A]"></div>
@@ -188,7 +259,7 @@ const Page = () => {
 
 {/* Right Section */}
 
-<div className="w-full lg:w-[35%]">
+{/* <div className="w-full lg:w-[35%]">
 
 <div className=" flex flex-col sm:flex-row gap-4 ">
   <div className="w-full sm:w-1/2 h-11 p-2 bg-[#E5223A] rounded-lg flex justify-center items-center gap-2 cursor-pointer">
@@ -260,7 +331,25 @@ const Page = () => {
       ))}
     </div>
 
-  </div>
+  </div> */}
+
+
+
+       {/* Right Section */}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
    </div>
