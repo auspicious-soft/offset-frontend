@@ -6,7 +6,10 @@ import Image from "next/image";
 export default function Footers() {
  return (
   <>
+     <div className="container ">
+
    <footer className="bg-[url('/images/footerBGImage.png')] bg-cover bg-center sticky top-0 bg-[#1C1B35] w-full px-4 sm:px-8">
+
     <div className="flex justify-center items-center">
      <Image
       src={"/images/logo.png"}
@@ -36,32 +39,23 @@ export default function Footers() {
     </nav>
 
     <div className="flex gap-3 sm:gap-[7px] mt-6 sm:mt-[18px] justify-center items-center">
-     <a href="https://www.youtube.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 YouTube Channel" className="bg-[#CF201F] w-6 h-6 flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
-      <Image
-       src="/images/youtube.png"
-       alt="YouTube Channel"
-       width={24}
-       height={24}
-       className="w-4 h-4 sm:w-5 sm:h-5"
-      />
+     <a href="https://www.youtube.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 YouTube Channel" className="bg-[#CF201F]  flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
+
+     <div className="bg-[#CF201F]  flex items-center justify-center rounded cursor-pointer ">
+         <Image src="/yt.svg" alt="YouTube " width={36} height={36} className=""/>
+      </div>
+
      </a>
-     <a href="https://twitter.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 Twitter/X Profile" className="bg-[#18B8EA] w-6 h-6 flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
-        <Image
-         src="/images/v.png"
-         alt="Twitter/X Profile"
-         width={12}
-         height={12}
-         className="h-auto w-auto"
-        />
+     <a href="https://twitter.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 Twitter/X Profile" className="bg-[#18B8EA]  flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
+       <div className="bg-[#18B8EA]  flex items-center justify-center rounded cursor-pointer ">
+                 <Image src="/v.svg" alt="Twitter/X Profile" width={36} height={36} />
+                </div>
+       
      </a>
-     <a href="https://www.facebook.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 Facebook Page" className="bg-[#3E599C] w-6 h-6 flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
-        <Image
-         src="/images/facebook.png"
-         alt="Facebook Page"
-         width={36}
-         height={36}
-         className="h-auto w-auto"
-        />
+     <a href="https://www.facebook.com/offset7" target="_blank" rel="noopener noreferrer" aria-label="Offset7 Facebook Page" className="bg-[#3E599C]  flex items-center justify-center rounded cursor-pointer hover:opacity-90 transition-opacity">
+ <div className="bg-[#3E599C]  flex items-center justify-center rounded cursor-pointer">
+          <Image src="/fb.svg" alt="Facebook Page" width={36} height={36} />
+         </div>
      </a>
     </div>
 
@@ -73,6 +67,7 @@ export default function Footers() {
      </span>
     </div>
    </footer>
+    </div>
   </>
  );
 }

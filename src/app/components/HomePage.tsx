@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
@@ -44,14 +45,41 @@ const cards = [
   },
  ];
 
+
+const educationCards = [
+  {
+    boardImg: "/images/mobile.png",
+    avatarImg: "/sarah.svg",
+    author: "Dr. Learnwell",
+    time: "1d ago",
+    title: "Mastering Cybersecurity: Beginner to Advanced",
+    tag: "CYBERSECURITY",
+  },
+  {
+    boardImg: "/images/one.png",
+    avatarImg: "/sarah.svg",
+    author: "Prof. Byte",
+    time: "3d ago",
+    title: "AI & Machine Learning Basics for Students",
+    tag: "AI EDUCATION",
+  },
+];
+
+
+
 const HomePage = () => {
+  const [active, setActive] = useState("tools");
+
+
+
   return (
   <>
-  <div className=" bg-[url('/images/dotsBackgroundImage.png')]  ">
+  <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat ">
    <Headers />
-
-   <div className=" min-h-[200px] sm:min-h-[250px] md:min-h-[300px] ">
-    <div className="  flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-[100px] gap-[44px]">
+<main>
+    <section className="news-section">    
+    <div className="container">
+      <div className="  flex flex-col lg:flex-row  gap-[44px]">
      {/* Left Section */}
 
      <div className=" w-full lg:w-[65%] mx-auto mt-[59px] px-2">
@@ -104,61 +132,176 @@ const HomePage = () => {
 
      {/* Right Section */}
 
-     <div className=" w-full lg:w-[35%]">
-      {/* buttons  */}
-      <div className=" flex flex-col sm:flex-row gap-4   lg:mt-[59px]">
-       <div className=" w-full sm:w-1/2 h-[11px] py-[17px]  bg-[#E5223A] rounded-lg flex justify-center items-center gap-2">
-        <div className="text-white text-l font-medium">Tools Posts</div>
-       </div>
+     <div className=" w-full lg:w-[35%]  ">
 
-       <div className=" py-[17px] h-[11px]  mb-[19px] w-full sm:w-1/2  bg-stone-50  rounded-lg flex justify-center items-center gap-2">
-        <div className="text-[#727272] text-l font-medium">Education Posts</div>
-       </div>
+      {/* buttons  */}
+
+<div className="h-14 bg-stone-50  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  sm:mb-[20px] lg:mt-[59px]">
+      <div
+        onClick={() => setActive("tools")}
+        className={`w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+          active === "tools" ? "bg-[#E5223A]" : "bg-stone-50"
+        }`}
+      >
+        <div
+          className={`text-l font-medium ${
+            active === "tools" ? "text-white" : "text-[#727272]"
+          }`}
+        >
+          Tools Posts
+        </div>
       </div>
+
+      <div
+        onClick={() => setActive("education")}
+        className={`w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+          active === "education" ? "bg-[#E5223A]" : "bg-stone-50"
+        }`}
+      >
+        <div
+          className={`text-l font-medium ${
+            active === "education" ? "text-white" : "text-[#727272]"
+          }`}
+        >
+          Education Posts
+        </div>
+      </div>
+    </div>
+
+
 
       {/* right top  */}
 
-      <div className="space-y-6 ">
-       {cardss.map((cards, index) => (
-        <div key={index} className="w-full lg:justify-between flex h-auto self-stretch sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]  ">
-         <div className="">
-          <Image
-           src={cards.boardImg}
-           alt="board"
-           height={140}
-           width={134}
-           // className="w-full max-w-[134px] h-[140px] rounded-xl object-cover"
-           className="rounded-xl object-cover"
-          />
-         </div>
 
-         <div className=" w-full pr-0">
+{active === "tools" && (
+  <div className="space-y-5 2xl:space-y-14">
+    {cardss.map((cards, index) => (
+      <div
+        key={index}
+        className=" py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
+      >
+        <div className="">
+          <Image
+            src={cards.boardImg}
+            alt="board"
+            height={140}
+            width={134}
+            className="rounded-xl object-cover"
+          />
+        </div>
+
+        <div className="w-full pr-0">
           <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
-           <Image src={cards.avatarImg} alt="Author" height={34} width={34} className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px]  w-8 h-8 " />
-           <div className=" flex justify-center align-middle">
-            <div className="mt-2    text-[#1C1B35] text-xs ">
-             By {cards.author}
-             <span className="ml-[4px] text-[#959595] text-xs ">| {cards.time}</span>
+            <Image
+              src={cards.avatarImg}
+              alt="Author"
+              height={34}
+              width={34}
+              className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
+            />
+            <div className="flex justify-center align-middle">
+              <div className="mt-2 text-[#1C1B35] text-xs">
+                By {cards.author}
+                <span className="ml-[4px] text-[#959595] text-xs">| {cards.time}</span>
+              </div>
             </div>
-           </div>
           </div>
 
-          <div className="text-[#1C1B35]  text-m sm:text-m md:text-m lg:text-m">{cards.title}</div>
+          <div className="text-[#1C1B35] text-m sm:text-m md:text-m lg:text-lg">
+            {cards.title}
+          </div>
 
           <div className="flex justify-between items-center">
-           <div className="text-sm  text-[#FF475E]   font-bold">{cards.tag}</div>
-           <Image src="/redarrow.svg" alt="Red Arrow" height={35} width={35} className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]" />
+            <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
+            <Image
+              src="/redArrow.svg"
+              alt="Red Arrow"
+              height={35}
+              width={35}
+              className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A] rounded-full p-[7px]"
+            />
           </div>
-         </div>
         </div>
-       ))}
       </div>
-     </div>
+    ))}
+  </div>
+)}
+
+{active === "education" && (
+  <div className="space-y-5 2xl:space-y-14">
+    {educationCards.map((cards, index) => (
+      <div
+      key={index}
+      className=" py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
+    >
+      <div className="">
+        <Image
+          src={cards.boardImg}
+          alt="board"
+          height={140}
+          width={134}
+          className="rounded-xl object-cover"
+        />
+      </div>
+
+      <div className="w-full pr-0">
+        <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 ">
+          <Image
+            src={cards.avatarImg}
+            alt="Author"
+            height={34}
+            width={34}
+            className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
+          />
+          <div className="flex justify-center align-middle">
+            <div className="mt-2 text-[#1C1B35] text-xs">
+              By {cards.author}
+              <span className="ml-[4px] text-[#959595] text-xs">| {cards.time}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-[#1C1B35]  text-m sm:text-m md:text-m lg:text-lg">
+          {cards.title}
+        </div>
+
+        <div className="flex justify-between items-center">
+          <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
+          <Image
+            src="/redArrow.svg"
+            alt="Red Arrow"
+            height={35}
+            width={35}
+            className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A] rounded-full p-[7px]"
+          />
+        </div>
+      </div>
     </div>
+    ))}
+  </div>
+)}
+
+
+
+
+
+
+
+
+
+
+      
+     </div>
+
+
+    </div>
+    </div>
+    </section>
 
     {/* red  */}
+    <div className="container">
 
-    <div className="mt-[75px] lg:px-[100px]">
+    <div className="mt-[75px] ">
      <div className="   ">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2">
@@ -219,13 +362,13 @@ const HomePage = () => {
       </div>
      </div>
     </div>
-   </div>
-
-   </div>
+</div>
+  
 
    {/* last second  */}
+   <div className="container">
 
-   <div className=" mt-[96px]  px-4 sm:px-6 md:px-10 lg:px-[100px]">
+   <div className=" mt-[96px]   ">
     <div className=" flex flex-col gap-[22px] lg:flex-row lg:flex-nowrap w-full">
      {[1, 2, 3].map((_, idx) => (
       <div key={idx} className=" flex-1 min-w-[300px]  bg-stone-50 rounded-t-[30px]">
@@ -253,11 +396,11 @@ const HomePage = () => {
          {cards.map((card, index) => (
           <div key={index} className="w-full lg:justify-between flex h-auto self-stretch lg:mt-[59px] sm:p-[2px] bg-stone-50 rounded-[20.65px] gap-[19px]">
            <div className="">
-            <Image src={card.boardImg} alt="board" height={140} width={140} className="w-full max-w-[134px] h-[140px] rounded-xl object-cover" />
+            <Image src={card.boardImg} alt="board" height={140} width={134} className="rounded-xl object-cover" />
            </div>
 
            <div className=" w-full pr-0">
-            <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
+            <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 ">
              <Image src={card.avatarImg} alt="Author" height={34} width={34} className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px]  w-8 h-8 " />
              <div className="  flex justify-center items-center">
               <div className="text-[#1C1B35] text-xs">
@@ -315,8 +458,10 @@ const HomePage = () => {
      </div>
     </div>
    </div>
-
+   </div>
+   </main>
    <Footers />
+   </div>
   {/* </div> */}
   </>
   );
