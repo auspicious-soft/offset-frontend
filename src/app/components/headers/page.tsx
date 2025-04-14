@@ -135,9 +135,10 @@ export default function Headers() {
 
 
 
-{/* <div className="container "> */}
 
+{/* <div className="container "> */}
 <DropdownMenuContent className=" rounded-tl-[30px] rounded-bl-[30px] rounded-br-[30px]   shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)]  pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] ">
+
   <DropdownItem icon={<Settings />} label="Account Settings" className="border-b border-gray-200 justify-between" />
   <DropdownItem icon={<CreditCard />} label="Payment Details" className="border-b border-gray-200 justify-between" />
   <DropdownItem icon={<FileText />} label="Canceling Subscription" className="border-b border-gray-200 justify-between" />

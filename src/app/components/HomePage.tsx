@@ -191,7 +191,7 @@ const HomePage = () => {
         </div>
 
         <div className="w-full pr-0">
-          <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 sm:mb-3">
+          <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 ">
             <Image
               src={cards.avatarImg}
               alt="Author"
@@ -214,12 +214,12 @@ const HomePage = () => {
           <div className="flex justify-between items-center">
             <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
             <Image
-              src="/redArrow.svg"
-              alt="Red Arrow"
-              height={35}
-              width={35}
-              className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A] rounded-full p-[7px]"
-            />
+            src="/redArrow.svg"
+            alt="Red Arrow"
+            height={35}
+            width={35}
+            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
+          />
           </div>
         </div>
       </div>
@@ -272,7 +272,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A] rounded-full p-[7px]"
+            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
           />
         </div>
       </div>
@@ -414,7 +414,10 @@ const HomePage = () => {
 
             <div className="flex justify-between items-center">
              <div className="text-sm  text-[#FF475E]  font-bold">{card.tag}</div>
-             <Image src="/redarrow.svg" alt="Red Arrow" height={35} width={35} className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]" />
+             <Image src="/Arrow.svg" 
+             alt="Red Arrow" 
+             height={29} width={29} 
+             className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]" />
             </div>
            </div>
           </div>
