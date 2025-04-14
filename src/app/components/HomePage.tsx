@@ -218,7 +218,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   bg-[#E5223A]   rounded-full p-[4px]"
+            className=" lg:w-5 lg:h-5 sm:w-7 sm:h-7   xl:w-6 xl:h-6  bg-[#E5223A]   rounded-full p-[4px]"
           />
            
           </div>
@@ -273,7 +273,7 @@ const HomePage = () => {
             alt="Red Arrow"
             height={35}
             width={35}
-            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 bg-[#E5223A]   rounded-full p-[4px]"
+            className="w-7 h-7 lg:w-5 lg:h-5 sm:w-7 sm:h-7 xl:w-6 xl:h-6  bg-[#E5223A]   rounded-full p-[4px]"
           />
         </div>
       </div>
