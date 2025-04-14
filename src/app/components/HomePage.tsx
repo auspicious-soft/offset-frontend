@@ -394,7 +394,7 @@ const HomePage = () => {
        </div>
 
        {/* text */}
-       <div className="ml-[22px] mt-[37px] w-auto">
+       <div className=" px-[22px] pt-[37px] pb-[29px] w-auto">
         <div className="justify-start text-gray-800 text-2xl font-medium">Zero-Day Exploit Discovered in Popular Enterprise Software</div>
 
         <div className=" text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm">
