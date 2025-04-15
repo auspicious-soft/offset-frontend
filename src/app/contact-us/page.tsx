@@ -9,7 +9,8 @@ const Page = () => {
  return (
   <>
   <Headers/>
-<div className=" px-4 sm:px-6 md:px-10 mb-[40px] sm:mb-[59px] md:mb-[60px] lg:mb-[119px] lg:px-[100px] mt-[50px]">
+  <div className="container">
+<div className="  mt-[50px]">
 
 
 {/* top  */}
@@ -70,7 +71,7 @@ const Page = () => {
   <div className="w-[10px] h-10 bg-rose-600 rounded-full" />
 
   <div>
-  <div className="justify-start text-[#1C1B35] text-5xl font-bold ">Get in Touch</div>
+  <div className="justify-start text-[#1C1B35] lg:text-5xl font-bold ">Get in Touch</div>
   <div className="mt-[9px] justify-start text-[#727272] text-xl font-normal ">It is a long established fact that a reader will be distracted by thereadable content of a page when looking at its layout.</div>
   </div>
 
@@ -88,7 +89,7 @@ const Page = () => {
 
   </div>
 
-
+  </div>
 <Footers/>
 
   {/* Structured data for contact page */}

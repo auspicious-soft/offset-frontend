@@ -47,7 +47,7 @@ export default function Headers() {
       <div className=" py-[17px] flex justify-between">
        <div className=" ">
         <Link href="/" aria-label="Offset7 Home">
-         <Image src="/logo.svg" alt="Offset7 Logo" height={72} width={57} priority className="h-auto w-auto" />
+         <Image src="/logo.svg" alt="Offset7 Logo" height={72} width={57} priority className="h-[50px] sm:h-[50px] lg:h-[72px]  w-auto" />
         </Link>
         
        </div>

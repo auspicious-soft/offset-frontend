@@ -28,7 +28,7 @@ const cards = [
  
  const cardss = [
   {
-   boardImg: "/images/one.png",
+   boardImg: "/images/boardd.png",
    avatarImg: "/sarah.svg",
    author: "Sarah Mitchell",
    time: "4 hours ago",
@@ -36,7 +36,7 @@ const cards = [
    tag: "GENERAL WEB",
   },
   {
-   boardImg: "/images/mobile.png",
+   boardImg: "/images/mobilee.png",
    avatarImg: "/sarah.svg",
    author: "Sarah Mitchell",
    time: "4 hours ago",
@@ -48,7 +48,7 @@ const cards = [
 
 const educationCards = [
   {
-    boardImg: "/images/mobile.png",
+    boardImg: "/images/mobilee.png",
     avatarImg: "/sarah.svg",
     author: "Dr. Learnwell",
     time: "1d ago",
@@ -56,7 +56,7 @@ const educationCards = [
     tag: "CYBERSECURITY",
   },
   {
-    boardImg: "/images/one.png",
+    boardImg: "/images/boardd.png",
     avatarImg: "/sarah.svg",
     author: "Prof. Byte",
     time: "3d ago",
@@ -88,7 +88,9 @@ const HomePage = () => {
      <div className=" w-full lg:w-[65%] mx-auto  ">
       <div className="relative w-full">
 
-       <Image src="/images/mainnews.png" alt="earth" width={955} height={425} className="w-full h-[425px]  sm:h-full   object-cover rounded-[30px]" priority />
+       <Image src="/images/mainnews.png" alt="earth" 
+       width={955} height={425} 
+       className="w-full h-[300px]   md:min-h-[425px] sm:h-full   object-cover  rounded-[20px] sm:rounded-[30px] lg:rounded-[30px]" priority />
 
        <div className="p-2 absolute top-0 left-0 w-full">
         <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
@@ -99,11 +101,11 @@ const HomePage = () => {
           MAIN NEWS
          </div>
          <div className="flex items-start gap-2 sm:gap-3">
-          <div className="backdrop-blur-sm bg-white/30 rounded-full p-2 w-fit">
+          <div className="cursor-pointer backdrop-blur-sm bg-white/30 rounded-full p-2 w-fit">
            <Image src="/leftarrow.svg" alt="left arrow" height={43} width={43} className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
 
-          <div className="backdrop-blur-sm bg-white rounded-full p-2 w-fit">
+          <div className="cursor-pointer backdrop-blur-sm bg-white rounded-full p-2 w-fit">
            <Image src="/rightarrow.svg" alt="left arrow" height={43} width={43} className="w-3 h-3 sm:w-4 sm:h-4 bg-white" />
           </div>
          </div>
@@ -122,7 +124,7 @@ const HomePage = () => {
 />
        </div>
 
-       <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 md:p-4 lg:p-5">
+       <div className="absolute bottom-0 left-0 w-full p-4 sm:p-3 md:p-4 lg:p-5 mb-[10px]">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
          <Image src="/sarah.svg" alt="Sarah Image" width={34} height={34} className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10" />
          <div className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base">By Sarah Mitchell</div>
@@ -155,7 +157,7 @@ const HomePage = () => {
 
       {/* buttons  */}
 
-<div className=" h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  ">
+{/* <div className="border border-purple-500 h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  ">
       <div
         onClick={() => setActive("tools")}
         className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
@@ -185,7 +187,42 @@ const HomePage = () => {
           Education Posts
         </div>
       </div>
+    </div> */}
+
+
+<div className=" h-auto sm:h-14 bg-stone-50 px-[14px] py-[10px] sm:py-[5px] flex flex-col sm:flex-row gap-3 sm:gap-4 rounded-3xl mb-[19px]">
+  <div
+    onClick={() => setActive("tools")}
+    className={`w-full sm:w-1/2 h-11 py-[10px] sm:py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+      active === "tools" ? "bg-[#E5223A]" : "bg-stone-50"
+    }`}
+  >
+    <div
+      className={`text-l font-medium ${
+        active === "tools" ? "text-white" : "text-[#727272]"
+      }`}
+    >
+      Tools Posts
     </div>
+  </div>
+
+  <div
+    onClick={() => setActive("education")}
+    className={`w-full sm:w-1/2 h-11 py-[10px] sm:py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
+      active === "education" ? "bg-[#E5223A]" : "bg-stone-50"
+    }`}
+  >
+    <div
+      className={`text-l font-medium ${
+        active === "education" ? "text-white" : "text-[#727272]"
+      }`}
+    >
+      Education Posts
+    </div>
+  </div>
+</div>
+
+
 
 
 
@@ -193,7 +230,7 @@ const HomePage = () => {
 
 
 {active === "tools" && (
-  <div className="space-y-5 2xl:space-y-14">
+  <div className="mt-[30px] md:mt-0  space-y-5 2xl:space-y-14">
     {cardss.map((cards, index) => (
       <div
         key={index}
@@ -205,9 +242,12 @@ const HomePage = () => {
             alt="board"
             height={140}
             width={134}
-            className="rounded-xl object-cover"
+            unoptimized
+            className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
           />
         </div>
+
+
 
         <div className="w-full pr-0">
           <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3 ">
@@ -260,7 +300,7 @@ const HomePage = () => {
           alt="board"
           height={140}
           width={134}
-          className="rounded-xl object-cover"
+          className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
         />
       </div>
 
@@ -313,7 +353,7 @@ const HomePage = () => {
     {/* red  */}
     <div className="container">
 
-    <div className="mt-[75px] ">
+    <div className="mt-[40px] sm:mt-[75px] ">
      <div className="   ">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2">
@@ -362,14 +402,15 @@ const HomePage = () => {
          <p className="text-sm text-gray-600 ml-[17px]">Enter your email address below to check if it has been compromised in malware leaks or cyber incidents.</p>
         </div>
 
-        <div className=" rounded-xl  relative w-full max-w-md px-4 py-[9px] sm:px-0">
+        <div className=" rounded-xl  relative w-full max-w-md  py-[9px] sm:px-0">
          <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
-         <input type="email" placeholder="Enter your Email" className=" rounded-xl text-[#7E7F91] w-full pl-10 text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none  " />
+         <input type="email" placeholder="Enter your Email" className=" rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7E7F91] focus:outline-none  " />
 
          <button type="submit" className="rounded-xl absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white  text-xs sm:text-sm cursor-pointer">
           Check Now
          </button>
         </div>
+        
        </div>
       </div>
      </div>
@@ -388,8 +429,7 @@ const HomePage = () => {
         <Image src="/images/board.png" 
         alt="board"  
         height={356} width={634}
-        className="   rounded-t-2xl 
- object-cover" />
+        className=" w-full rounded-t-2xl  object-cover" />
         <div className="absolute top-0 left-0 w-full">
          <div className="flex w-full justify-between items-start p-3 sm:p-4 ">
           <div className="0 mt-[30px] text-xl font-bold text-white sm:text-lg md:text-lg lg:text-lg xl:text-lg break-words max-w-[70%]">POST DOUBLE COLUMNS 1</div>
@@ -405,7 +445,7 @@ const HomePage = () => {
 
        {/* text */}
        <div className=" px-[22px] pt-[37px] pb-[29px] w-auto">
-        <div className="justify-start text-gray-800 text-2xl font-medium">Zero-Day Exploit Discovered in Popular Enterprise Software</div>
+        <div className="justify-start text-gray-800 text-xl sm:text-2xl font-medium">Zero-Day Exploit Discovered in Popular Enterprise Software</div>
 
 
         <div className="mt-[11px] flex text-[#FF475E] text-base font-bold text-[10px] sm:text-xs lg:text-sm gap-[5px]">
@@ -434,7 +474,7 @@ const HomePage = () => {
              </div>
             </div>
 
-            <div className="text-[#1C1B35]   text-lg   ">{card.title}</div>
+            <div className="text-[#1C1B35] text-m  sm:text-lg   ">{card.title}</div>
 
             <div className="flex justify-between items-center">
              <div className="text-sm  text-[#FF475E]  font-bold">{card.tag}</div>

@@ -16,7 +16,7 @@ export default function Footers() {
       alt="Offset7 Logo"
       height={129}
       width={149}
-      className="mt-[40px] sm:mt-[59px] h-auto w-auto"
+      className="h-[50px] sm:h-[50px] lg:h-[72px]  mt-[40px] sm:mt-[59px]  w-auto"
      />
     </div>
 
