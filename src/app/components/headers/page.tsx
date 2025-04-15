@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Settings, CreditCard, LogOut, FileText, ChevronRight } from "lucide-react";
@@ -34,6 +34,20 @@ export default function Headers() {
  const [menuOpen, setMenuOpen] = useState(false);
  const pathname = usePathname();
  const [isOpen, setIsOpen] = useState(false)
+
+ useEffect(() => {
+  if (menuOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+
+ return () => {
+  document.body.classList.remove("overflow-hidden");
+};
+}, [menuOpen]);
+
+
 
  return (
   <>
@@ -70,9 +84,22 @@ export default function Headers() {
         </div>
 
         {/* Hamburger (visible only on small & medium screens) */}
-        <button className="flex lg:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
+        {/* <button className="flex lg:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        </button> */}
+
+
+<button
+      className="flex lg:hidden"
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle Menu"
+    >
+      {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    </button>
+
+
+
+
        </div>
       </div>
      </div>

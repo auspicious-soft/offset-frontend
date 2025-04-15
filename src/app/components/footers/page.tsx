@@ -20,7 +20,7 @@ export default function Footers() {
      />
     </div>
 
-    <nav className="mt-6 sm:mt-[18px] flex flex-wrap justify-center items-center text-[#FFFFFF] gap-4 sm:gap-[38px] text-sm sm:text-base text-center">
+    <nav className="mt-6 sm:mt-[18px] flex flex-wrap justify-center items-center text-[#FFFFFF] gap-4 sm:gap-[38px] text-sm sm:text-base xl:text-2xl text-center">
      <Link href="/" scroll={true} className="cursor-pointer hover:text-[#E5223A] transition-colors" aria-label="Home Page">
       Home
      </Link>
@@ -64,7 +64,7 @@ export default function Footers() {
     
     <div className="container ">
 
-    <div className=" pb-10 sm:pb-[65px] text-[#FFFFFF] text-sm sm:text-base flex justify-center items-center text-center">
+    <div className="xl:text-2xl pb-10 sm:pb-[65px] text-[#FFFFFF] text-sm sm:text-base flex justify-center items-center text-center">
      <span itemScope itemType="http://schema.org/Organization">
       © {new Date().getFullYear()} <span itemProp="name">Offset7</span>. All Rights Reserved.
      </span>

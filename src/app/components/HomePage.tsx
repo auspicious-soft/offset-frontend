@@ -131,14 +131,11 @@ const HomePage = () => {
          <div className="text-[#959595] text-[10px] sm:text-xs md:text-sm lg:text-base">| 4 hours ago</div>
         </div>
 
-        <div
-         className="text-white leading-snug
-        text-xs sm:text-sm md:text-base lg:text-lg mb-1 sm:mb-2"
-        >
+        <div className="text-white text-sm sm:text-sm md:text-base lg:text-xl 2xl:text-4xl mb-1 sm:mb-2" >
          Dark Web Market Shutdown: Authorities Seize Illegal Data Trading Hub
         </div>
 
-        <div className="text-[#FF475E] text-[10px]  font-bold sm:text-xs md:text-sm">
+        <div className="text-[#FF475E] text-[10px]  font-bold sm:text-xs md:text-sm 2xl:text-xl">
          DARK WEB <span className="text-[#959595]">| 10 minutes read</span>
         </div>
        </div>
@@ -385,7 +382,7 @@ const HomePage = () => {
           </div>
           <div>
            <div className="text-gray-800 text-4xl sm:text-2xl font-bold">{item.number}</div>
-           <div className="text-gray-800  text-l sm: lg:text-xl  font-normal ">{item.label}</div>
+           <div className="text-gray-800  text-lg  sm:text-xl  2xl:text-2xl  font-normal ">{item.label}</div>
           </div>
          </div>
         ))}
@@ -422,6 +419,8 @@ const HomePage = () => {
    <div className="container">
 
    <div className=" mt-[96px]   ">
+
+
     <div className=" flex flex-col gap-[22px] lg:flex-row lg:flex-nowrap w-full">
      {[1, 2, 3].map((_, idx) => (
       <div key={idx} className=" flex-1 min-w-[300px]  bg-stone-50 rounded-[20px]">
@@ -495,6 +494,7 @@ const HomePage = () => {
     {/* red frame playstore */}
 
     <div className="bg-[url('/images/playstoreBGImage.png')] bg-cover bg-center relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
+
      <div className="w-full md:w-1/2 pt-[60px] md:pt-[110px] z-10">
       <div className="flex gap-[16px]">
        <div className="flex items-stretch rounded-full overflow-hidden">
@@ -505,31 +505,45 @@ const HomePage = () => {
 
       <div className="mt-4 text-white text-base md:text-xl font-normal">Stay ahead of cyber threats with Offset7! Download the app for free and gain access to powerful tools, real-time monitoring, and actionable insights to protect your organization from evolving digital risks.</div>
 
-      <div className="flex flex-wrap gap-x-6 mt-6 md:mt-[32px]">
+      <div className="flex flex-wrap gap-x-[26px] mt-6 md:mt-[32px]">
+
        {["Live Threat Monitoring", "Cybersecurity Insights", "Advanced Data Protection"].map((item, idx) => (
-        <div key={idx} className="flex items-center gap-3 mb-2 w-full sm:w-auto">
+        <div key={idx} className="flex items-center gap-[12px] mb-2 w-full sm:w-auto">
          <Image src="/check.svg" alt="check" width={21} height={21} className="w-5 h-5 rounded-full p-[2px]" />
-         <div className="text-white text-base md:text-lg font-medium leading-loose">{item}</div>
+         <div className="text-white  md:text-sm 2xl:text-lg font-light ">{item}</div>
         </div>
        ))}
       </div>
 
-      <div className="flex flex-wrap gap-4 md:gap-[23px] mt-8 md:mt-[67px] mb-[40px] md:mb-[50px]">
-       <Image src="/images/googleplay.png" 
-       alt="Google Play" 
-       width={293} height={87} 
-       className="h-auto  w-[180px]  2xl:w-[293px]  object-cover   " />
 
-       <Image src="/images/applestore.png" 
-       alt="App Store" 
-       width={293} height={87} 
-      className="h-auto  w-[180px]  2xl:w-[293px]  object-cover   " />
-      </div>
+<div className=" flex flex-wrap gap-4 md:gap-[23px] mt-8 md:mt-[67px] mb-[40px] md:mb-[50px]">
+  <Image
+    src="/images/googleplay.png"
+    alt="Google Play"
+    width={293}
+    height={87}
+    className=" h-auto w-[120px] md:w-[130px]  lg:w-[180px]  2xl:w-[293px] object-cover cursor-pointer"
+  />
+
+  <Image
+    src="/images/applestore.png"
+    alt="App Store"
+    width={293}
+    height={87}
+    className=" h-auto w-[120px] md:w-[130px] lg:w-[180px] 2xl:w-[293px] object-cover cursor-pointer"
+  />
+</div>
+
+
+
+
+
      </div>
 
-     <div className="w-full md:w-1/2 relative mt-8 md:mt-0 pr-0 md:pr-[20px] flex justify-center md:block">
+     <div className="  w-full md:w-1/2 relative mt-8 md:mt-0 pr-0 md:pr-[20px] flex justify-center md:block">
       <Image src="/images/stackmobiles.png" alt="Mobile Preview" width={707} height={563} className="relative md:absolute bottom-0 md:bottom-[-50px] right-0 w-[80%] md:w-[707px] h-auto z-0" />
      </div>
+
     </div>
    </div>
    </div>
