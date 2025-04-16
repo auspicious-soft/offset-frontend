@@ -71,12 +71,12 @@ const Page = () => {
 
    <Headers />
    <div className="container">
-    <div className="  mt-[50px]">
+    <div className="lg:mt-[59px]">
      {/* top  */}
      <div className="relative w-full ">
       <Image src="/images/contactUs.png" alt="earth" width={1580} height={415} className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[415px] object-cover rounded-xl" priority />
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-10">
+      <div className="absolute inset-0 flex  flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-10">
        <div className="flex gap-[10px] sm:gap-[12px] md:gap-[14px] items-center">
         <Image src="/horizontalRedLine.svg" alt="left arrow" height={0} width={30} className="w-[20px] sm:w-[30px] md:w-[41px]" />
 
