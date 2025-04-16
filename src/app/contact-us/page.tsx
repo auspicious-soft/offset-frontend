@@ -270,7 +270,7 @@ const Page = () => {
 </div>
     {/* faq  */}
     <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
-
+<div className="container">
 
     <div className="relative w-full mb-[46px] md:mb-[126px]">
   <div className="absolute inset-0 z-0">
@@ -373,7 +373,7 @@ const Page = () => {
 </div>
 </div>
 
-
+</div>
 
    </div>
    {/* map address  */}
