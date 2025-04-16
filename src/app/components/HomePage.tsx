@@ -131,11 +131,11 @@ const HomePage = () => {
          <div className="text-[#959595] text-[10px] sm:text-xs md:text-sm lg:text-base">| 4 hours ago</div>
         </div>
 
-        <div className="text-white text-sm sm:text-md md:text-lg lg:text-2xl 2xl:text-4xl mb-1 sm:mb-2" >
+        <div className="text-white text-sm  sm:text-md md:text-2xl lg:text-2xl 2xl:text-4xl mb-1 sm:mb-2" >
          Dark Web Market Shutdown: Authorities Seize Illegal Data Trading Hub
         </div>
 
-        <div className="text-[#FF475E] text-[10px]  font-bold sm:text-xs md:text-sm 2xl:text-xl">
+        <div className="text-[#FF475E] text-[10px]  font-bold sm:text-sm md:text-md 2xl:text-xl">
          DARK WEB <span className="text-[#959595]">| 10 minutes read</span>
         </div>
        </div>
@@ -546,9 +546,10 @@ const HomePage = () => {
      </div>
 
     </div>
-    </div>
    </div>
    </div>
+   </div>
+
    </main>
    <Footers />
    </div>

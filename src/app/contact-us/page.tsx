@@ -95,8 +95,8 @@ const Page = () => {
   {/* Left Section */}
   <div className="w-full lg:w-[50%]">
     <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start">
-      <span className="text-[#1C1B35] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium">We are</span>
-      <span className="text-[#E5223A] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium"> always ready</span>
+      <span className="text-[#1C1B35] font-medium text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl ">We are</span>
+      <span className="text-[#E5223A] font-medium text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl "> always ready</span>
       <span className="text-[#1C1B35] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium"> to help you and answer your questions</span>
     </div>
 
@@ -114,7 +114,7 @@ const Page = () => {
       <div className="flex justify-center md:justify-start">
         <div>
         <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Call Center</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">+1 (800) 123-4567</div>
+        <div className="mt-[15px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">+1 (800) 123-4567</div>
         <div className="justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">+1 (800) 987-6543</div>
         </div>
       </div>
@@ -122,7 +122,7 @@ const Page = () => {
       <div className="flex justify-center md:justify-start">
       <div>      
       <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Our Location</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">USA, New York – 10001</div>
+        <div className="mt-[15px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">USA, New York – 10001</div>
         <div className="justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">1st Avenue, Cyber Tower</div>
       </div>
     </div>
@@ -135,7 +135,7 @@ const Page = () => {
     <div className="flex justify-center md:justify-start">
     <div>  
         <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Email Address</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">support@offset7.com</div>
+        <div className="mt-[15px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">support@offset7.com</div>
       </div>
 </div>
 
@@ -280,7 +280,7 @@ const Page = () => {
   <div className="absolute  inset-0 z-0 w-full h-full">
   
     <Image
-  src="/images/PinkBG4X.png"
+  src="/images/pinkFrame2.png"
   alt="earth"
   className="w-full h-full object-cover rounded-[30px]"
   priority
