@@ -492,6 +492,7 @@ const HomePage = () => {
     </div>
 
     {/* red frame playstore */}
+    <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
 
     <div className="bg-[url('/images/playstoreBGImage.png')] bg-cover bg-center relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
 
@@ -544,6 +545,7 @@ const HomePage = () => {
       <Image src="/images/stackmobiles.png" alt="Mobile Preview" width={707} height={563} className="relative md:absolute bottom-0 md:bottom-[-50px] right-0 w-[80%] md:w-[707px] h-auto z-0" />
      </div>
 
+    </div>
     </div>
    </div>
    </div>
