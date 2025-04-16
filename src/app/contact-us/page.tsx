@@ -143,7 +143,7 @@ const Page = () => {
 <div>  
       <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Follow Us</div>
 
-<div className="mt-[7px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">
+<div className="mt-[15px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">
   <div className="flex gap-2 sm:gap-3 justify-start">
     <div className="bg-[#CF201F] flex items-center justify-center rounded-lg cursor-pointer">
       <Image src="/yt.svg" alt="YouTube" width={40} height={40} />
@@ -196,7 +196,7 @@ const Page = () => {
 
           <div className="rounded-xl relative w-full py-[9px] sm:px-0">
 
-           <Image src="/Message.svg" 
+           <Image src="/Message2.svg" 
             alt="Message box" 
             height={20} width={20} 
             className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-3 sm:w-5 sm:h-5 lg:h-4" />    
