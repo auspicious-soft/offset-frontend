@@ -91,16 +91,16 @@ const Page = () => {
 
 
 {/* middle  */}
-<div className="flex flex-col lg:flex-row my-[46px] md:my-[126px] gap-[102px]">
+<div className="flex flex-col lg:flex-row my-[46px] md:my-[126px]  gap-[102px]">
   {/* Left Section */}
   <div className="w-full lg:w-[50%]">
-    <div className="mt-[43px] self-stretch justify-start">
-      <span className="text-[#1C1B35] text-2xl sm:text-4xl 2xl:text-7xl font-medium">We are</span>
-      <span className="text-[#E5223A] text-2xl sm:text-4xl 2xl:text-7xl font-medium"> always ready</span>
-      <span className="text-[#1C1B35] text-2xl sm:text-4xl 2xl:text-7xl font-medium"> to help you and answer your questions</span>
+    <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start">
+      <span className="text-[#1C1B35] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium">We are</span>
+      <span className="text-[#E5223A] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium"> always ready</span>
+      <span className="text-[#1C1B35] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium"> to help you and answer your questions</span>
     </div>
 
-    <div className="mt-[21px] justify-start text-[#1C1B35] text-lg sm:text-lg 2xl:text-2xl font-normal">
+    <div className="mt-[21px] justify-start text-[#1C1B35] text-lg sm:text-lg md:text-xl 2xl:text-2xl font-normal">
       If you have any inquiries or need assistance, feel free to reach out to us. Our team is available 24/7 to support you.
     </div>
 
@@ -109,41 +109,39 @@ const Page = () => {
 
 
 
-
-    <div className="mt-[40px] md:mt-[88px] mb-[42px] md:mb-[89px]  grid grid-cols-1 md:grid-cols-2 gap-[42px] md:gap-[49px]">
+{/* top  */}
+    <div className="mt-[40px] mb-[42px]  lg:mt-[80px] lg:mb-[80px]  grid grid-cols-1 md:grid-cols-2 gap-[42px] md:gap-[49px]">
       <div className="flex justify-center md:justify-start">
         <div>
-        <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-2xl 2xl:text-4xl font-medium">Call Center</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">+1 (800) 123-4567</div>
-        <div className="justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">+1 (800) 987-6543</div>
+        <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Call Center</div>
+        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">+1 (800) 123-4567</div>
+        <div className="justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">+1 (800) 987-6543</div>
         </div>
       </div>
   
       <div className="flex justify-center md:justify-start">
       <div>      
-      <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-2xl 2xl:text-4xl font-medium">Our Location</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">USA, New York – 10001</div>
-        <div className="justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">1st Avenue, Cyber Tower</div>
+      <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Our Location</div>
+        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">USA, New York – 10001</div>
+        <div className="justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">1st Avenue, Cyber Tower</div>
       </div>
     </div>
 </div>
 
 
 
-
-
-
+{/* bottom  */}
     <div className="grid grid-cols-1 md:grid-cols-2  gap-[49px]">
     <div className="flex justify-center md:justify-start">
     <div>  
-        <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-2xl 2xl:text-4xl font-medium">Email Address</div>
-        <div className="mt-[7px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">support@offset7.com</div>
+        <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Email Address</div>
+        <div className="mt-[7px] justify-start text-[#1C1B35] text-lg 2xl:text-2xl font-normal">support@offset7.com</div>
       </div>
 </div>
 
 <div className="flex justify-center md:justify-start">
 <div>  
-      <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-2xl 2xl:text-4xl font-medium">Follow Us</div>
+      <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">Follow Us</div>
 
 <div className="mt-[7px] justify-start text-[#1C1B35] text-md 2xl:text-2xl font-normal">
   <div className="flex gap-2 sm:gap-3 justify-start">
@@ -173,8 +171,8 @@ const Page = () => {
       <div className="flex gap-[16px]">
         <div className="w-[10px] h-8 bg-rose-600 rounded-full" />
         <div>
-          <div className="justify-start text-[#1C1B35] text-xl sm:text-2xl 2xl:text-5xl font-bold">Get in Touch</div>
-          <div className="mt-[9px] justify-start text-[#727272] text-sm sm:text-md 2xl:text-xl font-normal">
+          <div className="justify-start text-[#1C1B35] text-xl sm:text-3xl 2xl:text-5xl font-bold">Get in Touch</div>
+          <div className="mt-[9px] justify-start text-[#727272] text-sm sm:text-lg 2xl:text-xl font-normal">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
           </div>
         </div>
@@ -192,19 +190,25 @@ const Page = () => {
               placeholder="Username"
               value={form.username}
               onChange={handleChange}
-              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
             />
           </div>
 
           <div className="rounded-xl relative w-full py-[9px] sm:px-0">
-            <Image src="/Message.svg" alt="Message box" height={20} width={20} className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
+
+           <Image src="/Message.svg" 
+            alt="Message box" 
+            height={20} width={20} 
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-3 sm:w-5 sm:h-5 lg:h-4" />    
+
+
             <input
               type="email"
               name="email"
               placeholder="Enter your Email"
               value={form.email}
               onChange={handleChange}
-              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
             />
           </div>
 
@@ -232,7 +236,7 @@ const Page = () => {
                   toast.error("Please enter a correct 10-digit phone number");
                 }
               }}
-              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-md pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+              className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
             />
           </div>
 
@@ -242,7 +246,7 @@ const Page = () => {
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="h-40 rounded-xl text-[#7E7F91] w-full pl-[15px] text-sm sm:text-md pt-4 border border-[#7C7C7C40] focus:outline-none resize-none"
+              className="h-40 rounded-xl text-[#7E7F91] w-full pl-[15px] text-sm sm:text-lg pt-4 border border-[#7C7C7C40] focus:outline-none resize-none"
             />
           </div>
 
@@ -272,18 +276,21 @@ const Page = () => {
     <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
 <div className="container">
 
-    <div className="relative w-full mb-[46px] md:mb-[126px]">
-  <div className="absolute inset-0 z-0">
+    <div className="relative w-full mb-[46px] md:mb-[126px] ">
+  <div className="absolute  inset-0 z-0 w-full h-full">
+  
     <Image
-      src="/images/PinkBG4X.png"
-      alt="earth"
-      fill
-      className="object-cover w-full h-full rounded-[30px]"
-      priority
-    />
+  src="/images/PinkBG4X.png"
+  alt="earth"
+  className="w-full h-full object-cover rounded-[30px]"
+  priority
+  width={0}
+  height={0}
+  sizes="100vw" />
+
   </div>
 
-  <div className="relative z-10 py-[86px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-10">
+  <div className="relative z-10 py-[20px] md:py-[86px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-10">
     <div className="flex gap-[10px] sm:gap-[12px] md:gap-[14px] items-center flex-wrap justify-center">
       <Image
         src="/horizontalRedLine.svg"
@@ -309,7 +316,7 @@ const Page = () => {
     </div>
 
     {/* Dropdowns */}
-    <div className="mt-[83px] w-full max-w-[1000px] px-4 sm:px-[50px] md:px-[87px] flex flex-col gap-2">
+    <div className="mt-[20px] md:mt-[83px] w-full max-w-[1000px] px-4 sm:px-[50px] md:px-[87px] flex flex-col gap-2">
       {[
         {
           q: "1. What is Offset 7?",
@@ -371,6 +378,8 @@ const Page = () => {
 
   </div>
 </div>
+
+
 </div>
 
 </div>
