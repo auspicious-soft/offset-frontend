@@ -90,7 +90,7 @@ const HomePage = () => {
 
        <Image src="/images/mainnews.png" alt="earth" 
        width={955} height={425} 
-       className="w-full h-[300px]   md:min-h-[425px] sm:h-full   object-cover  rounded-[20px] sm:rounded-[30px] lg:rounded-[30px]" priority />
+       className="w-full h-[300px] min-h-[355px] max-h-[425px]  sm:h-full   object-cover  rounded-[20px] sm:rounded-[30px] lg:rounded-[30px]" priority />
 
        <div className="p-2 absolute top-0 left-0 w-full">
         <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">

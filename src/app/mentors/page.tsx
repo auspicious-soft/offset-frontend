@@ -82,7 +82,7 @@ const Page = () => {
                 {mentors.map((mentor) => (
                   <div
                     key={mentor.id}
-                    className="relative bg-[#7E7F91] border border-gray-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow"
+                    className="relative bg-stone-50  rounded-lg p-4 "
                   >
                     <Image
                       src={mentor.image}
@@ -123,7 +123,7 @@ const Page = () => {
                 Empower others in our community by sharing your expertise and
                 helping shape the future of cybersecurity.
               </p>
-              <button className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors">
+              <button className="bg-[#E5223A] text-white px-6 py-3 cursor-pointer rounded-lg hover:bg-[#E5223A] transition-colors">
                 Become a Mentor
               </button>
             </div>
