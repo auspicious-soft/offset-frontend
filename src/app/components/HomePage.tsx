@@ -86,7 +86,7 @@ const HomePage = () => {
      {/* Left Section */}
 
      <div className=" w-full lg:w-[65%] mx-auto  ">
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
 
        <Image src="/images/mainnews.png" alt="earth" 
        width={955} height={425} 
@@ -145,47 +145,20 @@ const HomePage = () => {
 
 
 
-      </div>
+      </div> */}
+
+
+
+
+
+      
      </div>
 
-     {/* Right Section */}
+{/* Right Section */}
 
      <div className=" w-full lg:w-[35%]  ">
 
       {/* buttons  */}
-
-{/* <div className="border border-purple-500 h-14 bg-stone-50 px-[14px]  py-[5px] flex flex-col sm:flex-row gap-4 rounded-3xl mb-[19px]  ">
-      <div
-        onClick={() => setActive("tools")}
-        className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
-          active === "tools" ? "bg-[#E5223A]" : "bg-stone-50"
-        }`}
-      >
-        <div
-          className={`text-l font-medium ${
-            active === "tools" ? "text-white" : "text-[#727272]"
-          }`}
-        >
-          Tools Posts
-        </div>
-      </div>
-
-      <div
-        onClick={() => setActive("education")}
-        className={` w-full sm:w-1/2 h-11 py-[17px] rounded-lg flex justify-center items-center gap-2 cursor-pointer ${
-          active === "education" ? "bg-[#E5223A]" : "bg-stone-50"
-        }`}
-      >
-        <div
-          className={`text-l font-medium ${
-            active === "education" ? "text-white" : "text-[#727272]"
-          }`}
-        >
-          Education Posts
-        </div>
-      </div>
-    </div> */}
-
 
 <div className=" h-auto sm:h-14 bg-stone-50 px-[14px] py-[10px] sm:py-[5px] flex flex-col sm:flex-row gap-3 sm:gap-4 rounded-3xl mb-[19px]">
   <div
