@@ -86,7 +86,7 @@ const HomePage = () => {
      {/* Left Section */}
 
      <div className=" w-full lg:w-[65%] mx-auto  ">
-      {/* <div className="relative w-full">
+      <div className="relative w-full">
 
        <Image src="/images/mainnews.png" alt="earth" 
        width={955} height={425} 
@@ -145,7 +145,7 @@ const HomePage = () => {
 
 
 
-      </div> */}
+      </div>
 
 
 

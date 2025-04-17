@@ -101,11 +101,14 @@ export default function Headers() {
             className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] mr-2 lg:mr-10"
             sideOffset={5}
           >
+            <Link href="/settings">
             <DropdownItem
               icon={<Settings />}
               label="Account Settings"
               className="border-b border-gray-200"
             />
+            </Link>
+            
             <DropdownItem
               icon={<CreditCard />}
               label="Payment Details"
@@ -201,6 +204,7 @@ export default function Headers() {
               >
                 Home
               </Link>
+
               <Link
                 href="/newss"
                 className={
@@ -209,7 +213,17 @@ export default function Headers() {
               >
                 News
               </Link>
-              <Link href="/darkweb">Darkweb Incidents</Link>
+
+              <Link
+                href="/darkweb"
+                className={
+                  pathname === "/darkweb" ? "text-[#E5223A] font-semibold" : ""
+                }
+              >
+                Darkweb Incidents
+              </Link>
+
+
               <Link href="#">Cve Engine</Link>
               <Link href="#">Risk Assets</Link>
               <Link href="#">My Library</Link>
