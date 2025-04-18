@@ -250,27 +250,19 @@ export default function Headers() {
             <div className="h-full fixed z-50 left-0 right-0 top-0 backdrop-blur-xs">
               <div className="sticky top-0 z-50 bg-white">
                 {/* Top Row */}
-                <div className="sm:mx-[20px] lg:mx-[100px] py-[17px] flex justify-between">
-                  <div className="inline-flex items-center gap-2">
-                    <Link href="/" aria-label="Offset7 Home">
-                      <Image
-                        src="/images/logo.png"
-                        alt="Offset7 Logo"
-                        height={72}
-                        width={57}
-                        priority
-                        className="h-auto w-auto"
-                      />
-                    </Link>
-                    <div className="flex flex-col">
-                      <div className="text-[#1C1B35] text-lg font-black">
-                        OFFSET <span className="text-[#E5223A]">7</span>
-                      </div>
-                      <div className="text-[#979797] text-sm font-normal">
-                        Threat Intel
-                      </div>
-                    </div>
-                  </div>
+                <div className="ml-4 py-[17px] flex justify-between">
+                <div>
+                  <Link href="/" aria-label="Offset7 Home">
+                    <Image
+                      src="/logo.svg"
+                      alt="Offset7 Logo"
+                      height={72}
+                      width={57}
+                      priority
+                      className="h-[50px] sm:h-[50px] lg:h-[72px] w-auto"
+                    />
+                  </Link>
+                </div>
 
                   <div className="flex items-center gap-2 sm:gap-3">
                     {/* Social icons (hidden on small & medium screens) */}
