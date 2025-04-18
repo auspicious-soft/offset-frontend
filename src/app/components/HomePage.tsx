@@ -134,7 +134,7 @@ const HomePage = () => {
 
                 <div className=" w-full lg:w-[65%] mx-auto  ">
                 <div className="relative w-full h-full">
-      <div className="w-full h-[300px] min-h-[355px] max-h-[400px] sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
+      <div className="w-full  min-h-[355px]  sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
         <img 
           src={currentNews.image}
           alt="news background" 

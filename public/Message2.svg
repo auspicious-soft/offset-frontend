@@ -1,6 +1,6 @@
 <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Message">
-<path id="Stroke 1" d="M21.7767 9.06836L16.1999 13.6031C15.1463 14.439 13.6638 14.439 12.6102 13.6031L6.98633 9.06836" stroke="#7E7F91" stroke-width="2.00816" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd" d="M20.5286 24.3164C24.3458 24.327 26.9184 21.1907 26.9184 17.336V8.71554C26.9184 4.86089 24.3458 1.72461 20.5286 1.72461H8.2063C4.3891 1.72461 1.81641 4.86089 1.81641 8.71554V17.336C1.81641 21.1907 4.3891 24.327 8.2063 24.3164H20.5286Z" stroke="#7E7F91" stroke-width="2.00816" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 1" d="M21.7767 9.06836L16.1999 13.6031C15.1463 14.439 13.6638 14.439 12.6102 13.6031L6.98633 9.06836" stroke="#7E7F91" strokeWidth="2.00816" strokeLinecap="round" strokeLinejoin="round"/>
+<path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd" d="M20.5286 24.3164C24.3458 24.327 26.9184 21.1907 26.9184 17.336V8.71554C26.9184 4.86089 24.3458 1.72461 20.5286 1.72461H8.2063C4.3891 1.72461 1.81641 4.86089 1.81641 8.71554V17.336C1.81641 21.1907 4.3891 24.327 8.2063 24.3164H20.5286Z" stroke="#7E7F91" strokeWidth="2.00816" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 </svg>

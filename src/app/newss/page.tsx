@@ -254,69 +254,7 @@ const Page = () => {
               ))}
 
               {/* Pagination Controls */}
-              {/* <div className=" flex justify-center items-center gap-[80px] mt-4">
-                             <div className="flex">
-                               <div className="flex items-center gap-2 relative">
-                                 <label className="2xl:text-xl text-md text-neutral-600">News per page:</label>
-                                 <div className="relative ml-[16px] mr-[32px]">
-                                   <select
-                                     className="rounded-md appearance-none 2xl:py-[18px] 2xl:px-[16px] py-[15px] px-[16px]  border-[1.39px] border-zinc-200 shadow-[0px_1.3947858810424805px_4.184357643127441px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-10"
-                                     value={itemsPerPage}
-                                     onChange={handleItemsPerPageChange}
-                                   >
-                                     <option value={4}>4</option>
-                                     <option value={10}>10</option>
-                                     <option value={12}>12</option>
-                                   </select>
-                                   <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-600 pointer-events-none" size={18} />
-                                 </div>
-                               </div>
-             
-                               <div className="flex items-center gap-2">
-                                 <span className="2xl:text-xl text-md text-neutral-600">
-                                   {(currentPage - 1) * itemsPerPage + 1} - {Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} News
-                                 </span>
-                               </div>
-                             </div>
-             
-                             <div className="flex gap-[25px]">
-                               <div className="flex items-center gap-[25px] relative">
-                                 <div className="relative">
-                                   <select
-                                     className="rounded-md appearance-none  border-[1.39px] border-zinc-200 shadow-[0px_1.3947858810424805px_4.184357643127441px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-8 2xl:py-[18px] 2xl:px-[16px] py-[15px] px-[16px]"
-                                     value={currentPage}
-                                     onChange={(e) => setCurrentPage(parseInt(e.target.value))}
-                                   >
-                                     {Array.from({ length: totalPages }, (_, i) => (
-                                       <option key={i + 1} value={i + 1}>
-                                         {i + 1}
-                                       </option>
-                                     ))}
-                                   </select>
-                                   <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 text-neutral-600 pointer-events-none" size={16} />
-                                 </div>
-                                 <label className="text-md text-neutral-600">of {totalPages} pages</label>
-                               </div>
-             
-                               <div className="flex items-center gap-[17px]">
-                                 <button
-                                   onClick={handlePrev}
-                                   disabled={currentPage === 1}
-                                   className="rounded-md 2xl:py-[18px] 2xl:px-[16px] py-[15px] px-[16px] border-[1.39px] border-zinc-200 shadow-[0px_1.3947858810424805px_4.184357643127441px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
-                                 >
-                                   <ChevronLeft className="text-neutral-600" size={18} />
-                                 </button>
-             
-                                 <button
-                                   onClick={handleNext}
-                                   disabled={currentPage === totalPages}
-                                   className="rounded-md 2xl:py-[18px] 2xl:px-[16px] py-[15px] px-[16px] border-[1.39px] border-zinc-200 shadow-[0px_1.3947858810424805px_4.184357643127441px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
-                                 >
-                                   <ChevronRight className="text-neutral-600" size={18} />
-                                 </button>
-                               </div>
-                             </div>
-              </div> */}
+
 
 
 <div className="flex flex-col lg:flex-row justify-between lg:justify-center items-center gap-6 lg:gap-[80px] mt-4 px-4">
