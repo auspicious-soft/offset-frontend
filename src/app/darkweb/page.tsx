@@ -474,8 +474,8 @@ const Page = () => {
 
         <div className="container">
 {/* breadcrumbs  */}
-          <div className="mt-[50px] text-xl font-medium">
-            <Breadcrumb>
+<div className=" mt-[10px] sm:mt-[30px] md:mt-[20px] lg:mt-[50px] text-xl font-medium">
+<Breadcrumb>
               <div>
                 <BreadcrumbList>
                   <BreadcrumbItem>
@@ -536,7 +536,7 @@ const Page = () => {
                       </div>
 
                       <div
-                        className="px-[13px] py-[3px] w-[99px] rounded-3xl flex items-center justify-center"
+                        className="px-[13px] py-[3px]  rounded-3xl flex items-center justify-center"
                         style={{ backgroundColor: item.tagColor }}
                       >
                         <div className="text-base sm:text-base md:text-base px-[14px]" style={{ color: item.tagTextColor }}>
@@ -626,12 +626,12 @@ const Page = () => {
 
 <div className="flex flex-col lg:flex-row justify-between lg:justify-center items-center gap-6 lg:gap-[80px] mt-4 px-4">
   {/* Left side: Items per page + Current position */}
-  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+  <div className=" 2xl:text-xl sm:text-md text-sm  flex  sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
     <div className="flex items-center gap-2 relative">
-      <label className="2xl:text-xl text-md text-neutral-600">News per page:</label>
-      <div className="relative ml-[8px] sm:ml-[16px] mr-[16px] sm:mr-[32px]">
+      <label className=" text-neutral-600">News per page:</label>
+      <div className=" relative ml-[8px] sm:ml-[16px] mr-[16px] sm:mr-[32px]">
         <select
-          className="rounded-md appearance-none 2xl:py-[18px] 2xl:px-[16px] py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-10"
+          className="cursor-pointer rounded-md appearance-none 2xl:py-[18px]  py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-10"
           value={itemsPerPage}
           onChange={handleItemsPerPageChange}
         >
@@ -643,19 +643,20 @@ const Page = () => {
       </div>
     </div>
 
-    <div className="flex items-center gap-2">
-      <span className="2xl:text-xl text-md text-neutral-600">
-        {(currentPage - 1) * itemsPerPage + 1} - {Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} News
-      </span>
-    </div>
+ 
+    <div className="flex items-center justify-center h-full min-h-[40px] gap-2">
+  <span className=" text-neutral-600">
+    {(currentPage - 1) * itemsPerPage + 1} - {Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} News
+  </span>
+</div>
   </div>
 
   {/* Right side: Page selection and navigation */}
-  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-[25px]">
-    <div className="flex items-center gap-3 sm:gap-[25px] relative">
+  <div className=" 2xl:text-xl sm:text-md text-sm flex  sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+    <div className=" flex items-center gap-3 sm:gap-[25px] relative">
       <div className="relative">
         <select
-          className="rounded-md appearance-none border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-8 2xl:py-[18px] 2xl:px-[16px] py-[12px] px-[14px]"
+          className="cursor-pointer rounded-md appearance-none border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 pr-8 2xl:py-[18px]  py-[12px] px-[14px]"
           value={currentPage}
           onChange={(e) => setCurrentPage(parseInt(e.target.value))}
         >
@@ -667,14 +668,14 @@ const Page = () => {
         </select>
         <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 text-neutral-600 pointer-events-none" size={16} />
       </div>
-      <label className="text-md text-neutral-600">of {totalPages} pages</label>
+      <label className=" text-neutral-600">of {totalPages} pages</label>
     </div>
 
     <div className="flex items-center gap-3 sm:gap-[17px]">
       <button
         onClick={handlePrev}
         disabled={currentPage === 1}
-        className="rounded-md 2xl:py-[18px] 2xl:px-[16px] py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
+        className="cursor-pointer rounded-md 2xl:py-[18px]  2xl:px-[16px] py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
       >
         <ChevronLeft className="text-neutral-600" size={18} />
       </button>
@@ -682,7 +683,7 @@ const Page = () => {
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}
-        className="rounded-md 2xl:py-[18px] 2xl:px-[16px] py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
+        className="cursor-pointer rounded-md 2xl:py-[18px] 2xl:px-[16px] py-[12px] px-[14px] border-[1.39px] border-zinc-200 shadow-[0px_1.3948px_4.1844px_0px_rgba(60,64,67,0.16)] bg-stone-50 disabled:opacity-50"
       >
         <ChevronRight className="text-neutral-600" size={18} />
       </button>
