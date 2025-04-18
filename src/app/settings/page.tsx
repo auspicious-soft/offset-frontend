@@ -21,7 +21,6 @@ const Page = () => {
     <div className=" container mt-[50px]  ">
 
      {/* breadcrumbs  */}
-     {/* <div className="border border-red-400 mt-[50px]  text-xl font-medium"> */}
      <div className=" mt-[10px] sm:mt-[30px] md:mt-[20px] lg:mt-[50px] text-xl font-medium">
 
             <Breadcrumb>
@@ -46,16 +45,17 @@ const Page = () => {
 
 
 {/* first  */}
-<div className="self-stretch flex flex-col md:flex-row justify-between items-center   mt-[20px] sm:mt-[30px] md:mt-[20px] lg:mt-[55px] px-[30px] sm:px-[40px] md:px-[50px] py-[30px] sm:py-[35px] md:py-[39px] bg-stone-50 rounded-3xl overflow-hidden">
+<div className="self-stretch flex flex-col md:flex-row justify-between items-center   mt-[20px] sm:mt-[30px] md:mt-[20px] lg:mt-[55px] px-[20px] sm:px-[20px] py-[25px] sm:py-[25px] lg:py-[39px] bg-stone-50 rounded-3xl overflow-hidden">
   <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] items-center sm:items-start">
     <div>
+ 
   <Image
-    src="/images/gg.png"
-    alt="User"
-    height={151}
-    width={151}
-    className=""
-  />
+  src="/images/gg.png"
+  alt="User"
+  height={151}
+  width={151}
+  className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] md:h-[120px] md:w-[120px] lg:h-[151px] lg:w-[151px]"
+/>
 </div>
 
     <div className="text-center sm:text-left">
@@ -72,18 +72,23 @@ const Page = () => {
   </div>
 
   <div className="flex items-center justify-center min-h-[60px] sm:min-h-[70px] md:min-h-[80px] mt-4 sm:mt-5 md:mt-0">
+
+    <div className="flex items-center">
     <button
-      type="submit"
-      className="gap-[12px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-base sm:text-lg 2xl:text-2xl cursor-pointer w-28 sm:w-32 py-2 rounded-2xl"
-    >
-      Edit
-      <Image
-        src="/images/edit.png"
-        alt="Edit Icon"
-        height={20}
-        width={18}
-      />
-    </button>
+  type="submit"
+  className="gap-[6px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-sm md:text-lg 2xl:text-2xl cursor-pointer px-4 py-2 sm:px-6 sm:py-2 rounded-2xl"
+>
+  Edit
+  <Image
+    src="/images/edit.png"
+    alt="Edit Icon"
+    height={20}
+    width={18}
+    className="h-[15px] w-[15px] sm:h-[20px] sm:w-[18px]"
+  />
+</button>
+
+  </div>
   </div>
 </div>
 
@@ -96,31 +101,29 @@ const Page = () => {
     <div className="text-center sm:text-left">
   
 
-<div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 sm:flex-nowrap">
+<div className="flex flex-wrap items-center justify-between gap-1 sm:gap-2 md:gap-4 sm:flex-nowrap">
   <div className="text-left text-[#1C1B35] text-md sm:text-lg md:text-3xl 2xl:text-4xl font-bold">
     Personal Information:
   </div>
 
   <div className="flex items-center">
-      <button
-          type="submit"
-          className="gap-[12px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-sm md:text-lg 2xl:text-2xl cursor-pointer sm:p-2 sm:px-4 md:px-6  md:p-[10px] p-[10px] rounded-2xl"
-        >
-          Edit
-          <Image
-  src="/images/edit.png"
-  alt="Edit Icon"
-  height={20}
-  width={18}
-  className="h-[15px] w-[15px] sm:h-[20px] sm:w-[18px]"
-/>
-        </button>
+        <button
+  type="submit"
+  className="gap-[6px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-sm md:text-lg 2xl:text-2xl cursor-pointer px-4 py-2 sm:px-6 sm:py-2 rounded-2xl"
+>
+  Edit
+  <Image
+    src="/images/edit.png"
+    alt="Edit Icon"
+    height={20}
+    width={18}
+    className="h-[15px] w-[15px] sm:h-[20px] sm:w-[18px]"
+  />
+</button>
+
 
   </div>
 </div>
-
-
-
 
 
 
@@ -174,19 +177,19 @@ const Page = () => {
   </div>
 
   <div className="flex items-center">
-      <button
-          type="submit"
-          className="gap-[12px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-sm md:text-lg 2xl:text-2xl cursor-pointer sm:p-2 sm:px-4 md:px-6  md:p-[10px] p-[10px] rounded-2xl"
-        >
-          Edit
-          <Image
-  src="/images/edit.png"
-  alt="Edit Icon"
-  height={20}
-  width={18}
-  className="h-[15px] w-[15px] sm:h-[20px] sm:w-[18px]"
-/>
-        </button>
+  <button
+  type="submit"
+  className="gap-[6px] sm:gap-[16px] flex items-center justify-center bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-sm md:text-lg 2xl:text-2xl cursor-pointer px-4 py-2 sm:px-6 sm:py-2 rounded-2xl"
+>
+  Edit
+  <Image
+    src="/images/edit.png"
+    alt="Edit Icon"
+    height={20}
+    width={18}
+    className="h-[15px] w-[15px] sm:h-[20px] sm:w-[18px]"
+  />
+</button>
 
   </div>
 </div>
