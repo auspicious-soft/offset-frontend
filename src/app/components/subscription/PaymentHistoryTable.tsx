@@ -7,7 +7,8 @@ import {
   ChevronRight, 
   Download, 
   ChevronsLeft, 
-  ChevronsRight 
+  ChevronsRight, 
+  Calendar
 } from "lucide-react";
 
 interface Payment {
@@ -72,10 +73,8 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
           <tbody>
             {payments.map((payment) => (
               <tr key={payment.id} className="border-t border-gray-100 hover:bg-gray-50 transition-colors">
-                <td className="py-3 px-4 text-sm text-gray-700 flex items-center">
-                  <span className="h-4 w-4 mr-2 flex items-center justify-center">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#E5223A]"></span>
-                  </span>
+                <td className="py-3 px-4 text-sm gap-2 text-gray-700 flex items-center">
+                <Calendar color="red" />
                   {payment.date}
                 </td>
                 <td className="py-3 px-4 text-sm text-gray-700">{payment.invoiceNumber}</td>
@@ -91,7 +90,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
                     size="sm" 
                     className="h-8 w-8 p-0 text-gray-500 hover:text-[#E5223A]"
                   >
-                    <Download size={16} />
+                    <Download size={16} color="red" />
                   </Button>
                 </td>
               </tr>
@@ -112,15 +111,15 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
         </div>
         
         <div className="flex items-center space-x-1">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="h-8 w-8 text-gray-500" 
-            onClick={() => onPageChange(1)}
-            disabled={currentPage === 1}
-          >
-            <ChevronsLeft size={16} />
-          </Button>
+        <div className="flex items-center text-sm text-gray-500">
+          <select className="ml-2 border border-gray-200 rounded p-1 text-sm">
+            <option>5</option>
+            <option>10</option>
+            <option>25</option>
+          </select>
+          <span className="ml-4">of 40 pages</span>
+        </div>
+        
           <Button 
             variant="ghost" 
             size="icon" 
@@ -139,15 +138,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
           >
             <ChevronRight size={16} />
           </Button>
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="h-8 w-8 text-gray-500" 
-            onClick={() => onPageChange(totalPages)}
-            disabled={currentPage === totalPages}
-          >
-            <ChevronsRight size={16} />
-          </Button>
+        
         </div>
       </div>
     </div>
