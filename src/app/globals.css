@@ -49,7 +49,7 @@ body {
 .container{
   margin: 0 auto;
   padding: 0 5rem;
-  max-width: 1600px;
+  max-width: 1700px;
 }
 @media(max-width: 1280px){
   .container{
