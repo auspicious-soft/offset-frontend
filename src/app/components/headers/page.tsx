@@ -135,7 +135,7 @@ export default function Headers() {
               {/* Top Row */}
               <div className="py-[17px] flex justify-between">
                 <div>
-                  <Link href="/" aria-label="Offset7 Home">
+                  <Link href="/dashboard" aria-label="Offset7 Home">
                     <Image
                       src="/logo.svg"
                       alt="Offset7 Logo"
@@ -197,7 +197,7 @@ export default function Headers() {
           <div className="hidden px-5 sticky z-50 bg-white h-auto py-[22.5px] lg:flex justify-between rounded-[20px] shadow-[0px_4px_30px_0px_rgba(178,178,178,0.20)]">
             <nav className="hidden lg:flex items-center gap-6 text-[#1C1B35] text-md xl:text-lg 2xl:text-xl">
               <Link
-                href="/"
+                href="/dashboard"
                 className={
                   pathname === "/" ? "text-[#E5223A] font-semibold" : ""
                 }
