@@ -94,7 +94,7 @@ const HomePage = () => {
       </Link>
      </div>
 
-     <div className="absolute top-[100px] md:top-[200px] left-0 w-full px-4 md:px-6 max-w-[90%] mx-auto">
+     <div className="absolute top-[100px] md:top-[200px] left-0 w-full px-4 md:px-6 max-w-[90%] mx-auto font-['Jost'] ">
       <div className="text-white text-sm md:text-md xl:text-xl 2xl:text-2xl font-medium w-full">Welcome to Offset7 👋</div>
       <div className="py-[8px] md:py-[11px] text-white text-lg md:text-4xl xl:text-5xl 2xl:text-6xl font-medium leading-tight">Stay Secure with Real-Time Threat Intelligence.</div>
       <div className="text-white text-xs md:text-sm xl:text-md 2xl:text-lg font-normal leading-relaxed">Join Offset7 to monitor threats, safeguard your data, and take control of your cybersecurity.</div>
@@ -102,7 +102,7 @@ const HomePage = () => {
     </div>
 
     {/* Right Form Section */}
-    <div className="w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 2xl:py-[189px] 2xl:px-[128px]">
+    <div className="w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 2xl:py-[189px] 2xl:px-[128px] font-['Jost']">
      <div className="px-4 py-6 md:px-8 md:py-10 bg-white rounded-[39.18px] outline-1 outline-offset-[-1px] outline-stone-300/20">
       <div className="text-[#1C1B35] text-xl 2xl:text-4xl xl:text-3xl md:text-2xl font-semibold">Sign Up</div>
 
@@ -172,7 +172,7 @@ const HomePage = () => {
           <div className="mt-6 text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">Password</div>
           <div className="mt-[15px] flex items-center border border-[#7C7C7C40] rounded-2xl px-5 py-3 gap-3 w-full">
            <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
-           <Image src={showPassword ? "/images/redEye.png" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
+           <Image src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
           </div>
          </div>
 
@@ -187,7 +187,7 @@ const HomePage = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
            />
-           <Image src={showPasswordd ? "/images/redEye.png" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPasswordd((prev) => !prev)} />
+           <Image src={showPasswordd ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPasswordd((prev) => !prev)} />
           </div>
          </div>
         </div>
@@ -238,7 +238,7 @@ const HomePage = () => {
         <div className="mt-6 text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">Password</div>
         <div className="mt-[15px] flex items-center border border-[#7C7C7C40] rounded-2xl px-5 py-3 gap-3 w-full">
          <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
-         <Image src={showPassword ? "/images/redEye.png" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
+         <Image src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
         </div>
 
         <div className="my-[28px] flex flex-row gap-3 sm:gap-[15px] text-base font-normal items-start sm:items-center">
@@ -258,7 +258,7 @@ const HomePage = () => {
          </button>
         </div>
 
-        <div className="flex justify-center text-sm 2xl:text-lg xl:text-md md:text-sm font-medium">
+        <div className="flex justify-center text-sm mt-[28px] 2xl:text-lg xl:text-md md:text-sm font-medium">
          <span className="text-[#1C1B35]">Already have an account?</span>
          <Link href="/">
           <span className="text-[#E5223A] underline cursor-pointer ml-1">Sign in</span>

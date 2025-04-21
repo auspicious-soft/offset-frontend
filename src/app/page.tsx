@@ -79,21 +79,23 @@ const HomePage = () => {
   <>
     <ToastContainer />
 
-  <div className="flex flex-col lg:flex-row min-h-screen">
+  <div className="max-w-[1700px] mx-auto  flex flex-col-reverse lg:flex-row min-h-screen">
+
   {/* Left Image */}
-  <div className="w-full lg:w-[40%] h-auto  lg:h-auto relative object-contain">
+  <div className=" w-full lg:w-[40%] h-auto  lg:h-auto relative object-contain">
   {/* Background Image */}
   <Image
     src="/images/loginBG.png"
     alt="Login Image"
     width={829}
     height={1217}
-    className="w-full h-full object-cover"
+    // className="w-full h-full  object-cover"
+    className="w-full h-[400px] md:h-[450px] lg:h-[850px] 2xl:h-[1217px]  object-cover"
   />
 
   {/* Overlayed logo in top-left */}
-  <div className="absolute top-[20px] left-[45px] md:top-[50px] md:left-[45px] ">
-    <Link href="/homepage" aria-label="Offset7 Home">
+  <div className=" absolute top-[20px]  md:top-[50px] px-[30px]  ">
+    <Link href="/homepage" aria-label="Offset7 Home" className="">
       <Image
         src="/images/offset.png"
         alt="Offset7 Logo"
@@ -102,28 +104,42 @@ const HomePage = () => {
         className="w-[80px] h-[80px] md:w-[129px] md:h-[129px]"
         priority
       />
+      
     </Link>
-  </div>
 
   {/* Full width welcome text */}
-  <div className="absolute top-[100px] md:top-[200px] left-0 w-full px-4 md:px-6 max-w-[90%] mx-auto">
+  <div className=" font-['Jost'] top-[100px] md:top-[200px]  pr-[20px] w-full  max-w-[90%] mx-auto">
     <div className="text-white text-sm md:text-md xl:text-xl 2xl:text-2xl font-medium w-full">
       Welcome to Offset7 👋
     </div>
-    <div className="py-[8px] md:py-[11px] text-white text-lg md:text-4xl xl:text-5xl 2xl:text-6xl font-medium leading-tight">
+    <div className="py-[8px] md:py-[11px] text-white text-xl md:text-3xl xl:text-4xl 2xl:text-6xl font-medium ">
       Stay Secure with Real-Time Threat Intelligence.
     </div>
-    <div className="text-white text-xs md:text-sm xl:text-md 2xl:text-lg font-normal leading-relaxed">
+
+    <div className="text-white text-xs md:text-md xl:text-lg 2xl:text-lg font-normal leading-relaxed">
       Join Offset7 to monitor threats, safeguard your data, and take control of your cybersecurity.
     </div>
   </div>
+  <div className="pt-[79px] 2xl:px-[154px] flex justify-center">
+  <Image
+        src="/images/computer.png"
+        alt="Computer"
+        height={292}
+        width={280}
+        className="hidden lg:block "
+        priority
+      />
+      </div>
+  </div>
+
 </div>
 
 
 
   {/* Right Form Section */}
-  <div className="w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 
-  2xl:py-[189px] 2xl:px-[128px]">
+  <div className=" w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 
+  2xl:py-[189px] 2xl:px-[128px] font-['Jost']
+">
     <div className="px-4 py-6 md:px-8 md:py-10 bg-white rounded-[39.18px]  outline-1 outline-offset-[-1px] outline-stone-300/20 ">
       <div className="text-[#1C1B35] text-xl 2xl:text-4xl xl:text-3xl md:text-2xl font-semibold">Login</div>
 
@@ -184,7 +200,7 @@ const HomePage = () => {
     className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
   />
   <Image
-    src={showPassword ? "/images/redEye.png" : "/images/redEye.png"} // change icon based on state
+    src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"} 
     alt="Toggle visibility"
     width={18}
     height={10}
@@ -212,7 +228,7 @@ const HomePage = () => {
         </button>
       </div>
 
-      <div className="flex items-center gap-4 my-8">
+      <div className="flex items-center gap-4 my-[28px]">
         <div className="w-full h-px bg-[#615F7740]" />
         <div className="text-center text-[#7E7F91] text-sm 2xl:text-lg xl:text-md md:text-sm  font-normal ">Or</div>
         <div className="w-full h-px bg-[#615F7740]" />
