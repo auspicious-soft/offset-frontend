@@ -78,7 +78,7 @@ const HomePage = () => {
     <>
       <ToastContainer />
 
-      <div className="flex flex-col lg:flex-row min-h-screen {jost.className}">
+      <div className={`${jost.className} flex flex-col lg:flex-row min-h-screen`}>
         <div className=" w-full lg:w-[45%]  2xl:w-[40%] h-auto  lg:mn-h-full relative object-contain">
           {/* Background Image */}
           <Image
