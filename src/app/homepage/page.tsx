@@ -133,16 +133,16 @@ const HomePage = () => {
                 {/* Left Section */}
 
                 <div className=" w-full lg:w-[65%] mx-auto  ">
-                <div className="relative w-full h-full">
+                <div className=" relative w-full h-full">
       <div className="w-full  min-h-[355px]  sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
         <img 
           src={currentNews.image}
           alt="news background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full min-h-[355px] object-cover"
         />
       </div>
 
-      <div className="p-2 absolute top-0 left-0 w-full">
+      <div className=" p-2 absolute top-0 left-0 w-full">
         <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
           <div className="text-white font-bold break-words max-w-[70%] text-sm sm:text-base md:text-lg lg:text-2xl xl:text-2xl">
             MAIN NEWS
@@ -153,7 +153,7 @@ const HomePage = () => {
               className={`cursor-pointer backdrop-blur-sm rounded-full p-2 w-fit transition-colors ${
                 currentIndex === 0 
                   ? "bg-white/30 hover:bg-white/30" 
-                  : "bg-white/70 hover:bg-white"
+                  : "bg-white hover:bg-white"
               }`}
               aria-label="Previous slide"
             >
@@ -269,13 +269,13 @@ const HomePage = () => {
                   {/* right top  */}
 
                   {active === "tools" && (
-                    <div className="mt-[30px] md:mt-0  space-y-5 2xl:space-y-14">
+                    <div className="mt-[30px] md:mt-0  space-y-5 ">
                       {cardss.map((cards, index) => (
                         <div
                           key={index}
                           className=" py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
                         >
-                          <div className="">
+                          <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
                             <Image
                               src={cards.boardImg}
                               alt="board"
@@ -316,9 +316,9 @@ const HomePage = () => {
                               <Image
                                 src="/Arrow.svg"
                                 alt="Red Arrow"
-                                height={35}
-                                width={35}
-                                className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
+                                height={29}
+                                width={29}
+                                className="  xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
                               />
                             </div>
                           </div>
@@ -328,13 +328,13 @@ const HomePage = () => {
                   )}
 
                   {active === "education" && (
-                    <div className="space-y-5 2xl:space-y-14">
+                    <div className="space-y-5 ">
                       {educationCards.map((cards, index) => (
                         <div
                           key={index}
                           className=" py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
                         >
-                          <div className="">
+                          <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
                             <Image
                               src={cards.boardImg}
                               alt="board"
@@ -374,9 +374,9 @@ const HomePage = () => {
                               <Image
                                 src="/Arrow.svg"
                                 alt="Red Arrow"
-                                height={35}
-                                width={35}
-                                className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
+                                height={29}
+                                width={29}
+                                className="  xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
                               />
                             </div>
                           </div>
@@ -579,9 +579,9 @@ const HomePage = () => {
                                 <Image
                                   src="/Arrow.svg"
                                   alt="Red Arrow"
-                                  height={35}
-                                  width={35}
-                                  className="xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
+                                  height={29}
+                                  width={29}
+                                  className="xl:w-[29px] xl:h-[29px]  w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full "
                                 />
                               </div>
                             </div>

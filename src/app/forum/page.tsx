@@ -271,7 +271,7 @@ const Page = () => {
           key={index}
           className="gap-4 flex flex-col md:flex-row w-full h-auto bg-stone-50 rounded-3xl p-2 sm:p-3 md:p-4"
         >
-          <div className="">
+          <div className="md:w-[50%]">
             <Image
               src={item.image}
               alt="news image"
@@ -431,7 +431,7 @@ const Page = () => {
                 <div className="mt-[30px] md:mt-0 space-y-5">
                   {cardss.map((cards, index) => (
                     <div key={index} className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]">
-                      <div className="">
+                      <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
                         <Image
                           src={cards.boardImg}
                           alt="board"
@@ -466,9 +466,9 @@ const Page = () => {
                           <Image
                             src="/Arrow.svg"
                             alt="Red Arrow"
-                            height={35}
-                            width={35}
-                            className="xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
+                            height={29}
+                            width={29}
+                            className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
                           />
                         </div>
                       </div>
@@ -483,7 +483,7 @@ const Page = () => {
                 <div className="space-y-5">
                   {educationCards.map((cards, index) => (
                     <div key={index} className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]">
-                      <div className="">
+                      <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
                         <Image
                           src={cards.boardImg}
                           alt="board"
@@ -517,9 +517,9 @@ const Page = () => {
                           <Image
                             src="/Arrow.svg"
                             alt="Red Arrow"
-                            height={35}
-                            width={35}
-                            className="xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
+                            height={29}
+                            width={29}
+                            className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
                           />
                         </div>
                       </div>

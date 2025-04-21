@@ -40,7 +40,7 @@ offset-frontend/
    - Darkweb incident monitoring
    - News section
    - Contact page
-   - Dashboard interface
+   - Homepage interface
 
 3. **Components**
    - Headers
@@ -76,7 +76,7 @@ The application implements various Schema.org structured data types:
 - `/darkweb/detail` - Detailed incident view
 - `/newss` - News section
 - `/contact-us` - Contact page
-- `/dashboard` - User dashboard
+- `/homepage` - User homepage
 
 ## Performance Optimizations
 1. **Image Optimization**

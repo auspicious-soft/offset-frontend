@@ -21,7 +21,7 @@ export default function Footers() {
     </div>
 
     <nav className="mt-6 sm:mt-[18px] flex flex-wrap justify-center items-center text-[#FFFFFF] gap-4 sm:gap-[38px] text-sm sm:text-base xl:text-2xl text-center">
-     <Link href="/dashboard" scroll={true} className="cursor-pointer hover:text-[#E5223A] transition-colors" aria-label="Home Page">
+     <Link href="/homepage" scroll={true} className="cursor-pointer hover:text-[#E5223A] transition-colors" aria-label="Home Page">
       Home
      </Link>
      <Link href="/about-us" className="cursor-pointer hover:text-[#E5223A] transition-colors" aria-label="About Us Page">

@@ -93,7 +93,7 @@ const HomePage = () => {
 
   {/* Overlayed logo in top-left */}
   <div className="absolute top-[20px] left-[45px] md:top-[50px] md:left-[45px] ">
-    <Link href="/dashboard" aria-label="Offset7 Home">
+    <Link href="/homepage" aria-label="Offset7 Home">
       <Image
         src="/images/offset.png"
         alt="Offset7 Logo"
