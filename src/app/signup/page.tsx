@@ -151,7 +151,7 @@ const HomePage = () => {
 
         {/* Right Form Section */}
         <div className=" w-full lg:w-[55%] 2xl:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-[30px] px-[20px] md:py-[35px] md:px-[80px] 2xl:px-[128px] flex justify-center items-center ">
-          <div className="bg-white rounded-[20px] md:rounded-[39px]  outline-1 outline-offset-[-1px] outline-[#cdc8c8]/20 px-[20px] py-[30px] md:py-[35px] 2xl:px-[45px]">
+          <div className="bg-white rounded-[20px] md:rounded-[39px]  outline-1 outline-offset-[-1px] outline-[#cdc8c8]/20 px-[20px] py-[30px] lg:py-[35px] 2xl:px-[45px]">
             <div
               className="text-[#1c1b35] text-[30px] md:text-[36px] 2xl:text-[41px] font-semibold capitalize mb-3.5"
               style={{ fontFamily: "Jost, sans-serif" }}
