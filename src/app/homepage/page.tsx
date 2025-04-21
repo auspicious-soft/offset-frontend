@@ -114,20 +114,7 @@ const HomePage = () => {
     );
   };
 
-  // Optional: Auto-slide functionality with stable reference
-  useEffect(() => {
-    const autoSlide = () => {
-      setCurrentIndex(prevIndex => 
-        prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
-      );
-    };
-    
-    const interval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
-    
-    return () => clearInterval(interval);
-  }, []); // Empty dependency array to avoid excessive re-renders
-
-  // Use memoization to prevent unnecessary re-renders
+  // Use memoization to prevent unnecessary re-render
   const currentNews = useMemo(() => 
     newsItems[currentIndex], 
     [currentIndex, newsItems]
@@ -149,7 +136,7 @@ const HomePage = () => {
                       <img 
                         src={currentNews.image}
                         alt="news background" 
-                        className="w-full h-full min-h-[355px] object-cover"
+                        className="sw-full h-full min-h-[355px] object-cover"
                       />
                     </div>
 
@@ -506,7 +493,7 @@ const HomePage = () => {
                     key={idx}
                     className=" flex-1 min-w-[300px]  bg-stone-50 rounded-[20px]"
                   >
-                    <div className="relative inline-block w-full ">
+                    <div className="relative inline-block w-full h-[specific-height] sm:h-[specific-height] lg:h-[specific-height]">
                       <Image
                         src="/images/board.png"
                         alt="board"
@@ -609,16 +596,8 @@ const HomePage = () => {
               <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
                 <div className="bg-[url('/images/playstoreBGImage.png')] bg-cover bg-center relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">
                   <div className="w-full md:w-1/2 pt-[60px] md:pt-[110px] z-10">
-                    <div className="flex gap-[16px]">
-                      <div className="flex items-stretch rounded-full overflow-hidden">
-                        <Image
-                          src="/verticalWhiteLine.svg"
-                          alt="Vertical line"
-                          width={3}
-                          height={44}
-                          className="h-full object-cover"
-                        />
-                      </div>
+                    <div className="flex items-center gap-[16px]">   
+                    <div className="w-[4px] h-[34px] bg-white rounded-t-lg rounded-b-lg" />                
                       <div className="text-white text-3xl md:text-5xl font-bold">
                         Get Offset7 Today
                       </div>
