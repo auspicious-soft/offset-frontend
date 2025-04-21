@@ -211,7 +211,7 @@ export default function Headers() {
               <Link
                 href="/newss"
                 className={
-                  pathname === "/newss" ? "text-[#E5223A] font-semibold" : ""
+                  (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 News
@@ -220,7 +220,7 @@ export default function Headers() {
               <Link
                 href="/darkweb"
                 className={
-                  pathname === "/darkweb" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 Darkweb Incidents
@@ -323,7 +323,7 @@ export default function Headers() {
                   <Link
                     href="/newss"
                     className={
-                      pathname === "/newss" ? "text-[#E5223A] font-semibold" : ""
+                      (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
                     }
                   >
                     News
@@ -331,7 +331,7 @@ export default function Headers() {
                   <Link
                 href="/darkweb"
                 className={
-                  pathname === "/darkweb" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 Darkweb Incidents
