@@ -28,9 +28,9 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
             <Image src="/greenDot.svg" alt="Dropdown Arrow" width={10} height={10} className="" />
             <span className="text-[#B6FA81]">Active</span>
           </div>
-          <p className="text-xs  mt-1">Your subscription is about to expire!</p>
-          <Progress value={60} color="white" className="w-[100%] h-[12px] bg-white/20  text-white" />
-          <p className="text-xs  mt-1">Using 27 days from 30 days included</p>
+          <p className="2xl:text-xl lg:text-lg text-md mt-[24px] ">Your subscription is about to expire!</p>
+          <Progress value={60} color="white" className="w-[100%] h-[12px] bg-white/20  text-white my-[10px]" />
+          <p className="2xl:text-lg lg:text-md text-sm  ">Using 27 days from 30 days included</p>
         </div>
         
         <div className="grid grid-cols-1 md:col-span-2 gap-4">

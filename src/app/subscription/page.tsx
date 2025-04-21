@@ -50,7 +50,7 @@ const Page = () => {
           
           {/* Form Section (Inspired by Email Leak Checker) */}
           <section className="py-8 md:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#1C1B35] mb-2 md:mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-[#1C1B35] mb-2 md:mb-4">
               Choose the <span className="text-[#E5223A]"> Right Plan </span>for You
             </h1>
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-[#1C1B35] max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ const Page = () => {
                   height={100}
                 />
               </div>
-              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E]">Free</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Free</h3>
               <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#31334E] mt-1">$0.00/month</p>
               <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-[#7E7F91]">Limited to cybersecurity news & updates</p>
               <ul className="mt-3 md:mt-4 space-y-1 md:space-y-2 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">

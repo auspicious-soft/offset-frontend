@@ -451,7 +451,7 @@ const Page = () => {
                             width={34}
                             className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
                           />
-                          <div className="flex justify-center align-middle xl:text-lg text-md">
+                          <div className="flex justify-center items-center text-xs">
                             <div className=" text-[#1C1B35] ">
                               By {cards.author}
                               <span className="ml-[4px] text-[#959595] ">| {cards.time}</span>
@@ -502,7 +502,7 @@ const Page = () => {
                             width={34}
                             className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
                           />
-                          <div className="flex justify-center align-middle xl:text-lg text-md">
+                          <div className="flex justify-center items-center text-xs">
                             <div className=" text-[#1C1B35] ">
                               By {cards.author}
                               <span className="ml-[4px] text-[#959595] ">| {cards.time}</span>

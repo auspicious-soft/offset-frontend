@@ -78,9 +78,9 @@ const HomePage = () => {
     <>
       <ToastContainer />
 
-      <div className="flex flex-col lg:flex-row min-h-screen {jost.className}">
-        <div className=" w-full lg:w-[40%] h-auto  lg:mn-h-full relative object-contain">
-          {/* Background Image */}
+      <div className={`${jost.className} flex flex-col lg:flex-row min-h-screen`}>
+        <div className=" w-full lg:w-[45%]  2xl:w-[40%] h-auto  lg:mn-h-full relative object-contain">
+          {/* Background Image */}   
           <Image
             src="/images/loginBG.png"
             alt="Login Image"
@@ -88,46 +88,47 @@ const HomePage = () => {
             height={1217}
             className="w-full h-full object-cover object-top absolute top-[0px]"
           />
+          <div className="relative z-10 md:h-full p-[30px] md:p-[45px] 2xl:p-[55px]">
+            <div className="w-full  mx-auto flex gap-20 flex-col md:h-full justify-between">
+              <div className="max-w-[660px] w-full mx-auto">
+                <Link href="/homepage" aria-label="Offset7 Home" className="">
+                  <Image
+                    src="/images/offset.png"
+                    alt="Offset7 Logo"
+                    height={129}
+                    width={129}
+                    className="w-[80px] h-[80px] md:w-[129px] md:h-[129px] mb-4 md:mb-10 relative left-[-12px]"
+                    priority
+                  />
+                </Link>
+                <div
+                  className="text-white text-[18px] md:text-[22px] 2xl:text-[26px] font-medium"
+                  style={{ fontFamily: "Jost, sans-serif" }}
+                >
+                  Welcome to Offset7 👋 
+                </div>
+                <div
+                  className="justify-start text-white text-[34px] md:text-[46px] 2xl:text-[58px] font-medium my-3"
+                  style={{ fontFamily: "Jost, sans-serif" }}
+                >
+                  Stay Secure with Real-Time Threat Intelligence.
+                </div>
 
-          {/* Overlayed logo in top-left */}
-          <div className="relative z-10 ">
-            <Link href="/homepage" aria-label="Offset7 Home" className="">
-              <Image
-                src="/images/offset.png"
-                alt="Offset7 Logo"
-                height={129}
-                width={129}
-                className="w-[80px] h-[80px] md:w-[129px] md:h-[129px]"
-                priority
-              />
-            </Link>
-
-            {/* Full width welcome text */}
-
-            <div className="  top-[100px] md:top-[200px]  pr-[20px] w-full  max-w-[90%] mx-auto">
-              <div
-                className=" text-white"
-                style={{ fontFamily: "Jost, sans-serif" }}
-              >
-                Welcome to Offset7 👋
+                <div
+                  className="self-stretch justify-start text-white text-[16px] 2xl:text-lg font-normal "
+                  style={{ fontFamily: "Jost, sans-serif" }}
+                >
+                  Join Offset7 to monitor threats, safeguard your data, and take
+                  control of your cybersecurity.
+                </div>
               </div>
-              <div className=" text-white "
-              style={{ fontFamily: "Jost, sans-serif" }}
-              >
-                Stay Secure with Real-Time Threat Intelligence.
-              </div>
-
-              <div className="text-white text-xs md:text-md xl:text-lg 2xl:text-lg font-normal leading-relaxed">
-                Join Offset7 to monitor threats, safeguard your data, and take
-                control of your cybersecurity.
-              </div>
-              <div className="pt-[79px] 2xl:px-[154px] flex justify-center">
+              <div className="hidden lg:block">
                 <Image
-                  src="/images/computer.png"
+                  src="computer.svg"
                   alt="Computer"
-                  height={292}
-                  width={280}
-                  className="hidden lg:block "
+                  height={520}
+                  width={520}
+                  className="m-auto w-[84%] 2xl:w-full 2xl:max-w-[520px]" 
                   priority
                 />
               </div>
@@ -137,16 +138,17 @@ const HomePage = () => {
 
         {/* Right Form Section */}
         <div
-          className=" w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 
-  2xl:py-[189px] 2xl:px-[128px]  
-"
+          className=" w-full lg:w-[55%] 2xl:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-[30px] px-[20px] md:py-[50px] md:px-[80px] 2xl:px-[128px] flex justify-center items-center "
         >
-          <div className="px-4 py-6 md:px-8 md:py-10 bg-white rounded-[39.18px]  outline-1 outline-offset-[-1px] outline-stone-300/20 ">
-            <div className="text-[#1C1B35] text-xl 2xl:text-4xl xl:text-3xl md:text-2xl font-semibold">
+          <div className="bg-white rounded-[20px] md:rounded-[39px]  outline-1 outline-offset-[-1px] outline-[#cdc8c8]/20 px-[20px] py-[30px] md:py-[35px] 2xl:px-[45px]">
+            <div className="text-[#1c1b35] text-[30px] md:text-[36px] 2xl:text-[41px] font-semibold capitalize mb-3.5"
+             style={{ fontFamily: "Jost, sans-serif" }}
+            >
               Login
             </div>
 
-            <div className="mt-4 text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md  font-normal">
+            <div className="text-[#7E7F91] text-[16px] md:text-[18px] 2xl:text-[20px] font-normal capitalize leading-[1.6]"
+            style={{ fontFamily: "Jost, sans-serif" }}>
               Access your account to monitor threats, manage security insights,
               and stay protected.
             </div>
@@ -158,22 +160,22 @@ const HomePage = () => {
             </div>
 
             <div className="relative">
-              <div className="flex items-center border border-[#7C7C7C40] rounded-2xl w-full mt-3 px-5 py-3 gap-3">
+              <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
+                  className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
                 />
                 <Image
-                  src="/downredarrow.svg"
+                  src="/downred-arrow.svg"
                   alt="Arrow"
                   width={18}
                   height={10}
                   onClick={() => setShowDropdown((prev) => !prev)}
-                  className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer"
+                  className="h-[44px] xl:h-[52px] w-[40px] cursor-pointer absolute right-0 top-0 px-3 py-3 object-contain"
                 />
               </div>
 
@@ -198,21 +200,21 @@ const HomePage = () => {
               Password
             </div>
 
-            <div className="flex items-center border border-[#7C7C7C40] rounded-2xl w-full mt-3 px-5 py-3 gap-3">
+            <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Enter Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
+                className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
               />
               <Image
                 src={showPassword ? "/eyeClose .svg" : "/images/redEye.png"}
                 alt="Toggle visibility"
                 width={18}
                 height={10}
-                className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer"
+                className="h-[44px] xl:h-[52px] w-[52px] cursor-pointer absolute right-0 top-0 px-4 xl:px-3.5 py-3 object-contain"
                 onClick={() => setShowPassword((prev) => !prev)} // toggle on click
               />
             </div>
@@ -221,7 +223,7 @@ const HomePage = () => {
               Forgot your password?
             </div>
 
-            <div className="relative w-full min-h-[80px]">
+            <div className="relative w-full min-h-[60px]">
               <button
                 onClick={handleSubmit}
                 type="submit"

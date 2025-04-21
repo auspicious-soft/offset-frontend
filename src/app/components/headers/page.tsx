@@ -17,7 +17,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuPortal,
 } from "@radix-ui/react-dropdown-menu";
 
 // Define DropdownItem component using Radix's DropdownMenuItem
@@ -70,7 +69,7 @@ export default function Headers() {
         width={24}
         className="h-auto w-auto"
       />
-      <DropdownMenu onOpenChange={setIsOpen}>
+      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <button
             className="flex items-center gap-2 cursor-pointer focus:outline-none"
@@ -96,38 +95,36 @@ export default function Headers() {
             />
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuPortal>
-          <DropdownMenuContent
-            className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] mr-2 lg:mr-10"
-            sideOffset={5}
-          >
-            <Link href="/settings">
+        <DropdownMenuContent
+          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] mr-2 lg:mr-10"
+          sideOffset={5}
+        >
+          <Link href="/settings">
             <DropdownItem
               icon={<Settings />}
               label="Account Settings"
               className="border-b border-gray-200"
             />
-            </Link>
+          </Link>
 
-            <Link href="/subscription">
+          <Link href="/subscription">
             <DropdownItem
               icon={<CreditCard />}
               label="Payment Details"
               className="border-b border-gray-200"
             />
-            </Link>
+          </Link>
 
-            <Link href="/subscription/payment-history">
+          <Link href="/subscription/payment-history">
             <DropdownItem
               icon={<FileText />}
               label="Canceling Subscription"
               className="border-b border-gray-200"
             />
-            </Link>
+          </Link>
 
-            <DropdownItem icon={<LogOut />} label="Logout" />
-          </DropdownMenuContent>
-        </DropdownMenuPortal>
+          <DropdownItem icon={<LogOut />} label="Logout" />
+        </DropdownMenuContent>
       </DropdownMenu>
     </div>
   );

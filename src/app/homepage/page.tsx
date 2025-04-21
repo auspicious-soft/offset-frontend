@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { useState } from "react";
 import Image from "next/image";
 import Footers from "@/app/components/footers/page";
@@ -67,6 +67,7 @@ const educationCards = [
 const HomePage = () => {
   const [active, setActive] = useState("tools");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef(null);
   
   // Sample news items - you can replace these with your actual data
   const newsItems = [
@@ -99,28 +100,38 @@ const HomePage = () => {
     }
   ];
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+  const nextSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e) e.preventDefault();
+    setCurrentIndex(prevIndex => 
       prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+  const prevSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e) e.preventDefault();
+    setCurrentIndex(prevIndex => 
       prevIndex === 0 ? newsItems.length - 1 : prevIndex - 1
     );
   };
 
-  // Optional: Auto-slide functionality
+  // Optional: Auto-slide functionality with stable reference
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
+    const autoSlide = () => {
+      setCurrentIndex(prevIndex => 
+        prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
+      );
+    };
+    
+    const interval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
     
     return () => clearInterval(interval);
-  }, []);
+  }, []); // Empty dependency array to avoid excessive re-renders
 
-  const currentNews = newsItems[currentIndex];
+  // Use memoization to prevent unnecessary re-renders
+  const currentNews = useMemo(() => 
+    newsItems[currentIndex], 
+    [currentIndex, newsItems]
+  );
 
   return (
     <>
@@ -133,98 +144,100 @@ const HomePage = () => {
                 {/* Left Section */}
 
                 <div className=" w-full lg:w-[65%] mx-auto  ">
-                <div className=" relative w-full h-full">
-      <div className="w-full  min-h-[355px]  sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
-        <img 
-          src={currentNews.image}
-          alt="news background" 
-          className="w-full h-full min-h-[355px] object-cover"
-        />
-      </div>
+                  <div className=" relative w-full h-full">
+                    <div className="w-full  min-h-[355px]  sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
+                      <img 
+                        src={currentNews.image}
+                        alt="news background" 
+                        className="w-full h-full min-h-[355px] object-cover"
+                      />
+                    </div>
 
-      <div className=" p-2 absolute top-0 left-0 w-full">
-        <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
-          <div className="text-white font-bold break-words max-w-[70%] text-sm sm:text-base md:text-lg lg:text-2xl xl:text-2xl">
-            MAIN NEWS
-          </div>
-          <div className="flex items-start gap-2 sm:gap-3">
-            <button 
-              onClick={prevSlide}
-              className={`cursor-pointer backdrop-blur-sm rounded-full p-2 w-fit transition-colors ${
-                currentIndex === 0 
-                  ? "bg-white/30 hover:bg-white/30" 
-                  : "bg-white hover:bg-white"
-              }`}
-              aria-label="Previous slide"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4">
-                <path 
-                  d="M15 18L9 12L15 6" 
-                  stroke={currentIndex === 0 ? "white" : "black"} 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+                    <div className=" p-2 absolute top-0 left-0 w-full">
+                      <div className="flex justify-between items-start p-2 sm:p-3 md:p-4 lg:p-5">
+                        <div className="text-white font-bold break-words max-w-[70%] text-sm sm:text-base md:text-lg lg:text-2xl xl:text-2xl">
+                          MAIN NEWS
+                        </div>
+                        <div className="flex items-start gap-2 sm:gap-3" ref={sliderRef}>
+                          <button 
+                            onClick={prevSlide}
+                            type="button"
+                            className={`cursor-pointer backdrop-blur-sm rounded-full p-2 w-fit transition-colors ${
+                              currentIndex === 0 
+                                ? "bg-white/30 hover:bg-white/30" 
+                                : "bg-white hover:bg-white"
+                            }`}
+                            aria-label="Previous slide"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4">
+                              <path 
+                                d="M15 18L9 12L15 6" 
+                                stroke={currentIndex === 0 ? "white" : "black"} 
+                                strokeWidth="2" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </button>
 
-            <button 
-              onClick={nextSlide}
-              className={`cursor-pointer backdrop-blur-sm rounded-full p-2 w-fit transition-colors ${
-                currentIndex === newsItems.length - 1 
-                  ? "bg-white/30 hover:bg-white/30" 
-                  : "bg-white hover:bg-gray-100"
-              }`}
-              aria-label="Next slide"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4">
-                <path 
-                  d="M9 6L15 12L9 18" 
-                  stroke={currentIndex === newsItems.length - 1 ? "white" : "black"} 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+                          <button 
+                            onClick={nextSlide}
+                            type="button"
+                            className={`cursor-pointer backdrop-blur-sm rounded-full p-2 w-fit transition-colors ${
+                              currentIndex === newsItems.length - 1 
+                                ? "bg-white/30 hover:bg-white/30" 
+                                : "bg-white hover:bg-gray-100"
+                            }`}
+                            aria-label="Next slide"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4">
+                              <path 
+                                d="M9 6L15 12L9 18" 
+                                stroke={currentIndex === newsItems.length - 1 ? "white" : "black"} 
+                                strokeWidth="2" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
 
-        <div
-          className="h-0.5 ml-2 sm:ml-3 md:ml-4 mr-2 w-[98%]"
-          style={{
-            background: `linear-gradient(to right, #E5223A ${(currentIndex + 1) * (100 / newsItems.length)}%, rgba(255, 255, 255, 0.1) ${(currentIndex + 1) * (100 / newsItems.length)}%)`,
-          }}
-        />
-      </div>
+                      <div
+                        className="h-0.5 ml-2 sm:ml-3 md:ml-4 mr-2 w-[98%]"
+                        style={{
+                          background: `linear-gradient(to right, #E5223A ${(currentIndex + 1) * (100 / newsItems.length)}%, rgba(255, 255, 255, 0.1) ${(currentIndex + 1) * (100 / newsItems.length)}%)`,
+                        }}
+                      />
+                    </div>
 
-      <div className="absolute bottom-0 left-0 w-full p-4 sm:p-3 md:p-4 lg:p-5 mb-[10px]">
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-          <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-gray-300 overflow-hidden">
-            <img 
-              src="/sarah.svg" 
-              alt="Author" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base">
-            By {currentNews.author}
-          </div>
-          <div className="text-[#959595] text-[10px] sm:text-xs md:text-sm lg:text-base">
-            | {currentNews.timeAgo}
-          </div>
-        </div>
+                    <div className="absolute bottom-0 left-0 w-full p-4 sm:p-3 md:p-4 lg:p-5 mb-[10px]">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-gray-300 overflow-hidden">
+                          <img 
+                            src="/sarah.svg" 
+                            alt="Author" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base">
+                          By {currentNews.author}
+                        </div>
+                        <div className="text-[#959595] text-[10px] sm:text-xs md:text-sm lg:text-base">
+                          | {currentNews.timeAgo}
+                        </div>
+                      </div>
 
-        <div className="text-white text-sm sm:text-md md:text-2xl lg:text-3xl 2xl:text-4xl mb-1 sm:mb-2">
-          {currentNews.title}
-        </div>
+                      <div className="text-white text-sm sm:text-md md:text-2xl lg:text-3xl 2xl:text-4xl mb-1 sm:mb-2">
+                        {currentNews.title}
+                      </div>
 
-        <div className="text-[#FF475E] text-[10px] font-bold sm:text-sm md:text-md 2xl:text-xl">
-          {currentNews.category}{" "}
-          <span className="text-[#959595]">| {currentNews.readTime}</span>
-        </div>
-      </div>
-    </div>
+                      <div className="text-[#FF475E] text-[10px] font-bold sm:text-sm md:text-md 2xl:text-xl">
+                        {currentNews.category}{" "}
+                        <span className="text-[#959595]">| {currentNews.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Right Section */}
@@ -295,10 +308,10 @@ const HomePage = () => {
                                 width={34}
                                 className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
                               />
-                              <div className="flex justify-center align-middle">
-                                <div className="mt-2 text-[#1C1B35] text-xs">
+                              <div className="flex  justify-center items-center 2xl:text-lg lg:text-md text-sm">
+                                <div className=" text-[#1C1B35] ">
                                   By {cards.author}
-                                  <span className="ml-[4px] text-[#959595] text-xs">
+                                  <span className="ml-[4px] text-[#959595] ">
                                     | {cards.time}
                                   </span>
                                 </div>
@@ -353,10 +366,10 @@ const HomePage = () => {
                                 width={34}
                                 className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
                               />
-                              <div className="flex justify-center align-middle">
-                                <div className="mt-2 text-[#1C1B35] text-xs">
+                              <div className="flex justify-center items-center 2xl:text-lg lg:text-md text-sm">
+                                <div className=" text-[#1C1B35] ">
                                   By {cards.author}
-                                  <span className="ml-[4px] text-[#959595] text-xs">
+                                  <span className="ml-[4px] text-[#959595] ">
                                     | {cards.time}
                                   </span>
                                 </div>
@@ -472,7 +485,7 @@ const HomePage = () => {
                       />
 
                       <button
-                        type="submit"
+                        type="button"
                         className="rounded-xl absolute right-1 top-1/2 -translate-y-1/2 px-4 py-[10px] sm:py-[10px] sm:px-4 bg-[#E5223A] hover:bg-[#E5223A] text-white  text-xs sm:text-sm cursor-pointer"
                       >
                         Check Now
@@ -592,7 +605,6 @@ const HomePage = () => {
                   </div>
                 ))}
               </div>
-
               {/* red frame playstore */}
               <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
                 <div className="bg-[url('/images/playstoreBGImage.png')] bg-cover bg-center relative mt-[60px] md:mt-[126px] mb-[60px] md:mb-[126px] px-4 md:px-[50px] flex flex-col md:flex-row bg-[#E5223A] rounded-xl overflow-hidden">

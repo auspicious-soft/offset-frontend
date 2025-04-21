@@ -35,7 +35,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Paid":
-        return "bg-green-100 text-green-700";
+        return "bg-green-100 text-green-700 ";
       case "Pending":
         return "bg-yellow-100 text-yellow-700";
       case "Failed":
@@ -62,12 +62,12 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50">
-              <th className="py-3 px-4 text-left text-sm font-medium text-gray-500">Payment Date</th>
-              <th className="py-3 px-4 text-left text-sm font-medium text-gray-500">Invoice Number</th>
-              <th className="py-3 px-4 text-left text-sm font-medium text-gray-500">Payment Status</th>
-              <th className="py-3 px-4 text-left text-sm font-medium text-gray-500">Amount</th>
-              <th className="py-3 px-4 text-left text-sm font-medium text-gray-500">Action</th>
+            <tr className="bg-gray-50 text-[#7E7F91] 2xl:text-3xl lg:text-xl md:text-md text-sm font-medium">
+              <th className="py-3 px-4 text-left  ">Payment Date</th>
+              <th className="py-3 px-4 text-left  ">Invoice Number</th>
+              <th className="py-3 px-4 text-left  ">Payment Status</th>
+              <th className="py-3 px-4 text-left  ">Amount</th>
+              <th className="py-3 px-4 text-left  ">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -79,7 +79,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
                 </td>
                 <td className="py-3 px-4 text-sm text-gray-700">{payment.invoiceNumber}</td>
                 <td className="py-3 px-4 text-sm">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(payment.status)}`}>
+                  <span className={`inline-block px-[8px] py-[3px] rounded-full text-xs font-medium ${getStatusColor(payment.status)}`}>
                     {payment.status}
                   </span>
                 </td>
