@@ -47,6 +47,7 @@ export default function Headers() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Manage body overflow when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("overflow-hidden");
@@ -58,6 +59,27 @@ export default function Headers() {
       document.body.classList.remove("overflow-hidden");
     };
   }, [menuOpen]);
+
+  // Prevent scrollbar jump when dropdown is open
+  useEffect(() => {
+    if (isOpen) {
+      // Store the current scrollbar width
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Add padding to body to compensate for scrollbar disappearance
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Remove padding when dropdown is closed
+      document.body.style.paddingRight = '';
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.paddingRight = '';
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   // Common Icons Component for reusability
   const Icons = () => (
@@ -96,8 +118,10 @@ export default function Headers() {
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] mr-2 lg:mr-10"
+          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
           sideOffset={5}
+          avoidCollisions={true}
+          collisionPadding={10}
         >
           <Link href="/settings">
             <DropdownItem
@@ -186,7 +210,7 @@ export default function Headers() {
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
-                      <Menu className="w-6 h-6" />
+                      <Menu className="w-6 h-6 cursor-pointer" />
                     </button>
                   </div>
                 </div>
@@ -202,7 +226,7 @@ export default function Headers() {
               <Link
                 href="/homepage"
                 className={
-                  pathname === "/" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 Home
@@ -211,7 +235,7 @@ export default function Headers() {
               <Link
                 href="/newss"
                 className={
-                  pathname === "/newss" ? "text-[#E5223A] font-semibold" : ""
+                  (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 News
@@ -220,7 +244,7 @@ export default function Headers() {
               <Link
                 href="/darkweb"
                 className={
-                  pathname === "/darkweb" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 Darkweb Incidents
@@ -255,7 +279,7 @@ export default function Headers() {
                 {/* Top Row */}
                 <div className="ml-4 py-[17px] flex justify-between">
                 <div>
-                  <Link href="/" aria-label="Offset7 Home">
+                  <Link href="/homepage" aria-label="Offset7 Home">
                     <Image
                       src="/logo.svg"
                       alt="Offset7 Logo"
@@ -305,7 +329,7 @@ export default function Headers() {
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
-                      <X className="w-6 h-6" />
+                      <X className="w-6 h-6 cursor-pointer" />
                     </button>
                   </div>
                 </div>
@@ -313,9 +337,9 @@ export default function Headers() {
               <div className="lg:hidden p-4 text-[#1C1B35] text-base bg-white rounded-b-[20px] overflow-y-auto max-h-[calc(100vh-80px)] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                 <div className="flex flex-col gap-4">
                   <Link
-                    href="/"
+                    href="/homepage"
                     className={
-                      pathname === "/" ? "text-[#E5223A] font-semibold" : ""
+                      pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
                     }
                   >
                     Home
@@ -323,12 +347,19 @@ export default function Headers() {
                   <Link
                     href="/newss"
                     className={
-                      pathname === "/newss" ? "text-[#E5223A] font-semibold" : ""
+                      (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
                     }
                   >
                     News
                   </Link>
-                  <Link href="/darkweb">Darkweb Incidents</Link>
+                  <Link
+                    href="/darkweb"
+                    className={
+                      pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
+                    }
+                  >
+                    Darkweb Incidents
+                  </Link>
                   <Link href="#">Cve Engine</Link>
                   <Link href="#">Risk Assets</Link>
                   <Link href="#">My Library</Link>
