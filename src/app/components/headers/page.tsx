@@ -186,7 +186,7 @@ export default function Headers() {
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
-                      <Menu className="w-6 h-6" />
+                      <Menu className="w-6 h-6  cursor-pointer" />
                     </button>
                   </div>
                 </div>
@@ -202,7 +202,7 @@ export default function Headers() {
               <Link
                 href="/homepage"
                 className={
-                  pathname === "/" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
                 }
               >
                 Home
@@ -255,7 +255,7 @@ export default function Headers() {
                 {/* Top Row */}
                 <div className="ml-4 py-[17px] flex justify-between">
                 <div>
-                  <Link href="/" aria-label="Offset7 Home">
+                  <Link href="/homepage" aria-label="Offset7 Home">
                     <Image
                       src="/logo.svg"
                       alt="Offset7 Logo"
@@ -305,7 +305,7 @@ export default function Headers() {
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
-                      <X className="w-6 h-6" />
+                      <X className="w-6 h-6 cursor-pointer" />
                     </button>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function Headers() {
                   <Link
                     href="/"
                     className={
-                      pathname === "/" ? "text-[#E5223A] font-semibold" : ""
+                      pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
                     }
                   >
                     Home
@@ -328,7 +328,14 @@ export default function Headers() {
                   >
                     News
                   </Link>
-                  <Link href="/darkweb">Darkweb Incidents</Link>
+                  <Link
+                href="/darkweb"
+                className={
+                  pathname === "/darkweb" ? "text-[#E5223A] font-semibold" : ""
+                }
+              >
+                Darkweb Incidents
+              </Link>
                   <Link href="#">Cve Engine</Link>
                   <Link href="#">Risk Assets</Link>
                   <Link href="#">My Library</Link>
