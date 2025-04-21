@@ -371,7 +371,7 @@ const HomePage = () => {
                     id="terms"
                     checked={checked}
                     onChange={(e) => setChecked(e.target.checked)}
-                    className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-lg border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
+                    className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-[10px] border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
                   />
                   <label
                     htmlFor="terms"
@@ -481,7 +481,7 @@ const HomePage = () => {
                     id="terms"
                     checked={checked}
                     onChange={(e) => setChecked(e.target.checked)}
-                    className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-lg border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
+                    className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-[10px] border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
                     
                   />
                   <label   

@@ -85,7 +85,7 @@ const Page = () => {
                   <Image
                     src="/horizontalRedLine.svg"
                     alt="left arrow"
-                    height={0}
+                    height={4}
                     width={30}
                     className="w-[20px] sm:w-[30px] md:w-[41px]"
                   />
@@ -114,7 +114,7 @@ const Page = () => {
             <div className="flex flex-col lg:flex-row my-[46px] md:my-[126px]  gap-[102px]">
               {/* Left Section */}
               <div className="w-full lg:w-[50%]">
-                <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start">
+                <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start font-medium">
                   <span className="text-[#1C1B35] font-medium text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl ">
                     We are
                   </span>
