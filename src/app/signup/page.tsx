@@ -18,65 +18,102 @@ const HomePage = () => {
  const selectRef = useRef<HTMLSelectElement>(null);
  const [confirmPassword, setConfirmPassword] = useState("");
  const [checked, setChecked] = useState(false);
+ const [businessName, setBusinessName] = useState("");
 
  const handleSubmit = () => {
-  if (!firstName.trim()) {
-   toast.error("Please enter first name");
-   return;
+  if (active === "tools") {
+   // Personal Account Form Validation
+   if (!firstName.trim()) {
+    toast.error("Please enter your first name");
+    return;
+   }
+
+   if (!lastName.trim()) {
+    toast.error("Please enter your last name");
+    return;
+   }
+
+   if (!email) {
+    toast.error("Please enter your email address");
+    return;
+   }
+
+   if (!country) {
+    toast.error("Please select your country");
+    return;
+   }
+
+   if (!password) {
+    toast.error("Please enter a password");
+    return;
+   }
+
+   if (!confirmPassword) {
+    toast.error("Please confirm your password");
+    return;
+   }
+
+   if (password !== confirmPassword) {
+    toast.error("Passwords do not match");
+    return;
+   }
+
+   if (!checked) {
+    toast.error("You must agree to the Terms & Conditions");
+    return;
+   }
+
+   console.log("First Name:", firstName);
+   console.log("Last Name:", lastName);
+   console.log("Email:", email);
+   console.log("Country:", country);
+   console.log("Password:", password);
+   console.log("Confirm Password:", confirmPassword);
+   console.log("Agreed to Terms:", checked);
+
+   toast.success("Personal account created successfully!");
+
+   setFirstName("");
+   setLastName("");
+   setEmail("");
+   setPassword("");
+   setConfirmPassword("");
+   setCountry("");
+   setChecked(false);
+  } else {
+   // Business Account Form Validation
+   if (!businessName.trim()) {
+    toast.error("Please enter your business name");
+    return;
+   }
+
+   if (!email) {
+    toast.error("Please enter your business email address");
+    return;
+   }
+
+   if (!password) {
+    toast.error("Please enter a password for your business account");
+    return;
+   }
+
+   if (!checked) {
+    toast.error("You must agree to the Terms & Conditions for your business account");
+    return;
+   }
+
+   console.log("Business Name:", businessName);
+   console.log("Email:", email);
+   console.log("Password:", password);
+   console.log("Agreed to Terms:", checked);
+
+   toast.success("Business account created successfully!");
+
+   setBusinessName("");
+   setEmail("");
+   setPassword("");
+   setChecked(false);
   }
-
-  if (!lastName.trim()) {
-   toast.error("Please enter last name");
-   return;
-  }
-
-  if (!email) {
-   toast.error("Please enter email");
-   return;
-  }
-
-  if (!country) {
-   toast.error("Please enter country");
-   return;
-  }
-
-  if (!password) {
-   toast.error("Please enter password");
-   return;
-  }
-
-  if (!confirmPassword) {
-   toast.error("Please confirm your password");
-   return;
-  }
-
-  if (password !== confirmPassword) {
-   toast.error("Passwords do not match");
-   return;
-  }
-
-  if (!checked) {
-   toast.error("You must agree to the Terms & Conditions");
-   return;
-  }
-
-  console.log("First Name:", firstName);
-  console.log("Last Name:", lastName);
-  console.log("Email:", email);
-  console.log("Country:", country);
-  console.log("Password:", password);
-  console.log("Confirm Password:", confirmPassword);
-  console.log("Agreed to Terms:", checked);
-
-  toast.success("Form submitted!");
-
-  setFirstName("");
-  setLastName("");
-  setEmail("");
-  setPassword("");
-  setConfirmPassword("");
-  setCountry("");
-  setChecked(false);
  };
 
  return (
@@ -102,7 +139,7 @@ const HomePage = () => {
     </div>
 
     {/* Right Form Section */}
-    <div className="w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 2xl:py-[189px] 2xl:px-[128px] font-['Jost']">
+    <div className="w-full lg:w-[60%] bg-[url('/images/dotsBGImage.png')] bg-cover py-16 px-8 md:py-15 md:px-16 2xl:py-[189px] 2xl:px-[128px] ">
      <div className="px-4 py-6 md:px-8 md:py-10 bg-white rounded-[39.18px] outline-1 outline-offset-[-1px] outline-stone-300/20">
       <div className="text-[#1C1B35] text-xl 2xl:text-4xl xl:text-3xl md:text-2xl font-semibold">Sign Up</div>
 
@@ -120,9 +157,9 @@ const HomePage = () => {
        </div>
       </div>
 
+      {/* Personal Account Form */}
       {active === "tools" ? (
        <>
-        {/* Personal Account Form */}
         <div className="flex flex-col md:flex-row gap-[22px] mt-6">
          <div className="w-full md:w-1/2">
           <div className="text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">First Name</div>
@@ -172,7 +209,7 @@ const HomePage = () => {
           <div className="mt-6 text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">Password</div>
           <div className="mt-[15px] flex items-center border border-[#7C7C7C40] rounded-2xl px-5 py-3 gap-3 w-full">
            <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
-           <Image src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
+           <Image src={showPassword ? "/eyeClose .svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
           </div>
          </div>
 
@@ -187,7 +224,7 @@ const HomePage = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
            />
-           <Image src={showPasswordd ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPasswordd((prev) => !prev)} />
+           <Image src={showPasswordd ? "/eyeClose .svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPasswordd((prev) => !prev)} />
           </div>
          </div>
         </div>
@@ -217,13 +254,12 @@ const HomePage = () => {
        </>
       ) : (
        <>
-
         {/* Business Account Form */}
         <div className="w-full ">
-         <div className="text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium"> Name</div>
+         <div className="text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">Business Name</div>
          <div className="relative">
           <div className="flex items-center border border-[#7C7C7C40] rounded-2xl w-full mt-3 px-5 py-3 gap-3">
-           <input type="text" name="firstName" placeholder="Enter  Name" className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
+           <input type="text" name="businessName" placeholder="Enter Business Name" value={businessName} onChange={(e) => setBusinessName(e.target.value)} className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
           </div>
          </div>
         </div>
@@ -238,11 +274,10 @@ const HomePage = () => {
         <div className="mt-6 text-[#1C1B35] text-md 2xl:text-2xl xl:text-xl md:text-lg font-medium">Password</div>
         <div className="mt-[15px] flex items-center border border-[#7C7C7C40] rounded-2xl px-5 py-3 gap-3 w-full">
          <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent" />
-         <Image src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
+         <Image src={showPassword ? "/eyeClose .svg" : "/images/redEye.png"} alt="Toggle visibility" width={18} height={10} className="h-[8px] w-[12px] md:h-[10px] md:w-[18px] cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} />
         </div>
 
         <div className="my-[28px] flex flex-row gap-3 sm:gap-[15px] text-base font-normal items-start sm:items-center">
-
          <input type="checkbox" id="terms" checked={checked} onChange={(e) => setChecked(e.target.checked)} className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-lg border-[1.52px] border-Colorstroke" />
          <label htmlFor="terms" className="cursor-pointer leading-snug">
           <span className="text-gray-500">By using </span>

@@ -208,7 +208,7 @@ const HomePage = () => {
                 className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent"
               />
               <Image
-                src={showPassword ? "/eyeClose.svg" : "/images/redEye.png"}
+                src={showPassword ? "/eyeClose .svg" : "/images/redEye.png"}
                 alt="Toggle visibility"
                 width={18}
                 height={10}
