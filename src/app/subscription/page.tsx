@@ -83,7 +83,7 @@ const Page = () => {
                 <li className="flex items-center">
                   <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">Community Access –</span> 
                   <span className="font-normal ml-[4px]">Join discussions with other free users.</span> 
-                </li>
+                </li> 
                 <li className="flex items-center">
                   <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">No Premium Reports –</span> 
                   <span className="font-normal ml-[4px]">In-depth analytics not included.</span> 
