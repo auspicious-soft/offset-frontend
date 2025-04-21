@@ -79,7 +79,7 @@ const HomePage = () => {
   <>
     <ToastContainer />
 
-  <div className="max-w-[1700px] mx-auto  flex flex-col-reverse lg:flex-row min-h-screen">
+  <div className="max-w-[1700px] mx-auto  flex flex-col lg:flex-row min-h-screen">
 
   {/* Left Image */}
   <div className=" w-full lg:w-[40%] h-auto  lg:h-auto relative object-contain">
@@ -108,8 +108,9 @@ const HomePage = () => {
     </Link>
 
   {/* Full width welcome text */}
-  <div className=" font-['Jost'] top-[100px] md:top-[200px]  pr-[20px] w-full  max-w-[90%] mx-auto">
-    <div className="text-white text-sm md:text-md xl:text-xl 2xl:text-2xl font-medium w-full">
+  
+  <div className="  top-[100px] md:top-[200px]  pr-[20px] w-full  max-w-[90%] mx-auto">
+    <div className="lg:mt-[81px] mt-[30px] text-white text-sm md:text-md xl:text-xl 2xl:text-2xl font-medium w-full">
       Welcome to Offset7 👋
     </div>
     <div className="py-[8px] md:py-[11px] text-white text-xl md:text-3xl xl:text-4xl 2xl:text-6xl font-medium ">
