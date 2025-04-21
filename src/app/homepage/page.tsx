@@ -114,20 +114,7 @@ const HomePage = () => {
     );
   };
 
-  // // Optional: Auto-slide functionality with stable reference
-  // useEffect(() => {
-  //   const autoSlide = () => {
-  //     setCurrentIndex(prevIndex => 
-  //       prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
-  //     );
-  //   };
-    
-  //   const interval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
-    
-  //   return () => clearInterval(interval);
-  // }, []); // Empty dependency array to avoid excessive re-renders
-
-  // Use memoization to prevent unnecessary re-renders
+  // Use memoization to prevent unnecessary re-render
   const currentNews = useMemo(() => 
     newsItems[currentIndex], 
     [currentIndex, newsItems]
@@ -149,7 +136,7 @@ const HomePage = () => {
                       <img 
                         src={currentNews.image}
                         alt="news background" 
-                        className="w-full h-full min-h-[355px] object-cover"
+                        className="sw-full h-full min-h-[355px] object-cover"
                       />
                     </div>
 
