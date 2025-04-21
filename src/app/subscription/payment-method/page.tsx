@@ -21,6 +21,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
 
 const Page = () => {
   const [selectedFrequency, setSelectedFrequency] = useState<
@@ -295,9 +296,13 @@ const Page = () => {
                     </p>
                   </div>
                 </div>
-                <Button className="w-full mt-6 bg-[#E5223A] hover:bg-[#E5223A]/90">
+
+                <Link href="/subscription/payment-method/payment-success">
+                <Button className=" cursor-pointer w-full mt-6 bg-[#E5223A] hover:bg-[#E5223A]">
                   Pay Now
-                </Button>
+                </Button>'
+                </Link>
+
                 <div className="flex justify-between mt-3 border-t py-4 font-semibold">
                   <span>Subtotal:</span>
                   <span>$199.00</span>

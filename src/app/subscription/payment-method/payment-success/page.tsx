@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
 
@@ -74,20 +75,25 @@ const Page = () => {
             transition={{ delay: 0.9, duration: 0.5 }}
             className="w-full flex flex-col gap-3"
           >
+
+          <Link href="/homepage">
             <Button 
               className="w-full bg-[#E5223A] hover:bg-[#E5223A] cursor-pointer text-white"
               // onClick={() => setShowSuccess(false)}
             >
               Go to Home
             </Button>
+            </Link>
             
+            <Link href="/subscription/payment-method/payment-success/invoice-detail">
             <Button 
               variant="ghost"
-              className="text-[#1C1B35] border border-[#7C7C7C4A] cursor-pointer hover:text-[#1C1B35]"
+              className=" w-full text-[#1C1B35] border border-[#7C7C7C4A] cursor-pointer hover:text-[#1C1B35]"
               onClick={() => console.log('View invoice')}
             >
               View Invoice
             </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

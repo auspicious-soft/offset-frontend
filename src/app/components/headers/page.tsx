@@ -108,17 +108,23 @@ export default function Headers() {
               className="border-b border-gray-200"
             />
             </Link>
-            
+
+            <Link href="/subscription">
             <DropdownItem
               icon={<CreditCard />}
               label="Payment Details"
               className="border-b border-gray-200"
             />
+            </Link>
+
+            <Link href="/subscription/payment-history">
             <DropdownItem
               icon={<FileText />}
               label="Canceling Subscription"
               className="border-b border-gray-200"
             />
+            </Link>
+
             <DropdownItem icon={<LogOut />} label="Logout" />
           </DropdownMenuContent>
         </DropdownMenuPortal>

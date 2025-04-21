@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
 import { Search, ChevronDown, Mail, X, Check, LockKeyhole, Zap, ChartNoAxesColumn, CircleHelp } from "lucide-react";
+import Link from "next/link";
 
 const Page = () => {
   // State for FAQ dropdowns
@@ -86,9 +87,11 @@ const Page = () => {
                   <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>No Priority Support – General support only.
                 </li>
               </ul>
-              <button className="mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
+              <Link href="/subscription/payment-method">
+              <button className=" w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
                 Choose Plan
               </button>
+              </Link>
             </div>
 
             {/* Premium Plan */}
@@ -118,9 +121,13 @@ const Page = () => {
                   <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><CircleHelp color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>Premium Support – Priority customer assistance.
                 </li>
               </ul>
-              <button className="mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
+
+              <Link href="/subscription/payment-method">
+              <button className="w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
                 Choose Plan
               </button>
+              </Link>
+
             </div>
           </section>
         </div>

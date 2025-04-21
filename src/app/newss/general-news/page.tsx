@@ -252,7 +252,7 @@ const Page = () => {
 
             <div className="flex justify-between items-center">
              <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
-             <Image src="/Arrow.svg" alt="Red Arrow" height={35} width={35} className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full " />
+             <Image src="/Arrow.svg" alt="Red Arrow" height={29} width={29} className="   xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full " />
             </div>
            </div>
           </div>
@@ -283,7 +283,7 @@ const Page = () => {
 
             <div className="flex justify-between items-center">
              <div className="text-sm text-[#FF475E] font-bold">{cards.tag}</div>
-             <Image src="/Arrow.svg" alt="Red Arrow" height={35} width={35} className="   xl:w-[35px] xl:h-[35px] 2xl:w-[35px] 2xl:h-[35px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full " />
+             <Image src="/Arrow.svg" alt="Red Arrow" height={29} width={29} className="   xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5   bg-[#E5223A]   rounded-full " />
             </div>
            </div>
           </div>
