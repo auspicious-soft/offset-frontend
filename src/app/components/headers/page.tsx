@@ -155,7 +155,7 @@ export default function Headers() {
 
   return (
     <>
-      <header className="w-full">
+      <header className="w-full fixed top-0 left-0 right-0 z-50 bg-white">
         {!menuOpen && (
           <div className="bg-white">
             <div className="container">
@@ -274,114 +274,116 @@ export default function Headers() {
 
           {/* Mobile Nav Menu */}
           {menuOpen && (
-            <div className="h-full fixed z-50 left-0 right-0 top-0 backdrop-blur-xs">
-              <div className="sticky top-0 z-50 bg-white">
-                {/* Top Row */}
-                <div className="ml-4 py-[17px] flex justify-between">
-                <div>
-                  <Link href="/homepage" aria-label="Offset7 Home">
-                    <Image
-                      src="/logo.svg"
-                      alt="Offset7 Logo"
-                      height={72}
-                      width={57}
-                      priority
-                      className="h-[50px] sm:h-[50px] lg:h-[72px] w-auto"
-                    />
-                  </Link>
-                </div>
-
-                  <div className="flex items-center gap-2 sm:gap-3">
-                    {/* Social icons (hidden on small & medium screens) */}
-                    <div className="hidden lg:flex gap-2 sm:gap-3 justify-center items-center">
-                      <div className="bg-[#CF201F] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
+            <div className="fixed inset-0 z-50 bg-white transform-gpu">
+              <div className="h-screen overflow-y-auto">
+                <div className="sticky top-0 z-50 bg-white">
+                  {/* Top Row */}
+                  <div className="ml-4 py-[17px] flex justify-between">
+                    <div>
+                      <Link href="/homepage" aria-label="Offset7 Home">
                         <Image
-                          src="/images/youtube.png"
-                          alt="YouTube Channel"
-                          width={24}
-                          height={24}
-                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          src="/logo.svg"
+                          alt="Offset7 Logo"
+                          height={72}
+                          width={57}
+                          priority
+                          className="h-[50px] sm:h-[50px] lg:h-[72px] w-auto"
                         />
-                      </div>
-                      <div className="bg-[#18B8EA] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
-                        <Image
-                          src="/images/v.png"
-                          alt="Twitter/X Profile"
-                          width={12}
-                          height={12}
-                          className="h-auto w-auto"
-                        />
-                      </div>
-                      <div className="bg-[#3E599C] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
-                        <Image
-                          src="/images/facebook.png"
-                          alt="Facebook Page"
-                          width={36}
-                          height={36}
-                          className="h-auto w-auto"
-                        />
-                      </div>
+                      </Link>
                     </div>
 
-                    {/* Hamburger */}
-                    <button
-                      className="flex lg:hidden mr-3"
-                      onClick={() => setMenuOpen(!menuOpen)}
-                      aria-label="Toggle Menu"
-                    >
-                      <X className="w-6 h-6 cursor-pointer" />
-                    </button>
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      {/* Social icons (hidden on small & medium screens) */}
+                      <div className="hidden lg:flex gap-2 sm:gap-3 justify-center items-center">
+                        <div className="bg-[#CF201F] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
+                          <Image
+                            src="/images/youtube.png"
+                            alt="YouTube Channel"
+                            width={24}
+                            height={24}
+                            className="w-4 h-4 sm:w-5 sm:h-5"
+                          />
+                        </div>
+                        <div className="bg-[#18B8EA] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
+                          <Image
+                            src="/images/v.png"
+                            alt="Twitter/X Profile"
+                            width={12}
+                            height={12}
+                            className="h-auto w-auto"
+                          />
+                        </div>
+                        <div className="bg-[#3E599C] w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded cursor-pointer">
+                          <Image
+                            src="/images/facebook.png"
+                            alt="Facebook Page"
+                            width={36}
+                            height={36}
+                            className="h-auto w-auto"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Hamburger */}
+                      <button
+                        className="flex lg:hidden mr-3"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Toggle Menu"
+                      >
+                        <X className="w-6 h-6 cursor-pointer" />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="lg:hidden p-4 text-[#1C1B35] text-base bg-white rounded-b-[20px] overflow-y-auto max-h-[calc(100vh-80px)] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-                <div className="flex flex-col gap-4">
-                  <Link
-                    href="/homepage"
-                    className={
-                      pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
-                    }
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/newss"
-                    className={
-                      (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
-                    }
-                  >
-                    News
-                  </Link>
-                  <Link
-                    href="/darkweb"
-                    className={
-                      pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
-                    }
-                  >
-                    Darkweb Incidents
-                  </Link>
-                  <Link href="#">Cve Engine</Link>
-                  <Link href="#">Risk Assets</Link>
-                  <Link href="#">My Library</Link>
-                  <Link
-                    href="/contact-us"
-                    className={
-                      pathname === "/contact-us"
-                        ? "text-[#E5223A] font-semibold"
-                        : ""
-                    }
-                  >
-                    Contact Us
-                  </Link>
-                  <div className="flex gap-2 items-center">
-                    <Image
-                      src="/images/country.png"
-                      alt="Language Selection"
-                      height={32}
-                      width={32}
-                      className="h-auto w-auto"
-                    />
-                    <span className="text-[#1C1B35]">EN</span>
+                <div className="lg:hidden p-4 text-[#1C1B35] text-base bg-white rounded-b-[20px] overflow-y-auto max-h-[calc(100vh-80px)] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="/homepage"
+                      className={
+                        pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
+                      }
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/newss"
+                      className={
+                        (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
+                      }
+                    >
+                      News
+                    </Link>
+                    <Link
+                      href="/darkweb"
+                      className={
+                        pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
+                      }
+                    >
+                      Darkweb Incidents
+                    </Link>
+                    <Link href="#">Cve Engine</Link>
+                    <Link href="#">Risk Assets</Link>
+                    <Link href="#">My Library</Link>
+                    <Link
+                      href="/contact-us"
+                      className={
+                        pathname === "/contact-us"
+                          ? "text-[#E5223A] font-semibold"
+                          : ""
+                      }
+                    >
+                      Contact Us
+                    </Link>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        src="/images/country.png"
+                        alt="Language Selection"
+                        height={32}
+                        width={32}
+                        className="h-auto w-auto"
+                      />
+                      <span className="text-[#1C1B35]">EN</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -389,6 +391,9 @@ export default function Headers() {
           )}
         </div>
       </header>
+
+      {/* Add a spacer div after the header to prevent content jump */}
+      <div className="h-[120px] md:h-[140px] lg:h-[160px]"></div>
     </>
   );
 }

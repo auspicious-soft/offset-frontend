@@ -493,7 +493,7 @@ const HomePage = () => {
                     key={idx}
                     className=" flex-1 min-w-[300px]  bg-stone-50 rounded-[20px]"
                   >
-                    <div className="relative inline-block w-full ">
+                    <div className="relative inline-block w-full h-[specific-height] sm:h-[specific-height] lg:h-[specific-height]">
                       <Image
                         src="/images/board.png"
                         alt="board"
