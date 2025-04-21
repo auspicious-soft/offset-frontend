@@ -484,7 +484,7 @@ const HomePage = () => {
                     className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-lg border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
                     
                   />
-                  <label
+                  <label   
                     htmlFor="terms"
                     className="cursor-pointer leading-snug"
                   >
