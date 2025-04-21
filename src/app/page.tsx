@@ -252,10 +252,10 @@ const HomePage = () => {
               <div className="w-full h-px bg-[#615F7740]" />
             </div>
 
-            <div className="mb-12 text-center text-[#7E7F91] text-sm 2xl:text-lg xl:text-md md:text-sm  font-medium  underline cursor-pointer"
+            <div className="mb-12 text-center text-[#7E7F91] text-sm 2xl:text-lg xl:text-md  font-medium  underline cursor-pointer"
              style={{ fontFamily: "Jost, sans-serif" }}>
               Continue as guest
-            </div>
+            </div> 
 
             <div className="flex justify-center text-sm 2xl:text-lg xl:text-md md:text-sm font-medium">
               <span className="text-[#1C1B35]"
