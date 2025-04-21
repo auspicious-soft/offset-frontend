@@ -128,7 +128,7 @@ const HomePage = () => {
                   alt="Computer"
                   height={520}
                   width={520}
-                  className="m-auto w-[84%] 2xl:w-full"
+                  className="m-auto w-[84%] 2xl:w-full 2xl:max-w-[520px]" 
                   priority
                 />
               </div>
