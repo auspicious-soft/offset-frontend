@@ -174,10 +174,10 @@ const HomePage = () => {
               Account Type
             </div>
 
-            <div className="h-auto bg-stone-50 flex sm:flex-rowrounded-3xl mb-[24px] rounded-2xl outline-[1.31px] outline-offset-[-1.31px] outline-Colorstroke">
+            <div className="h-auto bg-stone-50 flex sm:flex-rowrounded-3xl mb-[24px] rounded-xl outline-[1.31px] outline-offset-[-1.31px] outline-Colorstroke">
               <div
                 onClick={() => setActive("tools")}
-                className={`w-full sm:w-1/2  rounded-2xl flex justify-center items-center gap-2 cursor-pointer py-2 lg:py-4 text-[20px] ${
+                className={`w-full sm:w-1/2  rounded-xl flex justify-center items-center gap-2 cursor-pointer py-2 lg:py-4 text-[20px] ${
                   active === "tools" ? "bg-[#E5223A]" : "bg-stone-50"
                 }`}
               >
@@ -193,7 +193,7 @@ const HomePage = () => {
 
               <div
                 onClick={() => setActive("education")}
-                className={`w-full sm:w-1/2 rounded-2xl flex justify-center items-center gap-2 cursor-pointer py-2 lg:py-4 text-[20px] ${
+                className={`w-full sm:w-1/2 rounded-xl flex justify-center items-center gap-2 cursor-pointer py-2 lg:py-4 text-[20px] ${
                   active === "education" ? "bg-[#E5223A]" : "bg-stone-50"
                 }`}
               >
@@ -218,14 +218,14 @@ const HomePage = () => {
                       First Name
                     </div>
                     <div className="relative">
-                      <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                      <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                         <input
                           type="text"
                           name="firstName"
                           value={firstName}
                           onChange={(e) => setFirstName(e.target.value)}
                           placeholder="Enter First Name"
-                          className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-2xl"
+                          className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-xl"
                           style={{ fontFamily: "Jost, sans-serif" }}
                        />
                       </div>
@@ -238,14 +238,14 @@ const HomePage = () => {
                       Last Name
                     </div>
                     <div className="relative">
-                    <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                    <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                         <input
                           type="text"
                           name="lastName"
                           value={lastName}
                           onChange={(e) => setLastName(e.target.value)}
                           placeholder="Enter Last Name"
-                           className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-2xl"
+                           className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-xl"
                            style={{ fontFamily: "Jost, sans-serif" }}
                         />
                       </div>
@@ -258,14 +258,14 @@ const HomePage = () => {
                   Email Address
                 </div>
                 <div className="relative">
-                <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                     <input
                       type="email"
                       name="email"
                       placeholder="Enter Email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                       className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-2xl"
+                       className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 rounded-xl"
                        style={{ fontFamily: "Jost, sans-serif" }}
                     />
                   </div>
@@ -278,14 +278,14 @@ const HomePage = () => {
                 <div className="relative">
                   <div
                     onClick={() => selectRef.current?.focus()}
-                    className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative"
+                    className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative"
                   >
                     <select
                       ref={selectRef}
                       name="country"
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
-                      className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full  bg-transparent px-5 py-3 pr-14 rounded-2xl focus:outline-none appearance-none"
+                      className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full  bg-transparent px-5 py-3 pr-14 rounded-xl focus:outline-none appearance-none"
                       style={{ fontFamily: "Jost, sans-serif" }}
                   >
                       <option value="" disabled>
@@ -313,14 +313,14 @@ const HomePage = () => {
                      style={{ fontFamily: "Jost, sans-serif" }}>
                       Password
                     </div>
-                    <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                    <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                       <input
                         type={showPassword ? "text" : "password"}
                         name="password"
                         placeholder="Enter Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
+                        className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-xl"
                      
                         style={{ fontFamily: "Jost, sans-serif" }}/>
                       <Image
@@ -341,14 +341,14 @@ const HomePage = () => {
                      style={{ fontFamily: "Jost, sans-serif" }}>
                       Confirm Password
                     </div>
-                    <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                    <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                       <input
                         type={showPasswordd ? "text" : "password"}
                         name="confirmPassword"
                         placeholder="Confirm Password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
-                       className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
+                       className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-xl"
                        style={{ fontFamily: "Jost, sans-serif" }}
                      />
                       <Image
@@ -421,12 +421,12 @@ const HomePage = () => {
                     Name
                   </div>
                   <div className="relative">
-                  <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                  <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                       <input
                         type="text"
                         name="firstName"
                         placeholder="Enter  Name"
-                        className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3  rounded-2xl"
+                        className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3  rounded-xl"
                         style={{ fontFamily: "Jost, sans-serif" }}
                       />
                     </div>
@@ -438,14 +438,14 @@ const HomePage = () => {
                   Email Address
                 </div>
                 <div className="relative">
-                   <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                   <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                     <input
                       type="email"
                       name="email"
                       placeholder="Enter Email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3  rounded-2xl"
+                      className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3  rounded-xl"
                       style={{ fontFamily: "Jost, sans-serif" }}
                     />
                   </div>
@@ -455,14 +455,14 @@ const HomePage = () => {
                  style={{ fontFamily: "Jost, sans-serif" }}>
                   Password
                 </div>
-                <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+                <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
                     placeholder="Enter Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
+                    className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-xl"
                 style={{ fontFamily: "Jost, sans-serif" }}
                   />
                   <Image

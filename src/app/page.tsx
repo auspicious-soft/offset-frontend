@@ -164,14 +164,14 @@ const HomePage = () => {
             </div>
 
             <div className="relative">
-              <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+              <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
+                  className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-xl"
                   style={{ fontFamily: "Jost, sans-serif" }}
                 />
                 <Image
@@ -207,14 +207,14 @@ const HomePage = () => {
               Password
             </div>
 
-            <div className="flex items-center border border-[#7C7C7C40] rounded-2xl  w-full mt-3  gap-3 relative">
+            <div className="flex items-center border border-[#7C7C7C40] rounded-xl  w-full mt-3  gap-3 relative">
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Enter Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-2xl"
+                className="text-[#7E7F91] text-sm 2xl:text-xl xl:text-lg md:text-md font-normal w-full focus:outline-none bg-transparent px-5 py-3 pr-14 rounded-xl"
                 style={{ fontFamily: "Jost, sans-serif" }}
               />
               <Image
