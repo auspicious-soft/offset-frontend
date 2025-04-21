@@ -90,7 +90,7 @@ const Page = () => {
                     className="w-[20px] sm:w-[30px] md:w-[41px]"
                   />
 
-                  <div className="text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                  <div className="text-center text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                     Contact Us
                   </div>
 
@@ -114,15 +114,15 @@ const Page = () => {
             <div className="flex flex-col lg:flex-row my-[46px] md:my-[126px]  gap-[102px]">
               {/* Left Section */}
               <div className="w-full lg:w-[50%]">
-                <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start font-medium">
-                  <span className="text-[#1C1B35] font-medium text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl ">
+                <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start text-3xl md:text-4xl lg:text-6xl 2xl:text-7xl ">
+                  <span className="text-[#1C1B35]  ">
                     We are
                   </span>
-                  <span className="text-[#E5223A] font-medium text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl ">
+                  <span className="text-[#E5223A] ">
                     {" "}
                     always ready
                   </span>
-                  <span className="text-[#1C1B35] text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl font-medium">
+                  <span className="text-[#1C1B35]">
                     {" "}
                     to help you and answer your questions
                   </span>
@@ -134,7 +134,7 @@ const Page = () => {
                 </div>
 
                 {/* top  */}
-                <div className="mt-[40px] mb-[42px]  lg:mt-[80px] lg:mb-[80px]  grid grid-cols-1 md:grid-cols-2 gap-[42px] md:gap-[49px]">
+                <div className="mt-[40px] mb-[42px]  lg:mt-[80px] lg:mb-[80px]  grid grid-cols-2 md:grid-cols-2 gap-[42px] md:gap-[49px]">
                   <div className="flex justify-center md:justify-start">
                     <div>
                       <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">
@@ -165,7 +165,7 @@ const Page = () => {
                 </div>
 
                 {/* bottom  */}
-                <div className="grid grid-cols-1 md:grid-cols-2  gap-[49px]">
+                <div className="grid grid-cols-2 md:grid-cols-2  gap-[49px]">
                   <div className="flex justify-center md:justify-start">
                     <div>
                       <div className="self-stretch justify-center text-[#1C1B35] text-2xl sm:text-3xl 2xl:text-4xl font-medium">
@@ -220,9 +220,9 @@ const Page = () => {
               <div className="w-full lg:w-[50%]">
                 <div className="p-[10px] md:p-[42px]  relative bg-stone-50 rounded-[30px] overflow-hidden">
                   <div className="flex gap-[16px]">
-                    <div className="w-[10px] h-8 bg-rose-600 rounded-full" />
+                    <div className="w-[10px] h-10 bg-rose-600 rounded-full" />
                     <div>
-                      <div className="justify-start text-[#1C1B35] text-xl sm:text-3xl 2xl:text-5xl font-bold">
+                      <div className="justify-start text-[#1C1B35] text-xl sm:text-4xl 2xl:text-5xl font-bold">
                         Get in Touch
                       </div>
                       <div className="mt-[9px] justify-start text-[#727272] text-sm sm:text-lg 2xl:text-xl font-normal">
@@ -243,25 +243,25 @@ const Page = () => {
                           alt="Message box"
                           height={20}
                           width={20}
-                          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
+                          className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
                         />
                         <input
                           type="text"
                           name="username"
                           placeholder="Username"
-                          value={form.username}
+                          value={form.username} 
                           onChange={handleChange}
-                          className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+                          className="rounded-xl text-[#7E7F91] w-full text-sm sm:text-lg sm:py-4 border border-[#7C7C7C40] focus:outline-none py-3.5 pl-15 pr-3.5"
                         />
                       </div>
 
                       <div className="rounded-xl relative w-full py-[9px] sm:px-0">
                         <Image
-                          src="/Message2.svg"
+                          src="/contact-Message.svg"
                           alt="Message box"
                           height={20}
                           width={20}
-                          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-3 sm:w-5 sm:h-5 lg:h-4"
+                          className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
                         />
 
                         <input
@@ -270,7 +270,7 @@ const Page = () => {
                           placeholder="Enter your Email"
                           value={form.email}
                           onChange={handleChange}
-                          className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+                          className="rounded-xl text-[#7E7F91] w-full text-sm sm:text-lg sm:py-4 border border-[#7C7C7C40] focus:outline-none pl-15 pr-3.5 py-3.5"
                         />
                       </div>
 
@@ -280,7 +280,7 @@ const Page = () => {
                           alt="Message box"
                           height={20}
                           width={20}
-                          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
+                          className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
                         />
                         <input
                           type="tel"
@@ -313,7 +313,7 @@ const Page = () => {
                               );
                             }
                           }}
-                          className="rounded-xl text-[#7E7F91] w-full pl-8 sm:pl-10 text-sm sm:text-lg pr-20 sm:pr-24 py-3 sm:py-4 border border-[#7C7C7C40] focus:outline-none"
+                          className="rounded-xl text-[#7E7F91] w-full text-sm sm:text-lg sm:py-4 border border-[#7C7C7C40] focus:outline-none pl-15 pr-3.5 py-3.5"
                         />
                       </div>
 
