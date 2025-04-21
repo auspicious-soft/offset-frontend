@@ -105,7 +105,7 @@ const HomePage = () => {
                   className="text-white text-[18px] md:text-[22px] 2xl:text-[26px] font-medium"
                   style={{ fontFamily: "Jost, sans-serif" }}
                 >
-                  Welcome to Offset7 👋
+                  Welcome to Offset7 👋 
                 </div>
                 <div
                   className="justify-start text-white text-[34px] md:text-[46px] 2xl:text-[58px] font-medium my-3"
