@@ -343,18 +343,18 @@ const Page = () => {
           </div>
         </div>
         {/* faq  */}
-        <div className=" bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
+        <div className=" bg-[url('/images/dotsBGImage.png')]  bg-no-repeat bg-size-[100%]">
           <div className="container">
             <div className="relative w-full mb-[46px] md:mb-[126px] ">
               <div className="absolute  inset-0 z-0 w-full h-full">
                 <Image
                   src="/images/pinkFrame2.png"
                   alt="earth"
-                  className="w-full h-full object-cover rounded-[30px]"
+                  className="w-full h-full object-cover rounded-[30px] lg:max-h-[700px] 2xl:max-h-[841px]"
                   priority
                   width={0}
                   height={0}
-                  sizes="100vw"
+                  sizes="100vw "
                 />
               </div>
 
