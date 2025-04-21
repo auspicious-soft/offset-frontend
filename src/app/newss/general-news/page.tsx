@@ -120,7 +120,7 @@ const Page = () => {
 
  return (
   <>
-   <div className="bg-[url('/images/dotsBGImage.png')]  bg-size-[100%]">
+   <div className="bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-size-[100%]">
     <Headers />
     <div className="container">
      {/* breadcrumbs  */}

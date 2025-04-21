@@ -24,18 +24,6 @@ const HomePage = () => {
   const selectRef = useRef<HTMLSelectElement>(null);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checked, setChecked] = useState(false);
- const [firstName, setFirstName] = useState("");
- const [lastName, setLastName] = useState("");
- const [email, setEmail] = useState("");
- const [password, setPassword] = useState("");
- const [showPassword, setShowPassword] = useState(false);
- const [showPasswordd, setShowPasswordd] = useState(false);
- const [active, setActive] = useState("tools");
- const [country, setCountry] = useState("");
- const selectRef = useRef<HTMLSelectElement>(null);
- const [confirmPassword, setConfirmPassword] = useState("");
- const [checked, setChecked] = useState(false);
- const [businessName, setBusinessName] = useState("");
 
   const handleSubmit = () => {
     if (!firstName.trim()) {

@@ -271,8 +271,8 @@ const Page = () => {
 
             {/* Summary Section */}
             <div className="lg:col-span-1">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-xl font-semibold mb-3">
+              <div className="bg-gray-50 p-6 rounded-[30px] ">
+                <h2 className="text-xl font-semibold mb-[20px]">
                   Upgrade your plan:
                 </h2>
                 <p className="text-2xl font-bold mb-3">$2,268.00</p>
@@ -298,7 +298,8 @@ const Page = () => {
                 </div>
 
                 <Link href="/subscription/payment-method/payment-success">
-                <Button className=" cursor-pointer w-full mt-6 bg-[#E5223A] hover:bg-[#E5223A]">
+                <Button className=" w-full bg-[#E5223A] hover:bg-[#E5223A] cursor-pointer text-white    
+               mt-4 md:mt-6   font-medium 2xl:py-[25px] py-[25px]  px-4 rounded-xl  text-md lg:text-md 2xl:text-xl ">
                   Pay Now
                 </Button>'
                 </Link>

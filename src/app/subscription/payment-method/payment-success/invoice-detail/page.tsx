@@ -36,7 +36,7 @@ const InvoiceDetailsPage = () => {
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
-            <h1 className="text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-medium mb-6">Payment: #INV2024XXXX</h1>
+            <h1 className="text-md md:text-lg lg:text-xl xl:text-3xl 2xl:text-5xl font-medium mb-6">Payment: #INV2024XXXX</h1>
             {/* Invoice Content */}
 
             <div className="bg-[#F9F9F9] py-5 px-2 mb-3 rounded-lg shadow p-6">
@@ -47,11 +47,11 @@ const InvoiceDetailsPage = () => {
                     M
                   </div>
                   <div>
-                    <p className="font-medium text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl">Michael Welch</p>
+                    <p className="font-medium text-sm md:text-md lg:text-xl xl:text-3lg 2xl:text-5xl">Michael Welch</p>
                     <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg">March 5, 2025</p>
                   </div>
                 </div>
-                <button className="bg-[#E5223A] text-white rounded-md px-3 py-1 md:px-4 md:py-2 flex items-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-lg">
+                <button className="bg-[#E5223A] text-white rounded-[33.12px] px-[10px] py-1 md:px-4 md:py-2 flex items-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-lg">
                   Download <Download className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </button>
               </div>

@@ -72,23 +72,31 @@ const Page = () => {
               </div>
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Free</h3>
               <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#31334E] mt-1">$0.00/month</p>
-              <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-[#7E7F91]">Limited to cybersecurity news & updates</p>
-              <ul className="mt-3 md:mt-4 space-y-1 md:space-y-2 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> Standard Notifications – Get occasional security alerts.
+              <p className="text-base md:text-lg lg:text-xl 2xl:text-3xl text-[#7E7F91] mt-[14px]">Limited access to cybersecurity news & updates</p>
+              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-gray-700 text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
+                <li className="flex items-center ">
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
+                  <span className="font-medium">Standard Notifications –</span> 
+                  <span className="font-normal ml-[4px]">Get occasional security alerts.</span> 
+                 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> Community Access – Join discussions with other free users.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">Community Access –</span> 
+                  <span className="font-normal ml-[4px]">Join discussions with other free users.</span> 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>No Premium Reports – In-depth analytics not included.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">No Premium Reports –</span> 
+                  <span className="font-normal ml-[4px]">In-depth analytics not included.</span> 
+
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>No Priority Support – General support only.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
+                  <span className="font-medium">No Priority Support –</span> 
+                  <span className="font-normal ml-[4px]">General support only.</span> 
                 </li>
               </ul>
               <Link href="/subscription/payment-method">
-              <button className=" w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
+              <button className=" w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-medium 2xl:py-[25px] py-[15px]  px-4 rounded-xl hover:bg-opacity-90 transition duration-300 text-md lg:text-md 2xl:text-xl cursor-pointer">
                 Choose Plan
               </button>
               </Link>
@@ -104,26 +112,34 @@ const Page = () => {
                   height={100}
                 />
               </div>
-              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E]">Premium</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Premium</h3>
               <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#31334E] mt-1">($9.99/month)</p>
-              <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-[#7E7F91]">Full access to cybersecurity insights and alerts.</p>
-              <ul className="mt-3 md:mt-4 space-y-1 md:space-y-2 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg">
+              <p className="text-base md:text-lg lg:text-xl 2xl:text-3xl text-[#7E7F91] mt-[14px]">Full access to cybersecurity insights and alerts.</p>
+              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-gray-700 text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><LockKeyhole color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> Security Insights – Stay updated with the latest threats.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><LockKeyhole color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  <span className="font-medium">Security Insights –</span> 
+                  <span className="font-normal ml-[4px]">Stay updated with the latest threats.</span> 
+
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Zap color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> Real-time Alerts – Get notified instantly.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Zap color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
+                   <span className="font-medium">Real-time Alerts –</span> 
+                  <span className="font-normal ml-[4px]">Get notified instantly.</span> 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><ChartNoAxesColumn color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>Analytics & Trends – Explore in-depth cyber reports.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><ChartNoAxesColumn color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  
+                  <span className="font-medium">Analytics & Trends –</span> 
+                  <span className="font-normal ml-[4px]">Explore in-depth cyber reports.</span> 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><CircleHelp color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>Premium Support – Priority customer assistance.
+                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><CircleHelp color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  
+                  <span className="font-medium">Premium Support –</span> 
+                  <span className="font-normal ml-[4px]">Priority customer assistance.</span> 
                 </li>
               </ul>
 
               <Link href="/subscription/payment-method">
-              <button className="w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer">
+              <button className="w-full mt-4 md:mt-6 bg-[#E5223A] text-white font-medium 2xl:py-[25px] py-[15px]  px-4 rounded-xl hover:bg-opacity-90 transition duration-300 text-md lg:text-md 2xl:text-xl cursor-pointer">
                 Choose Plan
               </button>
               </Link>
@@ -141,7 +157,7 @@ const Page = () => {
               <Image
                 src="/images/pinkFrame2.png"
                 alt="FAQ Background"
-                className="w-full h-full object-cover rounded-lg md:rounded-2xl lg:rounded-3xl"
+                className="w-full h-full object-cover rounded-lg md:rounded-2xl lg:rounded-3xl "
                 priority
                 width={0}
                 height={0}

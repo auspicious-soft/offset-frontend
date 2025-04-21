@@ -55,7 +55,7 @@ const Page = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-2xl font-semibold text-gray-900 mb-2 text-center"
+            className="2xl:text-5xl xl:text-3xl md:text-xl text-md font-medium text-gray-900 mb-[17px] text-center"
           >
             Payment Successful!
           </motion.h1>
@@ -78,7 +78,8 @@ const Page = () => {
 
           <Link href="/homepage">
             <Button 
-              className="w-full bg-[#E5223A] hover:bg-[#E5223A] cursor-pointer text-white"
+              className="w-full bg-[#E5223A] hover:bg-[#E5223A] cursor-pointer text-white    
+               mt-4 md:mt-6   font-medium 2xl:py-[25px] py-[25px]  px-4 rounded-xl  text-md lg:text-md 2xl:text-xl "
               // onClick={() => setShowSuccess(false)}
             >
               Go to Home
@@ -88,7 +89,7 @@ const Page = () => {
             <Link href="/subscription/payment-method/payment-success/invoice-detail">
             <Button 
               variant="ghost"
-              className=" w-full text-[#1C1B35] border border-[#7C7C7C4A] cursor-pointer hover:text-[#1C1B35]"
+              className=" w-full text-[#1C1B35] border border-[#7C7C7C4A] cursor-pointer hover:text-[#1C1B35]                   font-medium 2xl:py-[25px] py-[25px]  px-4 rounded-xl  text-md lg:text-md 2xl:text-xl "
               onClick={() => console.log('View invoice')}
             >
               View Invoice
