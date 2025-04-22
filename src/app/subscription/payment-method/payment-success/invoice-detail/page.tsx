@@ -51,7 +51,7 @@ const InvoiceDetailsPage = () => {
                     <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg">March 5, 2025</p>
                   </div>
                 </div>
-                <button className="bg-[#E5223A] text-white rounded-[33.12px] px-[10px] py-1 md:px-4 md:py-2 flex items-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-lg">
+                <button className="bg-[#E5223A] cursor-pointer text-white rounded-[33.12px] px-[10px] py-1 md:px-4 md:py-2 flex items-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-lg">
                   Download <Download className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </button>
               </div>
@@ -73,35 +73,35 @@ const InvoiceDetailsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Left Column */}
                   <div>
-                    <div className="bg-gray-50 rounded-md p-4">
-                      <div className="bg-green-100 text-green-800 text-xs md:text-xs lg:text-sm xl:text-sm 2xl:text-base font-medium px-2.5 py-0.5 rounded inline-block mb-2">
+                    <div className="bg-gray-50 rounded-[20px] md:py-[19px] md:px-[40px] py-[15px] px-[20px]">
+                      <div className="bg-green-100 text-[#0BA932] text-xs md:text-xs lg:text-sm xl:text-sm 2xl:text-base font-medium p-2 rounded-[29.42px] inline-block mb-2">
                         Subscription Plan
                       </div>
-                      <h3 className="font-medium text-gray-800 mb-3 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Premium ($9.99/month)</h3>
-                      <ul className="space-y-2">
+                      <h3 className="font-medium text-[#31334E] text-Color-Heading my-[12px] text-xl   lg:text-xl xl:text-2xl 2xl:text-4xl">Premium ($9.99/month)</h3>
+                      <ul className="2xl:space-y-[29px] lg:space-y-[15px] space-y-[10px]">
                         <li className="flex items-center">
                           <svg className="w-3 h-3 md:w-4 md:h-4 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-700">Full Cybersecurity Access</span>
+                          <span className="text-md  xl:text-lg 2xl:text-2xl text-gray-700">Full Cybersecurity Access</span>
                         </li>
                         <li className="flex items-center">
                           <svg className="w-3 h-3 md:w-4 md:h-4 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-700">Real-Time Alerts</span>
+                          <span className="text-md  xl:text-lg 2xl:text-2xl text-gray-700">Real-Time Alerts</span>
                         </li>
                         <li className="flex items-center">
                           <svg className="w-3 h-3 md:w-4 md:h-4 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-700">Advanced Analytics</span>
+                          <span className="text-md  xl:text-lg 2xl:text-2xl text-gray-700">Advanced Analytics</span>
                         </li>
                         <li className="flex items-center">
                           <svg className="w-3 h-3 md:w-4 md:h-4 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-700">Priority Support</span>
+                          <span className="text-md  xl:text-lg 2xl:text-2xl text-gray-700">Priority Support</span>
                         </li>
                       </ul>
                     </div>
@@ -109,21 +109,21 @@ const InvoiceDetailsPage = () => {
 
                   {/* Right Column */}
                   <div>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="bg-[#F9F9F9] py-4 px-2 rounded-2xl">
-                        <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg mb-1">Total Amount:</p>
-                        <p className="font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">$9.99</p>
+                    <div className="grid grid-cols-2 gap-y-[44px] gap-x-[23px]">
+                      <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+                        <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Total Amount:</p>
+                        <p className="font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">$9.99</p>
                       </div>
-                      <div className="bg-[#F9F9F9] py-4 px-2 rounded-2xl">
-                        <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg mb-1">Billing Cycle:</p>
-                        <p className="font-medium text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl">Mar 1 - 31, 2025</p>
+                      <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+                        <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Billing Cycle:</p>
+                        <p className="font-medium text-md  lg:text-md xl:text-xl 2xl:text-3xl">Mar 1 - 31, 2025</p>
                       </div>
-                      <div className="bg-[#F9F9F9] py-4 px-2 rounded-2xl">
-                        <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg mb-1">Status:</p>
-                        <p className="text-green-500 font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Paid</p>
+                      <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+                        <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Status:</p>
+                        <p className="text-green-500 font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">Paid</p>
                       </div>
-                      <div className="bg-[#F9F9F9] py-4 px-2 rounded-2xl">
-                        <p className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg mb-1">Invoice Date:</p>
+                      <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+                        <p className="text-[#7E7F91] font-medium text-md  lg:text-md xl:text-xl 2xl:text-3xl">Invoice Date:</p>
                         <p className="font-medium text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl">Mar 1, 2025</p>
                       </div>
                     </div>

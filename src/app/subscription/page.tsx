@@ -71,28 +71,28 @@ const Page = () => {
                 />
               </div>
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Free</h3>
-              <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#31334E] mt-1">$0.00/month</p>
-              <p className="text-base md:text-lg lg:text-xl 2xl:text-3xl text-[#7E7F91] mt-[14px]">Limited access to cybersecurity news & updates</p>
-              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-gray-700 text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
+              <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-1">$0.00/month</p>
+              <p className="text-base md:text-lg lg:text-xl 2xl:text-3xl text-[#7E7F91] mt-[14px] ">Limited access to cybersecurity news & updates</p>
+              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-[#303030] text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
+                
                 <li className="flex items-center ">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
-                  <span className="font-medium">Standard Notifications –</span> 
-                  <span className="font-normal ml-[4px]">Get occasional security alerts.</span> 
-                 
+                  <div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6 " /></div> 
+                  <div className="font-medium ml-[22px] ">Standard Notifications  – Get occasional security alerts.</div> 
                 </li>
+              
+
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">Community Access –</span> 
-                  <span className="font-normal ml-[4px]">Join discussions with other free users.</span> 
+                  <div className="bg-[#E5223A1C] p-1 rounded-full"><Check color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>
+                   <span className="font-medium ml-[22px]">Community Access  – Join discussions with other free users.</span> 
                 </li> 
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> <span className="font-medium">No Premium Reports –</span> 
-                  <span className="font-normal ml-[4px]">In-depth analytics not included.</span> 
+                 <div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>
+                  <div className="font-medium ml-[22px]">No Premium Reports – In-depth analytics not included.</div> 
 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
-                  <span className="font-medium">No Priority Support –</span> 
-                  <span className="font-normal ml-[4px]">General support only.</span> 
+           <div className="bg-[#E5223A1C] p-1 rounded-full"><X color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>
+                  <div className="font-medium ml-[22px]">No Priority Support – General support only.</div> 
                 </li>
               </ul>
               <Link href="/subscription/payment-method">
@@ -115,26 +115,25 @@ const Page = () => {
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Premium</h3>
               <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#31334E] mt-1">($9.99/month)</p>
               <p className="text-base md:text-lg lg:text-xl 2xl:text-3xl text-[#7E7F91] mt-[14px]">Full access to cybersecurity insights and alerts.</p>
-              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-gray-700 text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
+              <ul className="mt-[32px] mb-[28px] md:mt-4 space-y-2 md:space-y-[25px] text-[#303030] text-sm sm:text-sm md:text-md lg:text-md 2xl:text-xl">
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><LockKeyhole color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  <span className="font-medium">Security Insights –</span> 
+                  <div className="bg-[#E5223A1C] p-1 rounded-full"><LockKeyhole color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div> 
+                   <span className="font-medium ml-[22px]">Security Insights –</span> 
                   <span className="font-normal ml-[4px]">Stay updated with the latest threats.</span> 
 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><Zap color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span> 
-                   <span className="font-medium">Real-time Alerts –</span> 
-                  <span className="font-normal ml-[4px]">Get notified instantly.</span> 
+                  <div className="bg-[#E5223A1C] p-1 rounded-full"><Zap color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>
+                   <div className="font-medium ml-[22px]">Real-time Alerts –
+                  Get notified instantly.</div> 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><ChartNoAxesColumn color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  
-                  <span className="font-medium">Analytics & Trends –</span> 
-                  <span className="font-normal ml-[4px]">Explore in-depth cyber reports.</span> 
+                  <div className="bg-[#E5223A1C] p-1 rounded-full"><ChartNoAxesColumn color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>  
+                  <div className="font-medium ml-[22px]">Analytics & Trends – Explore in-depth cyber reports.</div> 
                 </li>
                 <li className="flex items-center">
-                  <span className="text-green-500 mr-2"><div className="bg-[#E5223A1C] p-1 rounded-full"><CircleHelp color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div></span>  
-                  <span className="font-medium">Premium Support –</span> 
-                  <span className="font-normal ml-[4px]">Priority customer assistance.</span> 
+                 <div className="bg-[#E5223A1C] p-1 rounded-full"><CircleHelp color="#E5223A" size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" /></div>  
+                  <div className="font-medium ml-[22px]">Premium Support – Priority customer assistance.</div> 
                 </li>
               </ul>
 
