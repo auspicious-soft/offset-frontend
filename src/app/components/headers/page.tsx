@@ -279,7 +279,7 @@ export default function Headers() {
 
             {/* Socials & Icons (hidden on mobile) */}
             <div className="hidden lg:flex items-center gap-3">
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-3">
                       <Image
                         src="/images/country.png"
                         alt="Language Selection"
@@ -288,8 +288,75 @@ export default function Headers() {
                         className="h-auto w-auto"
                       />
                       <span className="text-[#1C1B35]">EN</span>
-                    </div>
-              <Icons />
+                    
+                
+      <Image
+        src="/notification.svg"
+        alt="Notifications"
+        height={24}
+        width={24}
+        className="h-auto w-auto"
+      />
+      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+        <DropdownMenuTrigger asChild>
+          <button
+            className="flex items-center gap-2 cursor-pointer focus:outline-none"
+            aria-label="User menu"
+          >
+            <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
+              <Image
+                src="/images/G.png"
+                alt="User Profile"
+                height={20}
+                width={20}
+                className="h-auto w-auto"
+              />
+            </div>
+            <Image
+              src="/downredarrow.svg"
+              alt="Dropdown Arrow"
+              height={7}
+              width={14}
+              className={`transition-transform duration-300 ${
+                isOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
+          sideOffset={5}
+          avoidCollisions={true}
+          collisionPadding={10}
+        >
+          <Link href="/settings">
+            <DropdownItem
+              icon={<Settings />}
+              label="Account Settings"
+              className="border-b border-gray-200"
+            />
+          </Link>
+
+          <Link href="/subscription">
+            <DropdownItem
+              icon={<CreditCard />}
+              label="Payment Details"
+              className="border-b border-gray-200"
+            />
+          </Link>
+
+          <Link href="/subscription/payment-history">
+            <DropdownItem
+              icon={<FileText />}
+              label="Canceling Subscription"
+              className="border-b border-gray-200"
+            />
+          </Link>
+
+          <DropdownItem icon={<LogOut />} label="Logout" />
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
             </div>
           </div>
 
