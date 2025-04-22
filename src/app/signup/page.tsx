@@ -366,13 +366,14 @@ const HomePage = () => {
                 </div>
 
                 <div className="my-[28px] flex flex-row gap-3 sm:gap-[15px] text-base font-normal items-start sm:items-center">
+
                   <input
-                    type="checkbox"
-                    id="terms"
-                    checked={checked}
-                    onChange={(e) => setChecked(e.target.checked)}
-                    className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-[10px] border-[1.52px] border-Colorstroke focus:outline-none appearance-none"
-                  />
+  type="checkbox"
+  id="terms"
+  checked={checked}
+  onChange={(e) => setChecked(e.target.checked)}
+  className="w-[27px] h-[27px] accent-[#E5223A] mt-1 rounded-[5px] border border-gray-300"
+/>
                   <label
                     htmlFor="terms"
                     className="cursor-pointer leading-snug"
