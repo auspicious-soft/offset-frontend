@@ -22,7 +22,7 @@ const cardData = [
   label: "Monthly Credentials",
  },
  {
-  image: "/images/totalCredentialsBGImage.png",
+  image: "/globalCredentials.svg",
   pinkImage: "MCPinkImage.svg",
   value: "7332",
   label: "Total Credentials",
@@ -31,9 +31,9 @@ const cardData = [
 
 const cardDataa = [
  { image: "/monthlyCredentials.svg", pinkImage: "/MCPinkImage.svg", value: 12, label: "Label 1" },
- { image: "/images/totalCredentialsBGImage.png", pinkImage: "/MCPinkImage.svg", value: "+1B", label: "Label 2" },
+ { image: "/globalCredentials.svg", pinkImage: "/pinkMediumBGImage.svg", value: "+1B", label: "Label 2" },
  { image: "/monthlyCredentials.svg", pinkImage: "/MCPinkImage.svg", value: 12, label: "Label 3" },
- { image: "/images/totalCredentialsBGImage.png", pinkImage: "/MCPinkImage.svg", value: "+5K", label: "Label 4" },
+ { image: "/globalCredentials.svg", pinkImage: "/pinkMediumBGImage.svg", value: "+5K", label: "Label 4" },
 ];
 
 const data = {
@@ -343,7 +343,7 @@ const Page = () => {
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:mt-[58px] mt-[20px] md:mt-[30px]  md:mb-[332px] mb-[20px]">
         {cardDataa.map((card, index) => (
          <React.Fragment key={index}>
-          <div className="rounded-[35.12px] shadow-[0px_119.587px_140.691px_0px_rgba(205,205,205,0.16)] outline-[1.32px] outline-gray-200 pt-[19px] pl-[28px] pr-[17px] pb-[51px] bg-white relative">
+          <div className=" rounded-[35.12px] shadow-[0px_119.587px_140.691px_0px_rgba(205,205,205,0.16)] outline-[1.32px] outline-gray-200 pt-[19px] pl-[28px] pr-[17px] pb-[51px] bg-white relative">
            <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 flex-wrap">
             <div className="flex flex-col sm:flex-row xl:flex-nowrap items-start sm:items-center gap-[24px] sm:gap-[56px]">
              <div className="flex gap-2">
@@ -358,7 +358,7 @@ const Page = () => {
 
           {index === 3 && (
            <div
-            className="col-span-full rounded-[35.12px] shadow-[0px_119.587px_140.691px_0px_rgba(205,205,205,0.16)] outline-[1.32px] outline-gray-200 pt-[30px] px-[28px] pb-[51px] bg-white relative overflow-hidden"
+            className=" col-span-full rounded-[35.12px] shadow-[0px_119.587px_140.691px_0px_rgba(205,205,205,0.16)] outline-[1.32px] outline-gray-200 pt-[30px] px-[28px] pb-[51px] bg-white relative overflow-hidden"
             style={{
              backgroundImage: `url(${data.pinkImage})`,
              backgroundSize: "cover",
