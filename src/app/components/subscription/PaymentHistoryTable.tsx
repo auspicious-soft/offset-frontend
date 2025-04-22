@@ -35,7 +35,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Paid":
-        return "bg-green-100 text-green-700 ";
+        return "bg-green-100 text-[#0BA932] ";
       case "Pending":
         return "bg-yellow-100 text-yellow-700";
       case "Failed":
@@ -47,8 +47,8 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
 
   return (
     <div className="w-full bg-white rounded-lg overflow-hidden ">
-      <div className="flex justify-between items-center p-4 md:p-6  ">
-        <h2 className="text-xl font-semibold text-gray-900">Payment History</h2>
+      <div className="flex justify-between items-center p-4 pl-0 md:p-6  ">
+        <h2 className="2xl:text-3xl lg:text-2xl md:text-lg text-base font-semibold text-gray-900">Payment History</h2>
         <Button 
           variant="link" 
           size="sm" 
@@ -73,25 +73,25 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
           <tbody>
             {payments.map((payment) => (
               <tr key={payment.id} className="border-t border-gray-100 hover:bg-gray-50 transition-colors">
-                <td className="py-3 px-4 text-sm gap-2 text-gray-700 flex items-center">
+                <td className="py-3 px-4 text-base xl:text-2xl 2xl:text-4xl gap-2 text-gray-700 flex items-center">
                 <Calendar color="red" />
                   {payment.date}
                 </td>
-                <td className="py-3 px-4 text-sm text-gray-700">{payment.invoiceNumber}</td>
-                <td className="py-3 px-4 text-sm">
-                  <span className={`inline-block px-[8px] py-[3px] rounded-full text-xs font-medium ${getStatusColor(payment.status)}`}>
+                <td className="py-3 px-4 text-base xl:text-2xl 2xl:text-4xl  text-gray-700">{payment.invoiceNumber}</td>
+                <td className="py-3 px-4 text-base xl:text-2xl 2xl:text-4xl ">
+                  <span className={`inline-block px-[30px] py-[5px] rounded-full text-base font-bold ${getStatusColor(payment.status)}`}>
                     {payment.status}
                   </span>
                 </td>
-                <td className="py-3 px-4 text-sm text-gray-700">${payment.amount}</td>
-                <td className="py-3 px-4 text-sm">
-                  <Button 
+                <td className="py-3 px-4 text-base xl:text-2xl 2xl:text-4xl  text-gray-700">${payment.amount}</td>
+                <td className="py-3 px-4 text-base xl:text-2xl 2xl:text-4xl ">
+                  {/* <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="h-8 w-8 p-0 text-gray-500 hover:text-[#E5223A]"
-                  >
-                    <Download size={16} color="red" />
-                  </Button>
+                    className="h-8 w-8 p-0 text-gray-500 text-base xl:text-2xl 2xl:text-4xl  hover:text-[#E5223A]"
+                  > */}
+                    <Download  color="red" />
+                  {/* </Button> */}
                 </td>
               </tr>
             ))}
