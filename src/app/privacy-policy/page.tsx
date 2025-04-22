@@ -12,10 +12,7 @@ interface FaqItem {
   answer: string;
 }
 
-
-
 const Page = () => {
-
   return (
     <>
       <Headers />
@@ -51,122 +48,123 @@ const Page = () => {
                   className="w-5 sm:w-7 md:w-10"
                 />
               </div>
-               <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-sm sm:text-xl md:text-xl lg:text-lg xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
-               It is a long established fact that a reader will be distracted by
-                the readable content of a page when looking at its layout.
+              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-sm sm:text-xl md:text-xl lg:text-lg xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
               </div>
             </div>
           </div>
           <div className="min-h-screen w-full">
-      <div className=" py-10 ">
-        <div className=" mx-auto bg-white py-6 sm:py-8 rounded-lg  border-gray-200">
+            <div className=" py-10 ">
+              <div className=" mx-auto bg-white py-6 sm:py-8 rounded-lg  border-gray-200">
+                {/* 1. Purpose */}
+                <section className="mb-8">
+                  <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    1. Purpose
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It
+                    was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker
+                    including versions of Lorem Ipsum.
+                  </p>
+                </section>
 
-          {/* 1. Purpose */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              1. Purpose
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus
-              PageMaker including versions of Lorem Ipsum.
-            </p>
-          </section>
+                {/* 2. Scope */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    2. Scope
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It
+                    was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages.
+                  </p>
+                </section>
 
-          {/* 2. Scope */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              2. Scope
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum passages.
-            </p>
-          </section>
+                {/* 3. Data Collection */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    3. Data Collection
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It
+                    was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages.
+                  </p>
+                </section>
 
-          {/* 3. Data Collection */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              3. Data Collection
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum passages.
-            </p>
-          </section>
+                {/* 4. How We Use Your Information */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    4. How We Use Your Information
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </section>
 
-          {/* 4. How We Use Your Information */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              4. How We Use Your Information
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-            </p>
-          </section>
+                {/* 5. Legal Compliance */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    5. Legal Compliance
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </section>
 
-          {/* 5. Legal Compliance */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              5. Legal Compliance
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-            </p>
-          </section>
+                {/* 6. Data Deletion */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    6. Data Deletion
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </section>
 
-          {/* 6. Data Deletion */}
-          <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              6. Data Deletion
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-            </p>
-          </section>
-
-          {/* 7. Data Portability */}
-         <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
-              7. Data Portability
-            </h2>
-            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
-              Lorem ipsum has been the industry&#39;s standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only
-              five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-            </p>
-          </section>
-        </div>
-      </div>
-    </div>
-          
+                {/* 7. Data Portability */}
+                <section className="mb-8">
+                 <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+                    7. Data Portability
+                  </h2>
+                  <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
+                    Lorem ipsum has been the industry&#39;s standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It
+                    has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </section>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footers />

@@ -127,10 +127,10 @@ const HomePage = () => {
         <main>
           <section className="news-section">
             <div className="container">
-              <div className=" lg:mt-[59px] flex flex-col lg:flex-row  gap-[44px]">
+              <div className=" lg:mt-[59px] grid grid-cols-12 ">
                 {/* Left Section */}
 
-                <div className=" w-full lg:w-[65%] mx-auto  ">
+                <div className="col-span-12 md:col-span-8  mx-auto  ">
                   <div className=" relative w-full h-full">
                     <div className="w-full  min-h-[355px]  sm:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[30px] overflow-hidden">
                       <img 
@@ -229,7 +229,7 @@ const HomePage = () => {
 
                 {/* Right Section */}
 
-                <div className=" w-full lg:w-[35%]  ">
+                <div className=" col-span-12 md:col-span-4 ">
                   {/* buttons  */}
 
                   <div className=" h-auto sm:h-14 bg-stone-50 px-[14px] py-[10px] sm:py-[5px] flex flex-col sm:flex-row gap-3 sm:gap-4 rounded-3xl mb-[19px]">
@@ -442,7 +442,7 @@ const HomePage = () => {
                     ))}
                   </div>
 
-                  <div className="  p-6 flex flex-col justify-between rounded-[30px] gap-4 bg-[url('/images/pinkFrame.png')] bg-cover bg-center">
+                  <div className="pt-0 p-6 flex flex-col justify-between rounded-[30px] gap-2 bg-[url('/images/pinkFrame.png')] bg-cover bg-center">
                     <div className=" mt-[35px]">
                       <div className="flex gap-[17px]">
                         <div className="w-[4px] h-[34px] bg-red-600 rounded-t-lg rounded-b-lg" />
@@ -451,7 +451,7 @@ const HomePage = () => {
                           Check Your Email for Leaks
                         </div>
                       </div>
-                      <p className="text-sm text-gray-600 ml-[17px]">
+                      <p className="text-base 2xl:text-xl text-gray-600 ml-[17px]">
                         Enter your email address below to check if it has been
                         compromised in malware leaks or cyber incidents.
                       </p>
@@ -459,7 +459,7 @@ const HomePage = () => {
 
                     <div className=" rounded-xl  relative w-full max-w-md  py-[9px] sm:px-0">
                       <Image
-                        src="/Message.svg"
+                        src="/images/Message.png"
                         alt="Message box"
                         height={20}
                         width={20}

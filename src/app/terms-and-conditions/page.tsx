@@ -63,7 +63,7 @@ const Page = () => {
 
           {/* 1. Purpose */}
           <section className="mb-8">
-          <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+         <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Introduction 
             </h2>
            <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -80,7 +80,7 @@ const Page = () => {
 
           {/* 2. Scope */}
          <section className="mb-8">
-          <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+         <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Acceptance of Terms
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -95,7 +95,7 @@ const Page = () => {
 
           {/* 3. Data Collection */}
          <section className="mb-8">
-          <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+         <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Description of Service
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -110,7 +110,7 @@ const Page = () => {
 
           {/* 4. How We Use Your Information */}
          <section className="mb-8">
-          <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+         <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Eligibility
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -124,7 +124,7 @@ const Page = () => {
 
           {/* 5. Legal Compliance */}
          <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             User Account
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -138,7 +138,7 @@ const Page = () => {
 
           {/* 6. Data Deletion */}
          <section className="mb-8">
-          <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+         <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Acceptable Use Policy
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
@@ -152,7 +152,7 @@ const Page = () => {
 
           {/* 7. Data Portability */}
          <section className="mb-8">
-           <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-lg sm:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-gray-800 mb-4">
             Intellectual Property
             </h2>
             <p className="text-gray-600 text-xl font-normal lg:text-2xl  2xl:text-4xl">
