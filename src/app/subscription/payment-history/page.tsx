@@ -83,7 +83,7 @@ const Page = () => {
             </div>
 
             {/* Main Content Grid */}
-            <div className="grid grid-cols-12 gap-6 md:gap-8">
+            <div className=" grid grid-cols-12 gap-6 md:gap-8">
   {/* Subscription Information Row */}
   <div className="col-span-12">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,12 +97,12 @@ const Page = () => {
       </div>
       
       {/* Next Payment Info */}
-      <div>
+      
         <NextPayment 
           date="On November 20, 2025" 
           additionalInfo="We will bill you $189.00 monthly + taxes, unless you cancel." 
         />
-      </div>
+     
     </div>
   </div>
 
