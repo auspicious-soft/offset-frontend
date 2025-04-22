@@ -110,9 +110,8 @@ const Page = () => {
   <div className="col-span-12">
     <PaymentHistoryTable 
       payments={PAYMENT_DATA}
-      currentPage={currentPage}
-      totalPages={totalPages}
-      onPageChange={setCurrentPage}
+      initialItemsPerPage={4}
+      initialPage={1}
     />
   </div>
 </div>
