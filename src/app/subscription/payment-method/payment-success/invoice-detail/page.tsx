@@ -15,9 +15,9 @@ const InvoiceDetailsPage = () => {
   return (
     <>
       <Headers />
-      <div className="mb-10 md:mb-15 min-h-screen w-full bg-gray-50">
+      {/* <div className="mb-10 md:mb-15 min-h-screen h-fit  w-full bg-gray-50"> */}
         <div className="container px-4 sm:px-6 lg:px-8 bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-cover">
-           <div className="py-6 md:py-10">
+           <div className=" py-6 md:py-10">
             {/* Breadcrumb Navigation */}
             <div className="mb-6">
               <Breadcrumb>
@@ -109,7 +109,7 @@ const InvoiceDetailsPage = () => {
 
                   {/* Right Column */}
                   <div>
-                    <div className="grid grid-cols-2 lg:gap-y-[44px] gap-y-[23px] gap-x-[23px]">
+                    <div className="grid grid-cols-2 lg:gap-y-[44px] gap-y-[2px] gap-x-[23px]">
                       <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
                         <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Total Amount:</p>
                         <p className="font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">$9.99</p>
@@ -133,7 +133,7 @@ const InvoiceDetailsPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
       <Footers />
     </>
   );
