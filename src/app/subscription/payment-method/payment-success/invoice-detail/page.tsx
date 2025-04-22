@@ -109,7 +109,7 @@ const InvoiceDetailsPage = () => {
 
                   {/* Right Column */}
                   <div>
-                    <div className="grid grid-cols-2 gap-y-[44px] gap-x-[23px]">
+                    <div className="grid grid-cols-2 lg:gap-y-[44px] gap-y-[23px] gap-x-[23px]">
                       <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
                         <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Total Amount:</p>
                         <p className="font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">$9.99</p>
