@@ -295,7 +295,7 @@ const Page = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-2 sm:py-3 rounded-xl bg-[#E5223A] hover:bg-[#C91E33] text-white text-sm sm:text-base md:text-lg font-medium"
+                className="cursor-pointer w-full py-2 sm:py-3 rounded-xl bg-[#E5223A] hover:bg-[#E5223A] text-white text-sm sm:text-base md:text-lg font-medium"
               >
                 Check Now
               </button>
