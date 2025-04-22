@@ -48,7 +48,7 @@ const InvoiceDetailsPage = () => {
 
       {/* Due Amount */}
       <div className="border-t border-gray-200 pt-4  ">
-       <div className="flex justify-between mt-[37px]">
+       <div className="flex justify-between mt-[20px]">
         <p className="text-gray-500 text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl ">Due Amount:</p>
         <p className="font-medium">
          <span className="text-gray-500 text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg mr-2">Visa **** 4321</span>
@@ -97,20 +97,20 @@ const InvoiceDetailsPage = () => {
 
         {/* Right Column */}
         <div>
-         <div className="grid grid-cols-2 lg:gap-y-[44px] gap-y-[2px] gap-x-[23px]">
-          <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+         <div className="grid grid-cols-2 lg:gap-y-[42px]   gap-y-[20px] gap-x-[23px]">
+          <div className="bg-[#F9F9F9] py-[30px] 2xl:py-[45px]  px-[24px] rounded-2xl">
            <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Total Amount:</p>
            <p className="font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">$9.99</p>
           </div>
-          <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+          <div className="bg-[#F9F9F9] py-[30px] 2xl:py-[45px] px-[24px] rounded-2xl">
            <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Billing Cycle:</p>
            <p className="font-medium text-md  lg:text-md xl:text-xl 2xl:text-3xl">Mar 1 - 31, 2025</p>
           </div>
-          <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+          <div className="bg-[#F9F9F9] py-[30px] 2xl:py-[45px] px-[24px] rounded-2xl">
            <p className="text-[#7E7F91] text-md  lg:text-md xl:text-xl 2xl:text-3xl mb-[2px]">Status:</p>
            <p className="text-green-500 font-medium text-lg  lg:text-lg xl:text-2xl 2xl:text-4xl">Paid</p>
           </div>
-          <div className="bg-[#F9F9F9] py-[24px] px-[24px] rounded-2xl">
+          <div className="bg-[#F9F9F9] py-[30px] 2xl:py-[45px] px-[24px] rounded-2xl">
            <p className="text-[#7E7F91] font-medium text-md  lg:text-md xl:text-xl 2xl:text-3xl">Invoice Date:</p>
            <p className="font-medium text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl">Mar 1, 2025</p>
           </div>
