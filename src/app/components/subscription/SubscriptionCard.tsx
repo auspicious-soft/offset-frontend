@@ -18,8 +18,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   status,
 }) => {
   return (
-    // <div className="bg-[#E5223A] text-white rounded-lg p-5 h-full md:p-6 w-full ">
-    <div className="bg-[url('/images/redFrameDots.png')] bg-no-repeat bg-cover text-white rounded-lg p-5 h-full md:p-6 w-full ">
+    <div className="bg-[url('/images/redFrameDots.png')] bg-no-repeat bg-cover text-white rounded-3xl p-5 h-full md:p-6 w-full ">
       <div className="space-y-5 md:space-y-6">
         <div className="flex flex-col space-y-1">
           <p className="text-xs md:text-sm px-2 py-0.5 bg-white/20 rounded-full w-fit">Current subscription</p>
