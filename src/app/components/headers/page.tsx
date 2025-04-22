@@ -46,6 +46,7 @@ export default function Headers() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   // Manage body overflow when menu is open
   useEffect(() => {
@@ -64,31 +65,31 @@ export default function Headers() {
   useEffect(() => {
     if (isOpen) {
       // Instead of hiding overflow, make the body unscrollable while keeping scrollbar visible
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-    
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+
       // No need to adjust padding as we're keeping the scrollbar visible
     } else {
       // Restore scrolling
       const scrollY = document.body.style.top;
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
-      
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+
       // Restore scroll position
       if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
       }
     }
-    
+
     return () => {
       // Clean up
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
     };
   }, [isOpen]);
 
@@ -216,8 +217,75 @@ export default function Headers() {
 
                   {/* Icons and Hamburger (visible on small & medium screens) */}
                   <div className="flex items-center gap-2 lg:hidden">
-                    <Icons />
-                    <button 
+                               
+                <Image
+                  src="/notification.svg"
+                  alt="Notifications"
+                  height={24}
+                  width={24}
+                  className="h-auto w-auto"
+                />
+                <DropdownMenu open={isMobileDropdownOpen} onOpenChange={setIsMobileDropdownOpen}>
+                  <DropdownMenuTrigger asChild>
+                    <button
+                      className="flex items-center gap-2 cursor-pointer focus:outline-none"
+                      aria-label="User menu"
+                    >
+                      <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
+                        <Image
+                          src="/images/G.png"
+                          alt="User Profile"
+                          height={20}
+                          width={20}
+                          className="h-auto w-auto"
+                        />
+                      </div>
+                      <Image
+                        src="/downredarrow.svg"
+                        alt="Dropdown Arrow"
+                        height={7}
+                        width={14}
+                        className={`transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
+                    sideOffset={5}
+                    avoidCollisions={true}
+                    collisionPadding={10}
+                  >
+                    <Link href="/settings">
+                      <DropdownItem
+                        icon={<Settings />}
+                        label="Account Settings"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
+
+                    <Link href="/subscription">
+                      <DropdownItem
+                        icon={<CreditCard />}
+                        label="Payment Details"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
+
+                    <Link href="/subscription/payment-history">
+                      <DropdownItem
+                        icon={<FileText />}
+                        label="Canceling Subscription"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
+
+                    <DropdownItem icon={<LogOut />} label="Logout" />
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              
+                    <button
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
@@ -246,7 +314,9 @@ export default function Headers() {
               <Link
                 href="/newss"
                 className={
-                  (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/newss" || pathname === "/newss/general-news"
+                    ? "text-[#E5223A] font-semibold"
+                    : ""
                 }
               >
                 News
@@ -255,12 +325,13 @@ export default function Headers() {
               <Link
                 href="/darkweb"
                 className={
-                  pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
+                  pathname === "/darkweb" || pathname === "/darkweb/detail"
+                    ? "text-[#E5223A] font-semibold"
+                    : ""
                 }
               >
                 Darkweb Incidents
               </Link>
-
 
               <Link href="#">Cve Engine</Link>
               <Link href="#">Risk Assets</Link>
@@ -279,84 +350,83 @@ export default function Headers() {
 
             {/* Socials & Icons (hidden on mobile) */}
             <div className="hidden lg:flex items-center gap-3">
-            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/country.png"
+                  alt="Language Selection"
+                  height={32}
+                  width={32}
+                  className="h-auto w-auto"
+                />
+                <span className="text-[#1C1B35]">EN</span>
+
+                <Image
+                  src="/notification.svg"
+                  alt="Notifications"
+                  height={24}
+                  width={24}
+                  className="h-auto w-auto"
+                />
+                <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+                  <DropdownMenuTrigger asChild>
+                    <button
+                      className="flex items-center gap-2 cursor-pointer focus:outline-none"
+                      aria-label="User menu"
+                    >
+                      <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
+                        <Image
+                          src="/images/G.png"
+                          alt="User Profile"
+                          height={20}
+                          width={20}
+                          className="h-auto w-auto"
+                        />
+                      </div>
                       <Image
-                        src="/images/country.png"
-                        alt="Language Selection"
-                        height={32}
-                        width={32}
-                        className="h-auto w-auto"
+                        src="/downredarrow.svg"
+                        alt="Dropdown Arrow"
+                        height={7}
+                        width={14}
+                        className={`transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
                       />
-                      <span className="text-[#1C1B35]">EN</span>
-                    
-                
-      <Image
-        src="/notification.svg"
-        alt="Notifications"
-        height={24}
-        width={24}
-        className="h-auto w-auto"
-      />
-      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-        <DropdownMenuTrigger asChild>
-          <button
-            className="flex items-center gap-2 cursor-pointer focus:outline-none"
-            aria-label="User menu"
-          >
-            <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
-              <Image
-                src="/images/G.png"
-                alt="User Profile"
-                height={20}
-                width={20}
-                className="h-auto w-auto"
-              />
-            </div>
-            <Image
-              src="/downredarrow.svg"
-              alt="Dropdown Arrow"
-              height={7}
-              width={14}
-              className={`transition-transform duration-300 ${
-                isOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
-          sideOffset={5}
-          avoidCollisions={true}
-          collisionPadding={10}
-        >
-          <Link href="/settings">
-            <DropdownItem
-              icon={<Settings />}
-              label="Account Settings"
-              className="border-b border-gray-200"
-            />
-          </Link>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
+                    sideOffset={5}
+                    avoidCollisions={true}
+                    collisionPadding={10}
+                  >
+                    <Link href="/settings">
+                      <DropdownItem
+                        icon={<Settings />}
+                        label="Account Settings"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
 
-          <Link href="/subscription">
-            <DropdownItem
-              icon={<CreditCard />}
-              label="Payment Details"
-              className="border-b border-gray-200"
-            />
-          </Link>
+                    <Link href="/subscription">
+                      <DropdownItem
+                        icon={<CreditCard />}
+                        label="Payment Details"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
 
-          <Link href="/subscription/payment-history">
-            <DropdownItem
-              icon={<FileText />}
-              label="Canceling Subscription"
-              className="border-b border-gray-200"
-            />
-          </Link>
+                    <Link href="/subscription/payment-history">
+                      <DropdownItem
+                        icon={<FileText />}
+                        label="Canceling Subscription"
+                        className="border-b border-gray-200"
+                      />
+                    </Link>
 
-          <DropdownItem icon={<LogOut />} label="Logout" />
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+                    <DropdownItem icon={<LogOut />} label="Logout" />
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </div>
           </div>
 
@@ -428,7 +498,9 @@ export default function Headers() {
                     <Link
                       href="/homepage"
                       className={
-                        pathname === "/homepage" ? "text-[#E5223A] font-semibold" : ""
+                        pathname === "/homepage"
+                          ? "text-[#E5223A] font-semibold"
+                          : ""
                       }
                     >
                       Home
@@ -436,7 +508,10 @@ export default function Headers() {
                     <Link
                       href="/newss"
                       className={
-                        (pathname === "/newss" || pathname === "/newss/general-news") ? "text-[#E5223A] font-semibold" : ""
+                        pathname === "/newss" ||
+                        pathname === "/newss/general-news"
+                          ? "text-[#E5223A] font-semibold"
+                          : ""
                       }
                     >
                       News
@@ -444,7 +519,10 @@ export default function Headers() {
                     <Link
                       href="/darkweb"
                       className={
-                        pathname === "/darkweb" || pathname === "/darkweb/detail" ? "text-[#E5223A] font-semibold" : ""
+                        pathname === "/darkweb" ||
+                        pathname === "/darkweb/detail"
+                          ? "text-[#E5223A] font-semibold"
+                          : ""
                       }
                     >
                       Darkweb Incidents
