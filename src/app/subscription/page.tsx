@@ -61,7 +61,7 @@ const Page = () => {
           {/* Subscription Plans */}
           <section className="mt-6 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-24">
             {/* Free Plan */}
-            <div className="bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30   shadow-md p-4 md:p-6 flex flex-col items-left">
+            <div className="bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30    p-4 md:p-6 flex flex-col items-left">
               <div className=" w-fit p-3 md:p-4 rounded-full">
                 <Image
                   src="/greenTick.svg"
@@ -103,7 +103,7 @@ const Page = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className=" bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30   shadow-md p-4 md:p-6 flex flex-col items-left">
+            <div className=" bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30    p-4 md:p-6 flex flex-col items-left">
               <div className=" w-fit p-3 md:p-4 rounded-full">
                 <Image
                   src="/diamond.svg"
