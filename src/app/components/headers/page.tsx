@@ -60,24 +60,35 @@ export default function Headers() {
     };
   }, [menuOpen]);
 
-  // Prevent scrollbar jump when dropdown is open
+  // Keep scrollbar visible but prevent scrolling when dropdown is open
   useEffect(() => {
     if (isOpen) {
-      // Store the current scrollbar width
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      
-      // Add padding to body to compensate for scrollbar disappearance
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      // Instead of hiding overflow, make the body unscrollable while keeping scrollbar visible
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    
+      // No need to adjust padding as we're keeping the scrollbar visible
     } else {
-      // Remove padding when dropdown is closed
-      document.body.style.paddingRight = '';
+      // Restore scrolling
+      const scrollY = document.body.style.top;
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+      
+      // Restore scroll position
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+      }
     }
     
     return () => {
-      document.body.style.paddingRight = '';
+      // Clean up
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
     };
   }, [isOpen]);
 
@@ -268,6 +279,16 @@ export default function Headers() {
 
             {/* Socials & Icons (hidden on mobile) */}
             <div className="hidden lg:flex items-center gap-3">
+            <div className="flex gap-2 items-center">
+                      <Image
+                        src="/images/country.png"
+                        alt="Language Selection"
+                        height={32}
+                        width={32}
+                        className="h-auto w-auto"
+                      />
+                      <span className="text-[#1C1B35]">EN</span>
+                    </div>
               <Icons />
             </div>
           </div>
