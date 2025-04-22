@@ -12,9 +12,8 @@ interface FaqItem {
   answer: string;
 }
 
-
-
 const Page = () => {
+  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -40,7 +39,7 @@ const Page = () => {
                   width={30}
                   className="w-5 sm:w-7 md:w-10"
                 />
-                 <div className="text-center text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                <div className="text-center text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   About Us
                 </div>
                 <Image
@@ -51,9 +50,9 @@ const Page = () => {
                   className="w-5 sm:w-7 md:w-10"
                 />
               </div>
-              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
-                It is a long established fact that a reader will be distracted by
-                the readable content of a page when looking at its layout.
+              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-base sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
               </div>
             </div>
           </div>
@@ -89,9 +88,9 @@ const Page = () => {
                   breaches, and mapping dark web market activities.
                 </div>
                 <div className="text-[#727272] text-base lg:text-lg font-normal">
-                  Our platform also serves as a hub for the latest news about the
-                  dark web and emerging cybersecurity threats, ensuring users stay
-                  informed and prepared.
+                  Our platform also serves as a hub for the latest news about
+                  the dark web and emerging cybersecurity threats, ensuring
+                  users stay informed and prepared.
                 </div>
                 <ul className="space-y-2 sm:space-y-3">
                   <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">
@@ -106,7 +105,7 @@ const Page = () => {
                     </span>
                     In-depth reports on cyber attacks
                   </li>
-                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">  
+                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">
                     <span className="text-[#15B639]">
                       <Check className="w-4 sm:w-5" />
                     </span>
@@ -130,7 +129,7 @@ const Page = () => {
             {/* Dark Navy Card */}
             <div className="bg-gray-900 rounded-lg sm:rounded-[30px]  p-4 py-8 lg:p-10 sm:py-14 flex-1">
               <h2 className="text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white pl-2 flex gap-4 items-center">
-              <div className="w-1 h-6 sm:h-10 bg-rose-600 rounded-full"></div>
+                <div className="w-1 h-6 sm:h-10 bg-rose-600 rounded-full"></div>
                 Our Vision
               </h2>
               <p className="text-gray-300 text-[18px] lg:text-[26px] pl-4 pt-4">
@@ -165,7 +164,7 @@ const Page = () => {
                 />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white pl-2 flex gap-4 items-center">
-              <div className="w-1 h-6 sm:h-10 bg-white rounded-full"></div>
+                <div className="w-1 h-6 sm:h-10 bg-white rounded-full"></div>
                 Our Mission
               </h2>
               <p className="text-white text-[18px] lg:text-[26px] pl-4 pt-4">
@@ -215,9 +214,7 @@ const Page = () => {
                   priority
                 />
                 <div className="text-left">
-                <p className=" text-[24px] font-semibold">
-                    Trusted Source
-                  </p>
+                  <p className=" text-[24px] font-semibold">Trusted Source</p>
                   <p className="text-[18px] xl:text-xl">
                     Verified & accurate intelligence.
                   </p>
@@ -229,31 +226,29 @@ const Page = () => {
                   alt="Feature Two"
                   width={60}
                   height={60}
-                   className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
+                  className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
                   priority
                 />
                 <div className="text-left">
-                <p className=" text-[24px] font-semibold">
-                    Real-Time Alerts
-                  </p>
+                  <p className=" text-[24px] font-semibold">Real-Time Alerts</p>
                   <p className="text-[18px] xl:text-xl">
                     24/7 cyber threat monitoring.
                   </p>
                 </div>
-              </div> 
+              </div>
               <div className="flex gap-3 sm:gap-4 items-center">
                 <Image
                   src="/Easy.svg"
                   alt="Feature Three"
                   width={60}
                   height={60}
-                   className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
+                  className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
                   priority
                 />
                 <div className="text-left">
                   <p className=" text-[24px] font-semibold">
                     Easy to Understand
-                  </p> 
+                  </p>
                   <p className="text-[18px] xl:text-xl">
                     Simplified security reports.
                   </p>
@@ -262,10 +257,8 @@ const Page = () => {
             </div>
           </div>
 
-          
-
           {/* Email Check Section */}
-          <div className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 rounded-2xl bg-[url('/images/pinkFrame.png')] bg-cover bg-center my-10 sm:my-16">
+          <div className="px-4 sm:px-10  py-4 sm:py-10  grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 rounded-2xl bg-[#FFF3F3] relative bg-cover bg-center my-10 sm:my-16">
             <div className="col-span-1 md:col-span-7">
               <div className="flex gap-3 sm:gap-4">
                 <div className="w-1 h-6 sm:h-8 bg-red-600 rounded-full" />
@@ -274,14 +267,14 @@ const Page = () => {
                 </div>
               </div>
               <p className="mt-2 text-xs sm:text-sm md:text-base text-gray-600 ml-4 sm:ml-5">
-                Enter your email address below to check if it has been compromised
-                in malware leaks or cyber incidents.
+                Enter your email address below to check if it has been
+                compromised in malware leaks or cyber incidents.
               </p>
             </div>
             <div className="col-span-1 md:col-span-5 flex flex-col gap-3 sm:gap-4">
               <div className="relative">
                 <Image
-                  src="/Message.svg"
+                  src="/images/Message.png"
                   alt="Message box"
                   height={20}
                   width={20}
@@ -289,6 +282,8 @@ const Page = () => {
                 />
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your Email"
                   className="w-full pl-10 sm:pl-12 pr-4 py-2 sm:py-3 text-xs sm:text-sm md:text-base text-[#7E7F91] rounded-xl border border-[#7E7F91] focus:outline-none"
                 />
@@ -299,6 +294,26 @@ const Page = () => {
               >
                 Check Now
               </button>
+            </div>
+            <div className="absolute left-0 bottom-0">
+              <Image
+                src="/images/Group 1171275997.png"
+                alt="earth"
+                className="object-contain"
+                priority
+                width={250}
+                height={250}
+              />
+            </div>
+            <div className="absolute right-0 top-0">
+              <Image
+                src="/images/Group 1171275998.png"
+                alt="earth"
+                className="object-contain"
+                priority
+                width={250}
+                height={250}
+              />
             </div>
           </div>
         </div>

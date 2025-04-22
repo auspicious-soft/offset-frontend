@@ -463,7 +463,7 @@ const HomePage = () => {
                         alt="Message box"
                         height={20}
                         width={20}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
+                        className="absolute left-3 top-1/2 text-[#7E7F91] -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
                       />
                       <input
                         type="email"
