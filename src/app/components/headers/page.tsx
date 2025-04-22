@@ -217,7 +217,7 @@ export default function Headers() {
                   {/* Icons and Hamburger (visible on small & medium screens) */}
                   <div className="flex items-center gap-2 lg:hidden">
                     <Icons />
-                    <button
+                    <button 
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
                     >
