@@ -40,7 +40,7 @@ const Page = () => {
                   width={30}
                   className="w-5 sm:w-7 md:w-10"
                 />
-                <div className="text-center text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+                 <div className="text-center text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   About Us
                 </div>
                 <Image
@@ -76,37 +76,37 @@ const Page = () => {
             <div className="col-span-1 md:col-span-6">
               <div className="p-4 sm:p-6 md:p-8 h-full space-y-4 sm:space-y-6 bg-stone rounded-[20px] sm:rounded-[30px] overflow-hidden">
                 <div className="flex gap-3 sm:gap-4">
-                  <div className="w-1 h-6 sm:h-8 bg-rose-600 rounded-full" />
-                  <div className="text-[#1C1B35] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+                  <div className="w-1 h-6 sm:h-10 bg-rose-600 rounded-full" />
+                  <div className="text-[#1C1B35] text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
                     Who We Are
                   </div>
                 </div>
-                <div className="text-[#727272] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
+                <div className="text-[#727272] text-base lg:text-lg font-normal">
                   OffSet7 - ThreatIntel is a free and comprehensive threat
                   intelligence platform that helps organizations defend against
                   modern cyber threats. We specialize in tracking interstellar
                   malware logs, analyzing leaked credentials, monitoring data
                   breaches, and mapping dark web market activities.
                 </div>
-                <div className="text-[#727272] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
+                <div className="text-[#727272] text-base lg:text-lg font-normal">
                   Our platform also serves as a hub for the latest news about the
                   dark web and emerging cybersecurity threats, ensuring users stay
                   informed and prepared.
                 </div>
                 <ul className="space-y-2 sm:space-y-3">
-                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
+                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">
                     <span className="text-[#15B639]">
                       <Check className="w-4 sm:w-5" />
                     </span>
                     Real-time threat intelligence
                   </li>
-                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
+                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">
                     <span className="text-[#15B639]">
                       <Check className="w-4 sm:w-5" />
                     </span>
                     In-depth reports on cyber attacks
                   </li>
-                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
+                  <li className="flex gap-2 sm:gap-3 items-center text-[#1C1B35] text-base lg:text-lg font-normal">  
                     <span className="text-[#15B639]">
                       <Check className="w-4 sm:w-5" />
                     </span>
@@ -116,7 +116,7 @@ const Page = () => {
                 <div className="mt-6 sm:mt-8">
                   <button
                     type="button"
-                    className="w-full sm:w-48 md:w-56 h-10 sm:h-12 rounded-xl bg-[#E5223A] hover:bg-[#C91E33] text-white text-sm sm:text-base md:text-lg font-medium"
+                    className="w-full sm:w-48 md:w-56 h-12 sm:h-12 rounded-xl bg-[#E5223A] hover:bg-[#C91E33] text-white text-base md:text-lg font-medium"
                   >
                     Learn more
                   </button>
@@ -128,11 +128,12 @@ const Page = () => {
           {/* Vision and Mission Cards */}
           <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mb-10 sm:mb-16">
             {/* Dark Navy Card */}
-            <div className="bg-gray-900 rounded-lg p-4 sm:p-6 flex-1">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-white border-l-2 border-pink-500 pl-2">
+            <div className="bg-gray-900 rounded-lg sm:rounded-[30px]  p-4 py-8 lg:p-10 sm:py-14 flex-1">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white pl-2 flex gap-4 items-center">
+              <div className="w-1 h-6 sm:h-10 bg-rose-600 rounded-full"></div>
                 Our Vision
               </h2>
-              <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+              <p className="text-gray-300 text-[18px] lg:text-[26px] pl-4 pt-4">
                 OffSet7 - ThreatIntel is a free and comprehensive threat
                 intelligence platform that helps organizations defend against
                 modern cyber threats. We specialize in tracking interstellar
@@ -152,7 +153,7 @@ const Page = () => {
             </div>
 
             {/* Red Card */}
-            <div className="bg-red-500 rounded-lg p-4 sm:p-6 flex-1">
+            <div className="bg-red-500 rounded-lg sm:rounded-[30px]  p-4 py-8 lg:p-10 sm:py-14 flex-1">
               <div className="flex justify-center mt-4 mb-6 sm:mb-10">
                 <Image
                   src="/images/Group123.png"
@@ -163,10 +164,11 @@ const Page = () => {
                   priority
                 />
               </div>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-white border-l-2 border-white pl-2">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white pl-2 flex gap-4 items-center">
+              <div className="w-1 h-6 sm:h-10 bg-white rounded-full"></div>
                 Our Mission
               </h2>
-              <p className="text-white text-xs sm:text-sm md:text-base">
+              <p className="text-white text-[18px] lg:text-[26px] pl-4 pt-4">
                 OffSet7 - ThreatIntel is a free and comprehensive threat
                 intelligence platform that helps organizations defend against
                 modern cyber threats. We specialize in tracking interstellar
@@ -198,61 +200,61 @@ const Page = () => {
                   className="w-5 sm:w-7 md:w-10"
                 />
               </div>
-              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-[#1C1B35] text-xs sm:text-sm md:text-base lg:text-lg font-normal max-w-[90%] sm:max-w-[80%]">
+              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-[#727272] text-base lg:text-[22px] font-normal max-w-[90%] sm:max-w-[80%]">
                 Discover the Impact of Our Efforts Through Key Statistics.
               </div>
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-4 sm:gap-6 mt-6 sm:mt-8">
               <div className="flex gap-3 sm:gap-4 items-center">
                 <Image
-                  src="/images/Frame 1261157088.png"
+                  src="/trusted.svg"
                   alt="Feature One"
-                  width={60}
-                  height={60}
-                  className="w-12 sm:w-16 md:w-20 h-auto object-cover rounded-xl"
+                  width={100}
+                  height={100}
+                  className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
                   priority
                 />
                 <div className="text-left">
-                  <p className="text-sm sm:text-base font-semibold">
+                <p className=" text-[24px] font-semibold">
                     Trusted Source
                   </p>
-                  <p className="text-xs sm:text-sm">
+                  <p className="text-[18px] xl:text-xl">
                     Verified & accurate intelligence.
                   </p>
                 </div>
               </div>
               <div className="flex gap-3 sm:gap-4 items-center">
                 <Image
-                  src="/images/Frame 1261157085.png"
+                  src="/Real-Time.svg"
                   alt="Feature Two"
                   width={60}
                   height={60}
-                  className="w-12 sm:w-16 md:w-20 h-auto object-cover rounded-xl"
+                   className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
                   priority
                 />
                 <div className="text-left">
-                  <p className="text-sm sm:text-base font-semibold">
+                <p className=" text-[24px] font-semibold">
                     Real-Time Alerts
                   </p>
-                  <p className="text-xs sm:text-sm">
+                  <p className="text-[18px] xl:text-xl">
                     24/7 cyber threat monitoring.
                   </p>
                 </div>
-              </div>
+              </div> 
               <div className="flex gap-3 sm:gap-4 items-center">
                 <Image
-                  src="/images/Frame 12611570851.png"
+                  src="/Easy.svg"
                   alt="Feature Three"
                   width={60}
                   height={60}
-                  className="w-12 sm:w-16 md:w-20 h-auto object-cover rounded-xl"
+                   className="w-[80px] md:w-[100px] h-auto object-cover rounded-xl"
                   priority
                 />
                 <div className="text-left">
-                  <p className="text-sm sm:text-base font-semibold">
+                  <p className=" text-[24px] font-semibold">
                     Easy to Understand
-                  </p>
-                  <p className="text-xs sm:text-sm">
+                  </p> 
+                  <p className="text-[18px] xl:text-xl">
                     Simplified security reports.
                   </p>
                 </div>

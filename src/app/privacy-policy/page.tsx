@@ -51,7 +51,7 @@ const Page = () => {
                   className="w-5 sm:w-7 md:w-10"
                 />
               </div>
-              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
+              <div className="mt-2 sm:mt-3 md:mt-4 text-center text-white text-xs sm:text-xl md:text-base lg:text-xl xl:text-xl font-normal max-w-[90%] sm:max-w-[80%] md:max-w-[600px]">
                 It is a long established fact that a reader will be distracted by
                 the readable content of a page when looking at its layout.
               </div>
@@ -63,10 +63,10 @@ const Page = () => {
 
           {/* 1. Purpose */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               1. Purpose
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -80,10 +80,10 @@ const Page = () => {
 
           {/* 2. Scope */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               2. Scope
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -95,10 +95,10 @@ const Page = () => {
 
           {/* 3. Data Collection */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               3. Data Collection
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -110,10 +110,10 @@ const Page = () => {
 
           {/* 4. How We Use Your Information */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               4. How We Use Your Information
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -124,10 +124,10 @@ const Page = () => {
 
           {/* 5. Legal Compliance */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               5. Legal Compliance
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -138,10 +138,10 @@ const Page = () => {
 
           {/* 6. Data Deletion */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               6. Data Deletion
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
@@ -152,10 +152,10 @@ const Page = () => {
 
           {/* 7. Data Portability */}
           <section className="mb-6">
-            <h2 className="text-lg sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl sm:text-xl 2xl:text-5xl font-semibold text-gray-800 mb-2">
               7. Data Portability
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <p className="text-gray-600 text-[24px] sm:text-xl 2xl:text-5xl">
               Lorem ipsum has been the industry&#39;s standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not only
