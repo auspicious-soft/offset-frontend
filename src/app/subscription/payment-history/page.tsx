@@ -60,11 +60,11 @@ const Page = () => {
   return (
     <>
       <Headers />
-      <div className="mb-10 md:mb-15 min-h-screen bg-gray-50">
-        <div className="container px-4 sm:px-6 lg:px-8 bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-cover">
-          <div className="py-6 md:py-10">
+      <div className=" min-h-screen bg-gray-50 ">
+        <div className=" container px-4 sm:px-6 lg:px-8 bg-[url('/images/dotsBGImage.png')] bg-no-repeat bg-cover">
+          <div className="  lg:mb-[85px] mb-[25px]">
             {/* Breadcrumb Navigation */}
-            <div className="mb-6 md:mb-10">
+            <div className="mb-6 md:mb-10   mt-[10px] sm:mt-[30px] md:mt-[20px] lg:mt-[50px]">
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>

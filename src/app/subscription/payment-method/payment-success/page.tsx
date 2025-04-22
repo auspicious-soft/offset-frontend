@@ -32,22 +32,16 @@ const Page = () => {
           >
            <div className="flex items-center justify-center">
       {/* Outermost light green circle */}
-      <div className="relative flex items-center justify-center w-32 h-32 rounded-full bg-[#59CE5010]">
-        {/* Middle light green circle */}
-        <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#59CE5018]">
-          {/* Inner light green circle */}
-          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#59CE5021]">
+     
             {/* Green checkmark image */}
             <Image
-  src="/paymentSuccessful.svg"
+  src="/images/paymentSuccessful.png"
   alt="Checkmark"
-  width={363}
-  height={363}
-  className="h-[363px] w-[363px] 2xl:h-[480px] 2xl:w-[480px]"
+  width={250}
+  height={250}
+  className=""
 />
-          </div>
-        </div>
-      </div>
+         
     </div>
           </motion.div>
           
