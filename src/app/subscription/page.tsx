@@ -61,13 +61,13 @@ const Page = () => {
           {/* Subscription Plans */}
           <section className="mt-6 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 md:mx-8 lg:mx-16 xl:mx-20 2xl:mx-24">
             {/* Free Plan */}
-            <div className="bg-[#FFFFFF] rounded-lg w-full shadow-md p-4 md:p-6 flex flex-col items-left">
-              <div className="bg-[#1FED7821] w-fit p-3 md:p-4 rounded-full">
+            <div className="bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30   shadow-md p-4 md:p-6 flex flex-col items-left">
+              <div className=" w-fit p-3 md:p-4 rounded-full">
                 <Image
-                  src="/images/Layer_2.png"
+                  src="/greenTick.svg"
                   alt="Free Plan"
-                  width={100}
-                  height={100}
+                  width={127}
+                  height={127}
                 />
               </div>
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Free</h3>
@@ -103,13 +103,13 @@ const Page = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className="bg-[#FFFFFF] rounded-lg shadow-md p-4 md:p-6 flex flex-col items-left">
-              <div className="bg-[#54C0EB24] w-fit p-3 md:p-4 rounded-full">
+            <div className=" bg-white rounded-[45.42px]  outline-[2.84px] outline-offset-[-2.84px] outline-stone-300/30   shadow-md p-4 md:p-6 flex flex-col items-left">
+              <div className=" w-fit p-3 md:p-4 rounded-full">
                 <Image
-                  src="/images/Group 1261157046.png"
+                  src="/diamond.svg"
                   alt="Premium Plan"
-                  width={100}
-                  height={100}
+                  width={117}
+                  height={117}
                 />
               </div>
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#31334E] mt-[19px]">Premium</h3>

@@ -18,7 +18,7 @@ const Page = () => {
   return (
     <>
       <Headers />
-      <div className="container px-4 sm:px-6 lg:px-8">
+      <div className="container bg-[url('/images/dotsBGImage.png')] bg-size-[100%] px-4 sm:px-6 lg:px-8">
         <div className=" lg:mt-16">
           {/* Top Section */}
           <div className="relative w-full">
@@ -72,7 +72,7 @@ const Page = () => {
             </div>
 
             {/* Right Section */}
-            <div className="col-span-1 md:col-span-6">
+            <div className=" col-span-1 md:col-span-6">
               <div className="p-4 sm:p-6 md:p-8 h-full space-y-4 sm:space-y-6 bg-stone rounded-[20px] sm:rounded-[30px] overflow-hidden">
                 <div className="flex gap-3 sm:gap-4">
                   <div className="w-1 h-6 sm:h-10 bg-rose-600 rounded-full" />
@@ -124,8 +124,9 @@ const Page = () => {
             </div>
           </div>
 
+
           {/* Vision and Mission Cards */}
-          <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mb-10 sm:mb-16">
+          <div className="  flex flex-col md:flex-row gap-4 sm:gap-6 mb-10 sm:mb-16">
             {/* Dark Navy Card */}
             <div className="bg-gray-900 rounded-lg sm:rounded-[30px]  p-4 py-8 lg:p-10 sm:py-14 flex-1">
               <h2 className="text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white pl-2 flex gap-4 items-center">
@@ -178,7 +179,7 @@ const Page = () => {
           </div>
 
           {/* Why Choose Offset 7 */}
-          <div className="w-full my-10 sm:my-16">
+          <div className=" w-full lg:py-[80px] py-[30px]   ">
             <div className="flex flex-col items-center">
               <div className="flex gap-2 sm:gap-3 md:gap-4 items-center">
                 <Image

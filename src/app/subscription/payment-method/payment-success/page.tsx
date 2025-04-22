@@ -39,26 +39,28 @@ const Page = () => {
           <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#59CE5021]">
             {/* Green checkmark image */}
             <Image
-              src="/images/successfully-done 1.png"
-              alt="Checkmark"
-              width={500}
-              height={500}
-              className="w-12 h-12"
-            />
+  src="/paymentSuccessful.svg"
+  alt="Checkmark"
+  width={363}
+  height={363}
+  className="h-[363px] w-[363px] 2xl:h-[480px] 2xl:w-[480px]"
+/>
           </div>
         </div>
       </div>
     </div>
           </motion.div>
           
+
           <motion.h1 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="2xl:text-5xl xl:text-3xl md:text-xl text-md font-medium text-gray-900 mb-[17px] text-center"
-          >
-            Payment Successful!
-          </motion.h1>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5, duration: 0.5 }}
+  className="2xl:text-5xl xl:text-3xl md:text-xl text-md font-medium text-gray-900 mb-[17px] text-center whitespace-nowrap"
+>
+  Payment Successful!
+</motion.h1>
+
           
           <motion.p 
             initial={{ opacity: 0 }}

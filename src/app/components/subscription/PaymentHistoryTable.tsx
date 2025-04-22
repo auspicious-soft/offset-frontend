@@ -46,8 +46,8 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100">
-      <div className="flex justify-between items-center p-4 md:p-6 border-b border-gray-100">
+    <div className="w-full bg-white rounded-lg overflow-hidden ">
+      <div className="flex justify-between items-center p-4 md:p-6  ">
         <h2 className="text-xl font-semibold text-gray-900">Payment History</h2>
         <Button 
           variant="link" 
@@ -62,7 +62,7 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50 text-[#7E7F91] 2xl:text-3xl lg:text-xl md:text-md text-sm font-medium">
+            <tr className=" text-[#7E7F91] 2xl:text-3xl lg:text-xl md:text-md text-sm font-medium">
               <th className="py-3 px-4 text-left  ">Payment Date</th>
               <th className="py-3 px-4 text-left  ">Invoice Number</th>
               <th className="py-3 px-4 text-left  ">Payment Status</th>
@@ -99,15 +99,15 @@ const PaymentHistoryTable: React.FC<PaymentHistoryTableProps> = ({
         </table>
       </div>
       
-      <div className="px-4 py-3 flex items-center justify-between border-t border-gray-100 bg-gray-50">
+      <div className="px-4 py-3 flex items-center justify-between mt-[31px]  border-gray-100 ">
         <div className="flex items-center text-sm text-gray-500">
-          <span>Showing per page:</span>
+          <span>Mentors per page:</span>
           <select className="ml-2 border border-gray-200 rounded p-1 text-sm">
             <option>5</option>
             <option>10</option>
             <option>25</option>
           </select>
-          <span className="ml-4">1-5 of 100 items</span>
+          <span className="ml-4">1-5 of 100 Mentor</span>
         </div>
         
         <div className="flex items-center space-x-1">
