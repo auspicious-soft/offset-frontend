@@ -232,7 +232,7 @@ export default function Headers() {
 
         {/* Navbar Links - Show only on lg+ */}
         <div className="container">
-          <div className="hidden px-5 sticky z-50 bg-white h-16 py-[22.5px] lg:flex justify-between rounded-[20px] shadow-[0px_4px_30px_0px_rgba(178,178,178,0.20)]">
+          <div className="hidden px-5 sticky z-50 bg-white h-auto py-[22.5px] lg:flex justify-between rounded-[20px] shadow-[0px_4px_30px_0px_rgba(178,178,178,0.20)]">
             <nav className="hidden lg:flex items-center gap-6 text-[#1C1B35] text-md xl:text-lg 2xl:text-xl">
               <Link
                 href="/homepage"
