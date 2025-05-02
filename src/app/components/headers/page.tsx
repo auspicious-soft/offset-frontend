@@ -18,6 +18,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@radix-ui/react-dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { toast } from "react-toastify";
+import { logoutService } from "@/services/user-service";
 
 // Define DropdownItem component using Radix's DropdownMenuItem
 const DropdownItem = ({
@@ -78,10 +81,7 @@ export default function Headers() {
       document.body.style.width = "";
       document.body.style.top = "";
 
-      // Restore scroll position
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
-      }
+     
     }
 
     return () => {
@@ -93,77 +93,30 @@ export default function Headers() {
     };
   }, [isOpen]);
 
-  // Common Icons Component for reusability
-  const Icons = () => (
-    <div className="flex items-center gap-3">
-      <Image
-        src="/notification.svg"
-        alt="Notifications"
-        height={24}
-        width={24}
-        className="h-auto w-auto"
-      />
-      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-        <DropdownMenuTrigger asChild>
-          <button
-            className="flex items-center gap-2 cursor-pointer focus:outline-none"
-            aria-label="User menu"
-          >
-            <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
-              <Image
-                src="/images/G.png"
-                alt="User Profile"
-                height={20}
-                width={20}
-                className="h-auto w-auto"
-              />
-            </div>
-            <Image
-              src="/downredarrow.svg"
-              alt="Dropdown Arrow"
-              height={7}
-              width={14}
-              className={`transition-transform duration-300 ${
-                isOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
-          sideOffset={5}
-          avoidCollisions={true}
-          collisionPadding={10}
-        >
-          <Link href="/settings">
-            <DropdownItem
-              icon={<Settings />}
-              label="Account Settings"
-              className="border-b border-gray-200"
-            />
-          </Link>
+ const handleLogout = async () => {
+  try {
+    const response = await logoutService("/auth/logout");
 
-          <Link href="/subscription">
-            <DropdownItem
-              icon={<CreditCard />}
-              label="Payment Details"
-              className="border-b border-gray-200"
-            />
-          </Link>
+    if (response.status === 204) {
+      // Handle successful logout (e.g., redirect to login page or show a success message)
+      console.log("Logout successful");
+      toast.success("Logout successful");
+      localStorage.removeItem("token"); // Remove access token from local storage
+      localStorage.removeItem("refreshToken"); // Remove refresh token from local storage
+      setTimeout(() => {
+        window.location.href = "/"; // Redirect to login page
+      }, 1000);
 
-          <Link href="/subscription/payment-history">
-            <DropdownItem
-              icon={<FileText />}
-              label="Canceling Subscription"
-              className="border-b border-gray-200"
-            />
-          </Link>
-
-          <DropdownItem icon={<LogOut />} label="Logout" />
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
-  );
+    } else {
+      // Handle error response
+      console.error("Logout failed:", response.data);
+    }
+  } catch (error) {
+    console.error("Logout error:", error);
+    toast.error((error as any).response?.data?.message);
+    
+  }
+ }
 
   return (
     <>
@@ -281,7 +234,10 @@ export default function Headers() {
                       />
                     </Link>
 
-                    <DropdownItem icon={<LogOut />} label="Logout" />
+                    <Button className="w-full h-10 px-1" variant={"ghost"} 
+                    onClick={handleLogout}>
+                    <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full " />
+                    </Button>
                   </DropdownMenuContent>
                 </DropdownMenu>
               
@@ -423,7 +379,10 @@ export default function Headers() {
                       />
                     </Link>
 
-                    <DropdownItem icon={<LogOut />} label="Logout" />
+                    <Button className="w-full h-10 px-1" variant={"ghost"} 
+                    onClick={handleLogout}>
+                    <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full " />
+                    </Button>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,8 +86,9 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
+      
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans overflo-custom`}
-      >
+      > <ToastContainer />
         {children}
         {/* Structured data for organization */}
         <Script
