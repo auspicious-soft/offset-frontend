@@ -381,129 +381,133 @@ const Page = () => {
               </div>
 
               {/* Recent Posts */}
-              {active === "tools" && (
-                <div className="mt-[30px] md:mt-0 space-y-5">
-                  {recentPosts.length > 0 ? (
-                    recentPosts.map((post, index) => {
-                      const timeAgo = formatDate(post.updatedAt || post.createdAt);
-                      
-                      return (
-                        <Link 
-                          href={`/darkweb/detail/${post.id}`}
-                          key={index} 
-                          className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
-                        >
-                          <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
-                            <Image
-                              src={post.image || "/images/one.png"}
-                              alt="news thumbnail"
-                              height={140}
-                              width={134}
-                              unoptimized
-                              className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
-                            />
-                          </div>
+{active === "tools" && (
+  <div className="mt-[30px] md:mt-0 space-y-5">
+    {loading ? (
+      <div className="text-center p-8">Loading recent posts...</div>
+    ) : recentPosts.length > 0 ? (
+      recentPosts.map((post, index) => {
+        const timeAgo = formatDate(post.updatedAt || post.createdAt);
 
-                          <div className="w-full pr-0">
-                            <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3">
-                              <Image
-                                src="/sarah.svg"
-                                alt="Author"
-                                height={34}
-                                width={34}
-                                className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
-                              />
-                              <div className="flex justify-center items-center 2xl:text-lg lg:text-md text-sm">
-                                <div className="text-[#1C1B35]">
-                                  By {post.threat_actor?.name || "Unknown"}
-                                  <span className="ml-[4px] text-[#959595]">| {timeAgo}</span>
-                                </div>
-                              </div>
-                            </div>
+        return (
+          <Link
+            href={`/darkweb/detail/${post.id}`}
+            key={index}
+            className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
+          >
+            <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
+              <Image
+                src={post.image || "/images/one.png"}
+                alt="news thumbnail"
+                height={140}
+                width={134}
+                unoptimized
+                className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
+              />
+            </div>
 
-                            <div className="text-[#1C1B35] text-m sm:text-m md:text-m lg:text-lg">{post.title}</div>
-
-                            <div className="flex justify-between items-center">
-                              <div className="text-sm text-[#FF475E] font-bold">{post.sector?.name || "GENERAL WEB"}</div>
-                              <Image
-                                src="/Arrow.svg"
-                                alt="Red Arrow"
-                                height={29}
-                                width={29}
-                                className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
-                              />
-                            </div>
-                          </div>
-                        </Link>
-                      );
-                    })
-                  ) : (
-                    <div className="text-center p-8">No recent posts found.</div>
-                  )}
+            <div className="w-full pr-0">
+              <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3">
+                <Image
+                  src="/sarah.svg"
+                  alt="Author"
+                  height={34}
+                  width={34}
+                  className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
+                />
+                <div className="flex justify-center items-center 2xl:text-lg lg:text-md text-sm">
+                  <div className="text-[#1C1B35]">
+                    By {post.threat_actor?.name || "Unknown"}
+                    <span className="ml-[4px] text-[#959595]">| {timeAgo}</span>
+                  </div>
                 </div>
-              )}
+              </div>
 
-              {/* Popular Posts */}
-              {active === "education" && (
-                <div className="space-y-5">
-                  {popularPosts.length > 0 ? (
-                    popularPosts.map((post, index) => {
-                      const timeAgo = formatDate(post.updatedAt || post.createdAt);
-                      
-                      return (
-                        <Link 
-                          href={`/darkweb/detail/${post.id}`}
-                          key={index} 
-                          className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
-                        >
-                          <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
-                            <Image
-                              src={post.image || "/images/one.png"}
-                              alt="news thumbnail"
-                              height={140}
-                              width={134}
-                              className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
-                            />
-                          </div>
+              <div className="text-[#1C1B35] text-m sm:text-m md:text-m lg:text-lg">{post.title}</div>
 
-                          <div className="w-full pr-0">
-                            <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3">
-                              <Image
-                                src="/sarah.svg"
-                                alt="Author"
-                                height={34}
-                                width={34}
-                                className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
-                              />
-                              <div className="flex justify-center items-center 2xl:text-lg lg:text-md text-sm">
-                                <div className="text-[#1C1B35]">
-                                  By {post.threat_actor?.name || "Unknown"}
-                                  <span className="ml-[4px] text-[#959595]">| {timeAgo}</span>
-                                </div>
-                              </div>
-                            </div>
+              <div className="flex justify-between items-center">
+                <div className="text-sm text-[#FF475E] font-bold">{post.sector?.name || "GENERAL WEB"}</div>
+                <Image
+                  src="/Arrow.svg"
+                  alt="Red Arrow"
+                  height={29}
+                  width={29}
+                  className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
+                />
+              </div>
+            </div>
+          </Link>
+        );
+      })
+    ) : (
+      <div className="text-center p-8">No recent posts found.</div>
+    )}
+  </div>
+)}
 
-                            <div className="text-[#1C1B35] text-m sm:text-m md:text-m lg:text-lg">{post.title}</div>
+{/* Popular Posts */}
+{active === "education" && (
+  <div className="space-y-5">
+    {loading ? (
+      <div className="text-center p-8">Loading popular posts...</div>
+    ) : popularPosts.length > 0 ? (
+      popularPosts.map((post, index) => {
+        const timeAgo = formatDate(post.updatedAt || post.createdAt);
 
-                            <div className="flex justify-between items-center">
-                              <div className="text-sm text-[#FF475E] font-bold">{post.sector?.name || "GENERAL WEB"}</div>
-                              <Image
-                                src="/Arrow.svg"
-                                alt="Red Arrow"
-                                height={29}
-                                width={29}
-                                className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
-                              />
-                            </div>
-                          </div>
-                        </Link>
-                      );
-                    })
-                  ) : (
-                    <div className="text-center p-8">No popular posts found.</div>
-                  )}
+        return (
+          <Link
+            href={`/darkweb/detail/${post.id}`}
+            key={index}
+            className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
+          >
+            <div className="2xl:h-[140px] 2xl:min-h-[140px] 2xl:w-[134px] 2xl:min-w-[134px]">
+              <Image
+                src={post.image || "/images/one.png"}
+                alt="news thumbnail"
+                height={140}
+                width={134}
+                className="w-full h-[140px] md:h-auto sm:w-[134px] rounded-xl object-cover"
+              />
+            </div>
+
+            <div className="w-full pr-0">
+              <div className="flex flex-wrap lg:flex-nowrap gap-2 sm:gap-3">
+                <Image
+                  src="/sarah.svg"
+                  alt="Author"
+                  height={34}
+                  width={34}
+                  className="sm:h-[20px] sm:w-[20px] md:h-[30px] md:w-[30px] w-8 h-8"
+                />
+                <div className="flex justify-center items-center 2xl:text-lg lg:text-md text-sm">
+                  <div className="text-[#1C1B35]">
+                    By {post.threat_actor?.name || "Unknown"}
+                    <span className="ml-[4px] text-[#959595]">| {timeAgo}</span>
+                  </div>
                 </div>
-              )}
+              </div>
+
+              <div className="text-[#1C1B35] text-m sm:text-m md:text-m lg:text-lg">{post.title}</div>
+
+              <div className="flex justify-between items-center">
+                <div className="text-sm text-[#FF475E] font-bold">{post.sector?.name || "GENERAL WEB"}</div>
+                <Image
+                  src="/Arrow.svg"
+                  alt="Red Arrow"
+                  height={29}
+                  width={29}
+                  className="xl:w-[29px] xl:h-[29px] w-5 h-5 sm:w-5 sm:h-5 bg-[#E5223A] rounded-full"
+                />
+              </div>
+            </div>
+          </Link>
+        );
+      })
+    ) : (
+      <div className="text-center p-8">No popular posts found.</div>
+    )}
+  </div>
+)}
             </div>
           </div>
         </div>

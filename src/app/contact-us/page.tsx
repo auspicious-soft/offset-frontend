@@ -5,30 +5,38 @@ import Footers from "@/app/components/footers/page";
 import Headers from "../components/headers/page";
 import Script from "next/script";
 import toast, { Toaster } from "react-hot-toast";
+import { contactUs } from "@/services/user-service";
 
 interface FaqItem {
   _id: string;
   question: string;
   answer: string;
 }
+type DropdownKeys = "isOpen1" | "isOpen2" | "isOpen3" | "isOpen4" | "isOpen5";
 
 const Page = () => {
-  // Separate state for each dropdown
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
-  const [isOpen5, setIsOpen5] = useState(false);
+  const [dropdownState, setDropdownState] = useState<{
+    [key in DropdownKeys]: boolean;
+  }>({
+    isOpen1: false,
+    isOpen2: false,
+    isOpen3: false,
+    isOpen4: false,
+    isOpen5: false,
+  });
 
-  // Toggle functions for each dropdown
-  const toggleDropdown1 = () => setIsOpen1(!isOpen1);
-  const toggleDropdown2 = () => setIsOpen2(!isOpen2);
-  const toggleDropdown3 = () => setIsOpen3(!isOpen3);
-  const toggleDropdown4 = () => setIsOpen4(!isOpen4);
-  const toggleDropdown5 = () => setIsOpen5(!isOpen5);
+  const toggleDropdown = (key: DropdownKeys) => {
+    setDropdownState((prevState) => {
+      const newState = Object.keys(prevState).reduce((acc, curr) => {
+        acc[curr as DropdownKeys] = curr === key ? !prevState[key] : false;
+        return acc;
+      }, {} as { [key in DropdownKeys]: boolean });
+      return newState;
+    });
+  };
 
   const [form, setForm] = useState({
-    username: "",
+    fullName: "",
     email: "",
     phone: "",
     message: "",
@@ -37,31 +45,39 @@ const Page = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async (e: any) => {
+    try {
+      e.preventDefault();
 
-    if (!form.username.trim()) return toast.error("Username is required");
-    if (!form.email.trim()) return toast.error("Email is required");
-    if (!form.phone.trim()) return toast.error("Phone is required");
+      if (!form.fullName.trim()) return toast.error("fullName is required");
+      if (!form.email.trim()) return toast.error("Email is required");
+      if (!form.email.includes("@")) return toast.error("Please enter a valid email address");
+      if (!form.phone.trim()) return toast.error("Phone is required");
 
-    if (form.phone.length !== 10) {
-      return toast.error("Please enter a correct 10-digit phone number");
+      if (form.phone.length !== 10) {
+        return toast.error("Please enter a correct 10-digit phone number");
+      }
+
+      if (!form.message.trim()) return toast.error("Message is required");
+
+      const response = await contactUs("/help", form);
+      if (response.status === 201) {
+        toast.success(response.data.message);
+        setForm({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error(error as any);
     }
-
-    if (!form.message.trim()) return toast.error("Message is required");
-
-    // If all valid
-    toast.success("Form submitted!");
-    // Submit logic here
-    setForm({
-      username: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
   };
 
-  console.log("form: ", form);
 
   return (
     <>
@@ -115,13 +131,8 @@ const Page = () => {
               {/* Left Section */}
               <div className="w-full lg:w-[50%]">
                 <div className="mt-[20px]  lg:mt-[43px] self-stretch justify-start text-3xl md:text-4xl lg:text-6xl 2xl:text-7xl ">
-                  <span className="text-[#1C1B35]  ">
-                    We are
-                  </span>
-                  <span className="text-[#E5223A] ">
-                    {" "}
-                    always ready
-                  </span>
+                  <span className="text-[#1C1B35]  ">We are</span>
+                  <span className="text-[#E5223A] "> always ready</span>
                   <span className="text-[#1C1B35]">
                     {" "}
                     to help you and answer your questions
@@ -247,9 +258,9 @@ const Page = () => {
                         />
                         <input
                           type="text"
-                          name="username"
-                          placeholder="Username"
-                          value={form.username} 
+                          name="fullName"
+                          placeholder="fullName"
+                          value={form.fullName}
                           onChange={handleChange}
                           className="rounded-xl text-[#7E7F91] w-full text-sm sm:text-lg sm:py-4 border border-[#7C7C7C40] focus:outline-none py-3.5 pl-15 pr-3.5"
                         />
@@ -350,7 +361,7 @@ const Page = () => {
                 <Image
                   src="/images/pinkFrame2.png"
                   alt="earth"
-                  className="w-full h-full object-cover rounded-[30px] lg:max-h-[700px] 2xl:max-h-[841px]"
+                  className="w-full h-full object-cover rounded-[30px]  2xl:max-h-[841px]"
                   priority
                   width={0}
                   height={0}
@@ -389,38 +400,33 @@ const Page = () => {
                     {
                       q: "1. What is Offset 7?",
                       a: "Offset 7 is a cybersecurity company that specializes in...",
-                      isOpen: isOpen1,
-                      toggle: toggleDropdown1,
+                      key: "isOpen1" as DropdownKeys, // Explicitly type the key
                     },
                     {
                       q: "2. How can I report a security incident?",
                       a: "Offset 7 provides tailored cybersecurity solutions to protect businesses...",
-                      isOpen: isOpen2,
-                      toggle: toggleDropdown2,
+                      key: "isOpen2" as DropdownKeys,
                     },
                     {
                       q: "3. Do you offer cybersecurity consultation?",
                       a: "Offset 7 serves industries including healthcare, finance, and technology...",
-                      isOpen: isOpen3,
-                      toggle: toggleDropdown3,
+                      key: "isOpen3" as DropdownKeys,
                     },
                     {
                       q: "4. How can I subscribe to Offset 7 updates?",
                       a: "You can contact us via email at contact@offset7.com or visit our website...",
-                      isOpen: isOpen4,
-                      toggle: toggleDropdown4,
+                      key: "isOpen4" as DropdownKeys,
                     },
                     {
                       q: "5. Where can I follow Offset 7 for updates?",
                       a: "Offset 7 stands out by providing innovative cybersecurity solutions combined with personalized service...",
-                      isOpen: isOpen5,
-                      toggle: toggleDropdown5,
+                      key: "isOpen5" as DropdownKeys,
                     },
-                  ].map(({ q, a, isOpen, toggle }, i) => (
+                  ].map(({ q, a, key }, i) => (
                     <div key={i}>
                       <div
                         className="px-[1px] md:px-[21px] py-[21px] flex justify-between items-center gap-4 cursor-pointer"
-                        onClick={toggle}
+                        onClick={() => toggleDropdown(key)}
                       >
                         <div className="text-[#1C1B35] text-md md:text-xl 2xl:text-3xl font-medium">
                           {q}
@@ -431,11 +437,11 @@ const Page = () => {
                           height={14}
                           width={24}
                           className={`transform transition-transform duration-300 ease-in-out ${
-                            isOpen ? "rotate-180" : "rotate-0"
+                            dropdownState[key] ? "rotate-180" : "rotate-0"
                           }`}
                         />
                       </div>
-                      {isOpen && (
+                      {dropdownState[key] && (
                         <div className="mb-[15px] px-[1px] md:px-[21px] text-[#1C1B35] text-sm md:text-md 2xl:text-xl">
                           {a}
                         </div>

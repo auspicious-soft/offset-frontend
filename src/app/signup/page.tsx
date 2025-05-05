@@ -1,11 +1,12 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { Jost } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -25,6 +26,15 @@ const HomePage = () => {
   const selectRef = useRef<HTMLSelectElement>(null);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checked, setChecked] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        router.replace('/homepage'); // redirect to homepage
+      }
+    }, []);
+  
 
   const handleSubmit = () => {
     if (active === "tools") {

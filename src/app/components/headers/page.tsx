@@ -37,9 +37,9 @@ const DropdownItem = ({
       className || ""
     }`}
   >
-    <div className="flex items-center gap-[12px]">
+    <div className="flex items-center text-lg gap-[12px]">
       {icon}
-      <span>{label}</span>
+      <span className="">{label}</span>
     </div>
     <ChevronRight className="w-4 h-4 text-[#7E7F91]" />
   </DropdownMenuItem>
@@ -50,6 +50,17 @@ export default function Headers() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [language, setLanguage] = useState<string>("en"); // Default to English
+
+  // Load language from localStorage on mount
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    } else {
+      localStorage.setItem("language", "en"); // Default to English
+    }
+  }, []);
 
   // Manage body overflow when menu is open
   useEffect(() => {
@@ -67,25 +78,18 @@ export default function Headers() {
   // Keep scrollbar visible but prevent scrolling when dropdown is open
   useEffect(() => {
     if (isOpen) {
-      // Instead of hiding overflow, make the body unscrollable while keeping scrollbar visible
       document.body.style.overflow = "hidden";
       document.body.style.position = "fixed";
       document.body.style.width = "100%";
-
-      // No need to adjust padding as we're keeping the scrollbar visible
     } else {
-      // Restore scrolling
       const scrollY = document.body.style.top;
       document.body.style.overflow = "";
       document.body.style.position = "";
       document.body.style.width = "";
       document.body.style.top = "";
-
-     
     }
 
     return () => {
-      // Clean up
       document.body.style.overflow = "";
       document.body.style.position = "";
       document.body.style.width = "";
@@ -93,30 +97,33 @@ export default function Headers() {
     };
   }, [isOpen]);
 
- const handleLogout = async () => {
-  try {
-    const response = await logoutService("/auth/logout");
+  const handleLogout = async () => {
+    try {
+      const response = await logoutService("/auth/logout");
 
-    if (response.status === 204) {
-      // Handle successful logout (e.g., redirect to login page or show a success message)
-      console.log("Logout successful");
-      toast.success("Logout successful");
-      localStorage.removeItem("token"); // Remove access token from local storage
-      localStorage.removeItem("refreshToken"); // Remove refresh token from local storage
-      setTimeout(() => {
-        window.location.href = "/"; // Redirect to login page
-      }, 1000);
-
-    } else {
-      // Handle error response
-      console.error("Logout failed:", response.data);
+      if (response.status === 204) {
+        console.log("Logout successful");
+        toast.success("Logout successful");
+        localStorage.removeItem("token");
+        localStorage.removeItem("refreshToken");
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      } else {
+        console.error("Logout failed:", response.data);
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+      toast.error((error as any).response?.data?.message);
     }
-  } catch (error) {
-    console.error("Logout error:", error);
-    toast.error((error as any).response?.data?.message);
-    
-  }
- }
+  };
+
+  const handleLanguageToggle = () => {
+    const newLanguage = language === "en" ? "ar" : "en";
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+    window.location.reload(); // Reload the page to recall APIs with the new language
+  };
 
   return (
     <>
@@ -170,77 +177,75 @@ export default function Headers() {
 
                   {/* Icons and Hamburger (visible on small & medium screens) */}
                   <div className="flex items-center gap-2 lg:hidden">
-                               
-                <Image
-                  src="/notification.svg"
-                  alt="Notifications"
-                  height={24}
-                  width={24}
-                  className="h-auto w-auto"
-                />
-                <DropdownMenu open={isMobileDropdownOpen} onOpenChange={setIsMobileDropdownOpen}>
-                  <DropdownMenuTrigger asChild>
-                    <button
-                      className="flex items-center gap-2 cursor-pointer focus:outline-none"
-                      aria-label="User menu"
-                    >
-                      <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
-                        <Image
-                          src="/images/G.png"
-                          alt="User Profile"
-                          height={20}
-                          width={20}
-                          className="h-auto w-auto"
-                        />
-                      </div>
-                      <Image
-                        src="/downredarrow.svg"
-                        alt="Dropdown Arrow"
-                        height={7}
-                        width={14}
-                        className={`transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
-                    sideOffset={5}
-                    avoidCollisions={true}
-                    collisionPadding={10}
-                  >
-                    <Link href="/settings">
-                      <DropdownItem
-                        icon={<Settings />}
-                        label="Account Settings"
-                        className="border-b border-gray-200"
-                      />
-                    </Link>
+                    <Image
+                      src="/notification.svg"
+                      alt="Notifications"
+                      height={24}
+                      width={24}
+                      className="h-auto w-auto"
+                    />
+                    <DropdownMenu open={isMobileDropdownOpen} onOpenChange={setIsMobileDropdownOpen}>
+                      <DropdownMenuTrigger asChild>
+                        <button
+                          className="flex items-center gap-2 cursor-pointer focus:outline-none"
+                          aria-label="User menu"
+                        >
+                          <div className="h-8 w-8 bg-[#37474F] rounded-full flex items-center justify-center">
+                            <Image
+                              src="/images/G.png"
+                              alt="User Profile"
+                              height={20}
+                              width={20}
+                              className="h-auto w-auto"
+                            />
+                          </div>
+                          <Image
+                            src="/downredarrow.svg"
+                            alt="Dropdown Arrow"
+                            height={7}
+                            width={14}
+                            className={`transition-transform duration-300 ${
+                              isOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent
+                        className="rounded-[30px] shadow-[0px_4px_30px_0px_rgba(136,136,136,0.20)] pt-[34px] pb-[25px] px-[18px] bg-white text-[#7E7F91] min-w-[200px] z-[100] lg:mr-10"
+                        sideOffset={5}
+                        avoidCollisions={true}
+                        collisionPadding={10}
+                      >
+                        <Link href="/settings">
+                          <DropdownItem
+                            icon={<Settings />}
+                            label="Account Settings"
+                            className="border-b border-gray-200"
+                          />
+                        </Link>
 
-                    <Link href="/subscription">
-                      <DropdownItem
-                        icon={<CreditCard />}
-                        label="Payment Details"
-                        className="border-b border-gray-200"
-                      />
-                    </Link>
+                        <Link href="/subscription">
+                          <DropdownItem
+                            icon={<CreditCard />}
+                            label="Payment Details"
+                            className="border-b border-gray-200"
+                          />
+                        </Link>
 
-                    <Link href="/subscription/payment-history">
-                      <DropdownItem
-                        icon={<FileText />}
-                        label="Canceling Subscription"
-                        className="border-b border-gray-200"
-                      />
-                    </Link>
+                        <Link href="/subscription/payment-history">
+                          <DropdownItem
+                            icon={<FileText />}
+                            label="Canceling Subscription"
+                            className="border-b border-gray-200"
+                          />
+                        </Link>
 
-                    <Button className="w-full h-10 px-1" variant={"ghost"} 
-                    onClick={handleLogout}>
-                    <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full " />
-                    </Button>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              
+                        <Button className="w-full h-10 px-1" variant={"ghost"} onClick={handleLogout}>
+                          <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full" />
+                        </Button>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+
                     <button
                       onClick={() => setMenuOpen(!menuOpen)}
                       aria-label="Toggle Menu"
@@ -307,14 +312,16 @@ export default function Headers() {
             {/* Socials & Icons (hidden on mobile) */}
             <div className="hidden lg:flex items-center gap-3">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/images/country.png"
-                  alt="Language Selection"
-                  height={32}
-                  width={32}
-                  className="h-auto w-auto"
-                />
-                <span className="text-[#1C1B35]">EN</span>
+                <button onClick={handleLanguageToggle} className="flex items-center gap-1 cursor-pointer">
+                  <Image
+                    src={language === "en" ? "/images/country.png" : "/images/arabic.svg"}
+                    alt="Language Selection"
+                    height={40}
+                    width={40}
+                    className=""
+                  />
+                  <span className="text-[#1C1B35]">{language.toUpperCase()}</span>
+                </button>
 
                 <Image
                   src="/notification.svg"
@@ -379,9 +386,8 @@ export default function Headers() {
                       />
                     </Link>
 
-                    <Button className="w-full h-10 px-1" variant={"ghost"} 
-                    onClick={handleLogout}>
-                    <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full " />
+                    <Button className="w-full h-10 px-1" variant={"ghost"} onClick={handleLogout}>
+                      <DropdownItem icon={<LogOut />} label="Logout" className="w-full h-full" />
                     </Button>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -499,16 +505,16 @@ export default function Headers() {
                     >
                       Contact Us
                     </Link>
-                    <div className="flex gap-2 items-center">
+                    <button onClick={handleLanguageToggle} className="flex gap-2 items-center">
                       <Image
-                        src="/images/country.png"
+                        src={language === "en" ? "/images/country.png" : "/images/arabic.svg"}
                         alt="Language Selection"
-                        height={32}
-                        width={32}
-                        className="h-auto w-auto"
+                        height={40}
+                        width={40}
+                        className=""
                       />
-                      <span className="text-[#1C1B35]">EN</span>
-                    </div>
+                      <span className="text-[#1C1B35]">{language.toUpperCase()}</span>
+                    </button>
                   </div>
                 </div>
               </div>

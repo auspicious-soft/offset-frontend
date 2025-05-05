@@ -2,7 +2,7 @@
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { Jost } from "next/font/google";
 import { useRouter } from "next/navigation";
@@ -30,6 +30,14 @@ const HomePage = () => {
     setEmail(value);
     setShowDropdown(false);
   };
+
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      router.replace('/homepage'); // redirect to homepage
+    }
+  }, []);
 
   const handleSubmit = async () => {
     // Validation

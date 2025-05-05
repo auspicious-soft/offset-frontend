@@ -1,4 +1,4 @@
-import { axiosInstance, getAxiosInstance } from "@/config/axios";
+import { axiosInstance, getAxiosInstance, postAxiosInstance } from "@/config/axios";
 
 
 export const loginService = async (payload: any) => await axiosInstance.post(`/auth/email/login`, { email: payload.email, password: payload.password });
@@ -18,4 +18,8 @@ export const getDarkWebNewsService = async (route: string) => {
 export const getGeneralNewsService = async (route: string) => {
   const axiosInstance = await getAxiosInstance()
   return axiosInstance.get(route)
+}
+export const contactUs = async (route: string,payload:any) => {
+  const axiosInstance = await postAxiosInstance()
+  return axiosInstance.post(route,payload)
 }
