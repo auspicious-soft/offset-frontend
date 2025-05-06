@@ -83,6 +83,7 @@ const Page = () => {
 
   // Paginated news items (already handled by API pagination)
   const paginatedNewsItems = newsItems;
+  console.log('paginatedNewsItems:', paginatedNewsItems);
   
   // Format date helper
   const formatDate = (dateString: string) => {

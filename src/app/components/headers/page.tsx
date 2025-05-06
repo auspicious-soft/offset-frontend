@@ -104,8 +104,14 @@ export default function Headers() {
       if (response.status === 204) {
         console.log("Logout successful");
         toast.success("Logout successful");
+        
+        // Clear localStorage
         localStorage.removeItem("token");
         localStorage.removeItem("refreshToken");
+        
+        // Clear cookies
+        document.cookie = "auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);

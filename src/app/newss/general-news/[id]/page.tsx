@@ -6,12 +6,14 @@ import Footers from "@/app/components/footers/page";
 import Headers from "@/app/components/headers/page";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { getGeneralNewsService } from "@/services/user-service";
+import Link from "next/link";
 
 const Page = () => {
   const [active, setActive] = useState("tools");
   const params = useParams();
 
   interface Post {
+    _id: string;
     boardImg: string;
     avatarImg: string;
     author: string;
@@ -84,6 +86,7 @@ const Page = () => {
       const fetchedToolPosts = newsItems
         .filter((item: any) => item.category?.name === "Technology")
         .map((item: any) => ({
+          _id: item.id,
           boardImg: item.image || "/images/one.png",
           avatarImg: item.authorImage || "/sarah.svg",
           author: item.author || "Unknown Author",
@@ -97,6 +100,7 @@ const Page = () => {
       const fetchedEducationPosts = newsItems
         .filter((item: any) => item.category?.name === "Lifestyle" || item.category?.name === "Financial")
         .map((item: any) => ({
+          _id: item.id,
           boardImg: item.image || "/images/mobile.png",
           avatarImg: item.authorImage || "/sarah.svg",
           author: item.author || "Unknown Author",
@@ -327,12 +331,13 @@ const Page = () => {
                   {/* Tools Posts */}
                   {active === "tools" && (
                     <div className="mt-[30px] md:mt-0 space-y-5 2xl:space-y-14">
-                      {toolPosts.length > 0 ? (
+                      {toolPosts.length > 0 ? (                       
                         toolPosts.map((cards, index) => (
-                          <div
-                            key={index}
-                            className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
-                          >
+                          <Link
+                        href={`/newss/general-news/${cards._id}`}
+                        key={index}
+                        className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
+                      >                         
                             <div>
                               <Image
                                 src={cards.boardImg}
@@ -371,7 +376,8 @@ const Page = () => {
                                 />
                               </div>
                             </div>
-                          </div>
+                          
+                          </Link>
                         ))
                       ) : (
                         <div className="text-[#1C1B35] text-center">No tools posts available</div>
@@ -384,8 +390,9 @@ const Page = () => {
                     <div className="space-y-5 2xl:space-y-14">
                       {educationPosts.length > 0 ? (
                         educationPosts.map((cards, index) => (
-                          <div
+                          <Link
                             key={index}
+                            href={`/newss/general-news/${cards._id}`}
                             className="py-[12px] px-[15px] w-full flex flex-col sm:flex-row bg-stone-50 rounded-[20.65px] gap-[19px]"
                           >
                             <div>
@@ -425,7 +432,7 @@ const Page = () => {
                                 />
                               </div>
                             </div>
-                          </div>
+                          </Link>
                         ))
                       ) : (
                         <div className="text-[#1C1B35] text-center">No education posts available</div>

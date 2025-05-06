@@ -29,11 +29,11 @@ const HomePage = () => {
   const router = useRouter();
 
   useEffect(() => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        router.replace('/homepage'); // redirect to homepage
-      }
-    }, []);
+    const token = localStorage.getItem('token');
+    if (token) {
+      router.replace('/homepage'); // redirect to homepage if already logged in
+    }
+  }, [router]);
   
 
   const handleSubmit = () => {

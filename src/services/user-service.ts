@@ -19,6 +19,10 @@ export const getGeneralNewsService = async (route: string) => {
   const axiosInstance = await getAxiosInstance()
   return axiosInstance.get(route)
 }
+export const getUserDetails = async (route: string) => {
+  const axiosInstance = await getAxiosInstance()
+  return axiosInstance.get(route)
+}
 export const contactUs = async (route: string,payload:any) => {
   const axiosInstance = await postAxiosInstance()
   return axiosInstance.post(route,payload)
